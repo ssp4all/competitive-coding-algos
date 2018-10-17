@@ -6,7 +6,7 @@ import mechanize #easy_install mechanize
 from time import sleep
 import os
 import cgi
-import http.cookiejar
+# import http.cookiejar
 # A routine to download a file from a link, by simulating a click on it
 
 
