@@ -3,8 +3,10 @@
 using namespace std;
 int main()
 {
-    int arr[2][2] = {{1,2},{3,4}};
-
+    int arr[2][2] = {
+                        {1,2},
+                        {3,4}
+                    };
     int i, j, (*parr)[2];
     parr = arr;
     for(i=0 ; i<2; i++)
@@ -13,9 +15,6 @@ int main()
         {
             cout << (*(parr + i))[j]; //for 3D array use *(*(*(parr+i)+j)+k) or *(*(*(parr+i)+j+)+k)
         }
-
     }
-
-
     return 0;
 }
