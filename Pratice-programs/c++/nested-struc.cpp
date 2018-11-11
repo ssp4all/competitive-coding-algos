@@ -2,18 +2,18 @@
 using namespace std;
 int main()
 {
-    typedef struct dob{
+    typedef struct {
         int day;
         int month;
         int year;
-    };
+    }dob;
 
-    typedef struct student{
+    typedef struct {
         int roll;
         char first[20];
         char last[20];
         dob date;
-    };
+    }student;
     student std1;
 
     cout<<"\nEnter the Roll:";

@@ -21,7 +21,7 @@ int main()
     {
         if(str[i] == '\n' || i==79)
             line_count++;
-        if(str[i] == ' ' &&str[i+1] != ' ')
+        if(str[i] == ' ' && str[i+1] != ' ')
             word_count++;
         char_count++;
         i++;
