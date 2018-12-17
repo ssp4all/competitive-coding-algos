@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<bits/stdc++.h>
+//#include<bits/stdc++.h>
 #include<stdlib.h>
 
 struct node
@@ -173,9 +173,7 @@ int search(int d)
     }
     if(temp == NULL )
     {
-
         return 0;
-
     }
     else
     {
