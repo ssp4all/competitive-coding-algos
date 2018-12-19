@@ -16,7 +16,7 @@ void main()
        do
        {
 			printf("\n***********MENU*************\n");
-			printf("\n\n1.push\n2.pop\n3.peek\n4.display\n5.stop\n");
+			printf("\n\n1.Push\n2.Pop\n3.Peek\n4.Display\n5.stop\n");
             printf("\n Enter Your Choice : ");
 			scanf("%d",&n);
 
@@ -58,7 +58,7 @@ void push(char ch)
 {
 	if(top == 4)
 	{
-		printf("Stack is full\n");
+		printf("Stack is OVERFLOW\n");
 	}
 	else
 	{
@@ -79,7 +79,7 @@ char pop()
 {
 	if(top==-1)
     {
-        printf("stack is underflow\n");
+        printf("stack is UNDERFLOW\n");
     }
 	else
     {
@@ -91,7 +91,7 @@ void peek()
 {
 	if(top==-1)
 		{
-            printf("stack is empty\n");
+            printf("stack is EMPTY\n");
 		}
 	else
 		{
