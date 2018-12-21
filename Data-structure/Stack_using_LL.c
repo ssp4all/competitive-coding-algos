@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-struct stack
+typedef struct stack
 {
     int data;
     struct stack *next;
@@ -70,7 +70,6 @@ void main()
                         if(temp == NULL)
                         {
                             printf("\nStack is Empty ");
-
                         }
                         else
                         {

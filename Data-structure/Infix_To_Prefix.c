@@ -1,70 +1,65 @@
-#include<stdio.h>
-#include<ctype.h>
+#define SIZE 50            /* Size of Stack */
+#include<string.h>
+#include <ctype.h>
+char s[SIZE];
+int top=-1;       /* Global declarations */
 
-char stack[20];
-int top = -1;
-
-int priority(char);
-void push(char);
-char pop();
-
-void main()
-{
-    char exp[20];
-    char *e, x;
-    printf("Enter the expression : ");
-    scanf("%s",exp);
-    e = exp;
-    while(*e != '\0')
-    {
-        if(isalnum(*e))
-        {
-            printf("%c",*e);
-        }
-        else if(*e == '(')
-            {
-                push(*e);
-            }
-                else if(*e == ')')
-                {
-                    while((x = pop()) != '(')
-                        printf("%c", x);
-                }
-                else
-                {
-                    while(priority(stack[top]) >= priority(*e))
-                    {
-                        printf("%c",pop());
-                        push(*e);
-                    }
-                }
-        e++;
-    }
-    while(top != -1)
-    {
-        printf("%c",pop());
-    }
-}
-
-void push(char x)
-{
-    stack[++top] = x;
+push(char elem)
+{                       /* Function for PUSH operation */
+    s[++top]=elem;
 }
 
 char pop()
-{
-    if(top == -1)
-        return -1;
-    else
-        return stack[top--];
+{                      /* Function for POP operation */
+    return(s[top--]);
 }
 
-int priority(char x)
-{
-	if(x == '(')
-		return 0;
-	if(x == '+' || x == '-')
-		return 1;
-	if(x == '*' || x == '/')
-		return 2;
+int pr(char elem)
+{                 /* Function for precedence */
+    switch(elem)
+    {
+    case '#': return 0;
+    case ')': return 1;
+    case '+':
+    case '-': return 2;
+    case '*':
+    case '/': return 3;
+    }
+}
+
+main()
+{                         /* Main Program */
+    char infx[50],prfx[50],ch,elem;
+    int i=0,k=0;
+    printf("\n\nRead the Infix Expression ? ");
+    scanf("%s",infx);
+    push('#');
+    strrev(infx);
+    while( (ch=infx[i++]) != '\0')
+    {
+        if( ch == ')')
+            push(ch);
+        else
+            if(isalnum(ch))
+                prfx[k++]=ch;
+            else
+                if( ch == '(')
+                {
+                    while( s[top] != ')')
+                        prfx[k++]=pop();
+                    elem=pop(); /* Remove ) */
+                }
+                else
+                {       /* Operator */
+                    while( pr(s[top]) >= pr(ch) )
+                        prfx[k++]=pop();
+                    push(ch);
+                }
+    }
+    while( s[top] != '#')     /* Pop from stack till empty */
+        prfx[k++]=pop();
+    prfx[k]='\0';          /* Make prfx as valid string */
+    strrev(prfx);
+    strrev(infx);
+    printf("\n\nGiven Infix Expn: %s  Prefix Expn: %s\n",infx,prfx);
 }

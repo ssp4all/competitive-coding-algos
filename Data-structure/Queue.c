@@ -23,17 +23,15 @@ void main()
         printf("\n4:Display");
         printf("\n5:Count");
         printf("\n6:Search");
-        printf("\n7:Exit");
+        printf("\n99:Exit");
         printf("\n\n Enter Your Choice : ");
         scanf("%d",&n);
 
         switch(n)
             {
                 case 1 : //crate a queue
-
                 {
                    int a;
-
                    printf("\n Enter a Element in the Q : ");
                    scanf("%d",&a);
                    q[0]=a;
@@ -41,7 +39,6 @@ void main()
                    rear++;
                    printf("\n Queue Created Successfully");
                    display();
-
                 }
                 break;
                 case 2 :    //insert
@@ -53,35 +50,26 @@ void main()
                 {
                     delete_ele();
                     display();
-
                 }
                 break;
                 case 4 :    //display
                 {
-
                     display();
                 }
                 break;
                 case 5:
                 {
                     count();
-
                 }
                 break;
                 case 6:
                 {
                    search();
-
-
-
                 }
                 break;
                 case 7:
                 {
                     printf("\n THANK YOU VERY MUCH....!!!");
-
-
-
                 }
                 break;
                 default :
@@ -92,22 +80,14 @@ void main()
                 break;
 
             }
-
-
-
-
-    }while(n != 7 );
-
+    }while(n != 99 );
 }
-
 //--------------------------------------------
 void insert(int b)
 {
     if((front)== -1)
     {
         printf("\n Q is NOT Created...");
-
-
     }
     else
     {
@@ -125,9 +105,7 @@ void insert(int b)
             front=0;
         }
         display();
-
-        }
-
+    }
 }
 //---------------------------------------------
 
@@ -184,19 +162,21 @@ void search()
     printf("\n Enter Element to be Searched : ");
     scanf("%d",&n);
 
-    while(front != rear && q[front] != n)
+    int temp;
+    int flag = 0;
+    temp = front;
+    printf("%d",front);
+    printf("%d",rear);
+    while(q[temp] != n && temp<rear)
     {
-        front++;
+        if(q[temp] == n)
+            flag = 1;
+        else
+            flag = 0;
+        temp++;
     }
-    if(q[front] == n)
-
-    {
-        printf("\n Found");
-    }
+    if(flag == 1)
+        printf("Found");
     else
-    {
-        printf("\n  Not Found");
-
-    }
-
+        printf("Not found");
 }

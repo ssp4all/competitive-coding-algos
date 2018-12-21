@@ -21,24 +21,21 @@ void main()
             if(isalnum(*e))
             {
                 printf("%c",*e);
-
             }
             else if(*e == '(')
                 {
                     push(*e);
-
                 }
-
-                    else if(*e == ')')
-                    {
-                        while((x = pop()) != '(')
+                else if(*e == ')')
+                {
+                    while((x = pop()) != '(')
                         printf("%c", x);
-                    }
+                }
                 else
                 {
                     while(priority(stack[top]) >= priority(*e))
                         printf("%c",pop());
-                        push(*e);
+                    push(*e);
                 }
             e++;
         }
@@ -51,15 +48,15 @@ void main()
 
 void push(char x)
 {
-        stack[++top] = x;
+    stack[++top] = x;
 }
 
 char pop()
 {
-        if(top == -1)
-            return -1;
-        else
-        	return stack[top--];
+    if(top == -1)
+        return -1;
+    else
+        return stack[top--];
 }
 
 int priority(char x)
