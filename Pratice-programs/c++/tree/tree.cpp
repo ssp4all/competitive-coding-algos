@@ -19,11 +19,12 @@ void inordertraversal(struct node *);
 void postordertraversal(struct node *);
 struct node *smallestElement(struct node *);
 struct node *largestElement(struct node *);
+int totalNodes(struct node *);
 //main body
 int main(){
 
     struct node *ptr;
-    int n,val;
+    int n, val, total=0;
 
     do{
         printf("\n***   MENU   ***\n");
@@ -34,6 +35,7 @@ int main(){
         printf("\n5:Postorder");
         printf("\n6:Smallest");
         printf("\n7:Largest");
+        printf("\n8:Total Number of Nodes");
         printf("\n99:Stop");
         printf("\nEnter Your Choice :");
         scanf("%d",&n);
@@ -81,6 +83,11 @@ int main(){
                 else
                     cout<<ptr->data;
                 break;
+
+            case 8:
+                cout<<"\nTotal Number of Nodes are: "<<totalNodes(tree);
+                break;
+
             case 99:
                 cout<<"Thank You!";
                 break;
@@ -166,4 +173,11 @@ struct node *largestElement(struct node *tree){
         return tree;
     else
         return smallestElement(tree->right);
+}
+
+int totalNodes(struct node *tree){
+    if(tree == NULL)
+        return 0;
+    else
+        return (totalNodes(tree->left) + totalNodes(tree->right) + 1);
 }
