@@ -10,6 +10,7 @@ struct node
     struct node *right;
 };
 struct node *tree;
+
 //Initialize all ptrs and values
 //function signature
 void create_tree(struct node *);
