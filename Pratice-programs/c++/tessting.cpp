@@ -9,5 +9,9 @@ int main()
     for(i=0;i<5;++i)
         cout<<i;
 
-    return 0;
+    if (0>0)
+        cout<<"T";
+    else
+        cout<<"F";
+   return 0;
 }

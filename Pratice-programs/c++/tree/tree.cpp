@@ -20,6 +20,7 @@ void inordertraversal(struct node *);
 void postordertraversal(struct node *);
 struct node *smallestElement(struct node *);
 struct node *largestElement(struct node *);
+int Height(struct node *);
 int totalNodes(struct node *);
 //main body
 int main(){
@@ -37,6 +38,7 @@ int main(){
         printf("\n6:Smallest");
         printf("\n7:Largest");
         printf("\n8:Total Number of Nodes");
+        printf("\n9:Height");
         printf("\n99:Stop");
         printf("\nEnter Your Choice :");
         scanf("%d",&n);
@@ -87,6 +89,10 @@ int main(){
 
             case 8:
                 cout<<"\nTotal Number of Nodes are: "<<totalNodes(tree);
+                break;
+
+            case 9:
+                cout<<"\nHeight of a tree is: "<<Height(tree);
                 break;
 
             case 99:
@@ -181,4 +187,18 @@ int totalNodes(struct node *tree){
         return 0;
     else
         return (totalNodes(tree->left) + totalNodes(tree->right) + 1);
+}
+
+int Height(struct node *tree){
+    int LH, RH;
+    if(tree == NULL)
+        return 0;
+    else{
+        LH = Height(tree->left);
+        RH = Height(tree->right);
+        if(LH>RH)
+            return (LH+1);
+        else
+            return (RH+1);
+    }
 }
