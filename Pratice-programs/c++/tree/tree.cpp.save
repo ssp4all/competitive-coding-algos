@@ -20,6 +20,8 @@ void inordertraversal(struct node *);
 void postordertraversal(struct node *);
 struct node *smallestElement(struct node *);
 struct node *largestElement(struct node *);
+struct node *mirror(struct node *);
+struct node *delete_tree(struct node *);
 int Height(struct node *);
 int totalNodes(struct node *);
 //main body
@@ -38,6 +40,9 @@ int main(){
         printf("\n6:Smallest");
         printf("\n7:Largest");
         printf("\n8:Total Number of Nodes");
+        printf("\n9:Height");
+        printf("\n10:Mirror");
+        printf("\n11:Delete");
         printf("\n99:Stop");
         printf("\nEnter Your Choice :");
         scanf("%d",&n);
@@ -55,7 +60,11 @@ int main(){
 
             case 3:
                 cout<<"\n Preorder :";
-                preordertraversal(tree);
+                if(tree == NULL)
+                    cout<<"NULL";
+                else
+                    preordertraversal(tree);
+                
                 break;
 
             case 4:
@@ -89,11 +98,21 @@ int main(){
             case 8:
                 cout<<"\nTotal Number of Nodes are: "<<totalNodes(tree);
                 break;
-            
+
             case 9:
                 cout<<"\nHeight of a tree is: "<<Height(tree);
                 break;
-                
+
+            case 10:
+                cout<<"\nMirror: ";
+                tree = mirror(tree);
+                break;
+
+            case 11:
+                cout<<"\nTree delete!";
+                tree = delete_tree(tree);
+                break;
+
             case 99:
                 cout<<"Thank You!";
                 break;
@@ -195,9 +214,26 @@ int Height(struct node *tree){
     else{
         LH = Height(tree->left);
         RH = Height(tree->right);
-        if(LH>RH)   
+        if(LH>RH)
             return (LH+1);
         else
-            return (LH+1);
+            return (RH+1);
+    }
+}
+struct node *mirror(struct node *tree){
+    struct node *temp;
+    if(tree != NULL){
+        mirror(tree->left);
+        mirror(tree->right);
+        temp = tree->left;
+        tree->left = tree->right;
+        tree->right = temp;
+    }
+}
+struct node *delete_tree(struct node *tree){
+    if(tree != NULL){
+        delete(tree->left);
+        delete(tree->right);
+        free(tree);
     }
 }

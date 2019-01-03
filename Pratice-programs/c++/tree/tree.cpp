@@ -20,6 +20,8 @@ void inordertraversal(struct node *);
 void postordertraversal(struct node *);
 struct node *smallestElement(struct node *);
 struct node *largestElement(struct node *);
+struct node *mirror(struct node *);
+struct node *delete_tree(struct node *);
 int Height(struct node *);
 int totalNodes(struct node *);
 //main body
@@ -39,6 +41,8 @@ int main(){
         printf("\n7:Largest");
         printf("\n8:Total Number of Nodes");
         printf("\n9:Height");
+        printf("\n10:Mirror");
+        printf("\n11:Delete");
         printf("\n99:Stop");
         printf("\nEnter Your Choice :");
         scanf("%d",&n);
@@ -56,7 +60,10 @@ int main(){
 
             case 3:
                 cout<<"\n Preorder :";
-                preordertraversal(tree);
+                if(tree == NULL)
+                    cout<<"NULL";
+                else
+                    preordertraversal(tree);
                 break;
 
             case 4:
@@ -93,6 +100,16 @@ int main(){
 
             case 9:
                 cout<<"\nHeight of a tree is: "<<Height(tree);
+                break;
+
+            case 10:
+                cout<<"\nMirrored!";
+                tree = mirror(tree);
+                break;
+
+            case 11:
+                cout<<"\nTree deleted!";
+                tree = delete_tree(tree);
                 break;
 
             case 99:
@@ -201,4 +218,23 @@ int Height(struct node *tree){
         else
             return (RH+1);
     }
+}
+struct node *mirror(struct node *tree){
+    struct node *temp;
+    if(tree != NULL){
+        mirror(tree->left);
+        mirror(tree->right);
+        temp = tree->left;
+        temp->left = temp->right;
+        tree->right = temp;
+    }
+    return tree;
+}
+struct node *delete_tree(struct node *tree){
+    if(tree != NULL){
+        delete(tree->left);
+        delete(tree->right);
+        free(tree);
+    }
+    return tree;
 }
