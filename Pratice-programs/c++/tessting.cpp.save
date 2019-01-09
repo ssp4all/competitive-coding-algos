@@ -10,6 +10,10 @@ int main()
         cout<<i;
 
     if (0>0)
-        cout
-    return 0;
+        cout<<"T";
+    else
+        cout<<"F";
+        
+    cout<<(char)(65);
+   return 0;
 }

@@ -13,5 +13,7 @@ int main()
         cout<<"T";
     else
         cout<<"F";
+    cout<<endl;
+    cout<<(char)(65);
    return 0;
 }
