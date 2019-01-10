@@ -12,9 +12,8 @@ int main(){
                         {1,1,0,0,1},
                         {0,0,1,1,0}
                     };
-    int visited[NODE], i;
-    for(i=0; i<NODE; i++)
-        visited[i] = 0;
+    int visited[NODE]={0}, i;
+
     bfs(adj, visited, 0);
     return 0;
 }

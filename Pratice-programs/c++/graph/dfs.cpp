@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-#define NODE 10
+#define NODE 5
 void dfs(int [][NODE], int [], int);
 
 int main(){
@@ -12,9 +12,8 @@ int main(){
                         {1,1,0,0,1},
                         {0,0,1,1,0}
                     };
-    int visited[NODE], i;
-    for(i=0; i<NODE; i++)
-        visited[i] = 0;
+    int visited[NODE]={0}, i;
+
     dfs(adj, visited, 0);
     return 0;
 }
@@ -24,6 +23,8 @@ void dfs(int adj[NODE][NODE], int visited[NODE], int start){
     int stack[NODE];
 
     stack[++top] = start;
+    cout<<(char)(start+65)<<"\t";
+    visited[start] = 1;
     while(top != -1){
 
         start = stack[top];
