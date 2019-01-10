@@ -13,22 +13,26 @@ int smallest(int arr[], int k, int n){
 }
 
 void selection_sort(int arr[], int n){
-    int i=0, pos;
+    int i=0, pos, temp;
     for(i=0; i<n; i++){
-        pos = smallest(arr, k, n);
+        pos = smallest(arr, i, n);
+        temp = arr[i];
+        arr[i] = arr[pos];
+        arr[pos] = temp;
     }
-
 }
 int main(){
     cout<<"Binary search by Suraj Pawar"<<endl;
-    int arr[10] = {3,5,35,7,2,0,2,72,3,2};
-    int i;
-    cout<<"Given array is:";
-    for(i=0; i<10; i++)
-        cout<<arr[i]<<"\t";
-    cout<<"Array after sorting.."
-    selection_sort(arr, n);
-    for(i=0; i<10; i++)
-        cout<<arr[i]<<"\t";
+    int i, n=10;
+    int arr[n] = {3,5,35,7,2,0,2,72,3,2};
 
+    cout<<"Given array is:";
+    for(i=0; i<n; i++)
+        cout<<arr[i]<<"\t";
+    cout<<endl;
+    cout<<"Array after sorting..";
+    selection_sort(arr, n);
+    for(i=0; i<n; i++)
+        cout<<arr[i]<<"\t";
+    return 0;
 }
