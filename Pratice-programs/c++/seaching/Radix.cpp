@@ -7,7 +7,7 @@ int digits(int arr[], int n){
     k = max_element(arr, arr+n);
     //cout<<*k;
     while(*k > 0){
-        *k = *k/10;
+        *k /= 10;
         counter++;
     }
     return counter;
@@ -52,8 +52,11 @@ int main(){
     for(i=0; i<n; i++)
         cout<<arr[i]<<"\t";
     cout<<endl;
+
     cout<<"Array after sorting:\t";
+
     radix_sort(arr, n);
+
     for(i=0; i<n; i++)
         cout<<arr[i]<<"\t";
 

@@ -42,9 +42,11 @@ void quick_sort(int arr[], int beg, int end){
 }
 int main(){
     cout<<"Quick-sort by Suraj Pawar"<<endl;
-    int i, n=5;
-    //int arr[n] = {3,5,35,7,1,0,8,72,3,2};
-    int arr[n] = {9,2,3,4,5};
+    int i, n=50;
+    int arr[n];
+    srand(time(0));
+    for(i=0; i<n; i++)
+        arr[i] = rand();
 
     cout<<"Given array is:\t";
     for(i=0; i<n; i++)
