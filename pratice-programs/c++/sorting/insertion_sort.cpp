@@ -15,7 +15,7 @@ void insertion_sort(int arr[], int n){
     }
 }
 int main(){
-    cout<<"Bubble sort by Suraj Pawar"<<endl;
+    cout<<"Insertion sort by Suraj Pawar"<<endl;
     int i, n=10;
     int arr[n] = {3,5,35,7,1,0,8,72,3,2};
     //int arr[n] = {1,2,3,5,4};
