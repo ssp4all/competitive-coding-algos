@@ -1,6 +1,15 @@
 # A pattern matching algorithm
 
 
+def calc_z_array(conc, z):
+    l = len(conc)
+    L = R = 0
+    for i in range(l):
+        if i > R:
+            while R < n and str[R-L] == str[R]:
+                R += 1
+
+
 def search(str, pattern):
     # print(str, pattern)
     n = len(str)
@@ -9,14 +18,8 @@ def search(str, pattern):
     calc_z_array(conc, z)
 
 
-def calc_z_array(conc, z):
-    l = len(conc)
-    L=R=0
-    for i in range(l):
-        if i>R:
-            while R<n and str[R-L] == str[R]:
-                R += 1
-                
+
+
 
 def main():
     # str = input()
