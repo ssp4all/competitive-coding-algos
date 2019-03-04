@@ -1,0 +1,18 @@
+// Suraj Pawar
+// https://www.codechef.com/MARCH19B/problems/CHDIGER
+#include<bits/stdc++.h>
+using namespace std;
+# define "\n" endl 
+# define lld long long int
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	lld t, n, d;
+	cin>>t;
+	while(t--){
+		cin>>n>>d;
+		
+	}
+	return 0;
+}
