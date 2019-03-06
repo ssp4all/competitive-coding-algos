@@ -1,17 +1,26 @@
 # Suraj Pawar
 # https://www.codechef.com/MARCH19B/problems/JAIN
+"""
+1
+3
+aaooaoaooa
+uiieieiieieuuu
+aeioooeeiiaiei
+
+"""
 from itertools import combinations 
 for _ in range(int(input())):
 	n = int(input())
 	ip = []
 	for _ in range(n):
 		ip.append(set(input()))
-	op = list(combinations(ip, 2))
-	temp = []
-	for i in range(len(op)):
-		temp.append(op[i][0].union(op[i][1]))
+	print(ip)
+	ip.sort(key=lambda x:len(x), reverse=True)
+	print(ip)
 	ans = 0
-	for j in temp:
-		if 5 == sum(list(map(str(j).count, "aeiou"))):	
-			ans += 1
+	for it in combinations(ip, 2):
+		# print(it[0] | it[1])
+		l = len(( it[0] | it[1]))
+		if l < 2: break
+		elif 5 == l:	ans += 1
 	print(ans)
