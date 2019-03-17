@@ -4,6 +4,26 @@ using namespace std;
 #define endl "\n" 
 #define lld long long int
 
+inline int scan(){
+    int x = 0;
+    char c = getchar_unlocked();
+    bool b = 0;
+    while ( c < '0' || c > '9'){
+        if( c == '-'){
+            b = 1;
+        }
+        c = getchar_unlocked();
+    }
+    while ( c >= '0' && c <= '9'){
+        x = ( x << 3) + ( x << 1) + c - '0';
+        c = getchar_unlocked();
+    }
+    if(b)
+        return -x;
+        
+    return x;
+}
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
