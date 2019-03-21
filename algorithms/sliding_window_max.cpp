@@ -1,54 +1,62 @@
-//Dynamic Programming approach
 // Suraj Pawar
+// https://www.hackerrank.com/challenges/deque-stl/
 #include <bits/stdc++.h>
 using namespace std;
-#define endl "\n" 
-#define lld long long int
-#define LTM 1000
+#define nl "\n" 
+#define ll long long
 
-lld arr[LTM]; 
-lld LR[LTM]; 
-lld RL[LTM]; 
-lld max_val[LTM]; 
+inline int scan(){
+    int x = 0;
+    char c = getchar_unlocked();
+    bool b = 0;
+    while ( c < '0' || c > '9'){
+        if( c == '-'){
+            b = 1;
+        }
+        c = getchar_unlocked();
+    }
+    while ( c >= '0' && c <= '9'){
+        x = ( x << 3) + ( x << 1) + c - '0';
+        c = getchar_unlocked();
+    }
+    if(b)
+        return -x;
+    return x;
+}
 
-lld n,w,i,k;   
+void sliding_window_max(ll arr[], ll n, ll k){
+    deque<ll> d;
+    ll i;
+    for( i = 0; i < k; ++i ){
+        while( ( !d.empty() ) and arr[i] >= arr[d.back()])
+            d.pop_back();
+        d.push_back(i);
+    }
+    for(; i < n; ++i){
+        cout<<arr[d.front()]<<" ";
+        while( (!d.empty()) and d.front() <= ( i - k))
+            d.pop_front();
+        while( (!d.empty()) and arr[i] >= arr[d.back()] )
+            d.pop_back();
+        d.push_back(i);
+    }    
+    cout<<arr[d.front()]<<nl;
+}
 
 int main() {
+
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
-    lld t;
-    cin>>t;
 
+    ll t = scan();
     while(t--){
-        
-        cin>>n>>w;    
-        k=n-w+1; // 'K' is number of Windows
-            
-        for(i=1;i<=n;i++)
-            cin>>arr[i];
-        
-        for(i=1;i<=n;i++){
-            if(i%w==1)
-                LR[i]=arr[i];
-            else
-				LR[i]=max(LR[i-1],arr[i]);               
-		}
-
-        
-        for(i=n;i>=1;i--){
-            if(i%w==0 || i==n )
-                RL[i]=arr[i];
-            else
-                RL[i]=max(RL[i+1],arr[i]);
-        }
-        
-        for(i=1;i<=k;i++)    // maximum
-            max_val[i]=max(RL[i],LR[i+w-1]);
-    
-        for(i=1;i<=k;i++)
-            cout<<max_val[i]<<" ";
-        cout<<endl; 
+        ll n, k;
+        n = scan(), k = scan();
+        // cout<<n<<" "<<k;
+        ll arr[n];
+        for(ll i=0; i<n; ++i)
+            arr[i] = scan();
+        sliding_window_max(arr, n, k);
     }
-    return 0;
+  return 0;
 }
