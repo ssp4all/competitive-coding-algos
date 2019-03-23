@@ -1,41 +1,43 @@
 # A pattern matching algorithm
 
-
 def calc_z_array(conc, z):
-    l = len(conc)
-    L = R = 0
-    for i in range(l):
-        if i > R:
-            while R < n and str[R-L] == str[R]:
-                R += 1
+    """Generates z array """
+    l = r = 0
+    n = len(conc)
+    # print(conc)
+    for i in range(1, n):
+        if i > r:
+            l = r = i
+            while r < n and conc[ r - l ] == conc[r]:
+                r += 1
+            z[i] = r - l
+            r -= 1
+        else:
+            k = i - l
+            if z[k] < (r - i + 1):
+                z[i] = z[k]
+            else:
+                l = i
+                while r < n and conc[ r - l ] == conc[r]:
+                    r += 1
+                z[i] = r - l
+                r -= 1
 
-
-def search(str, pattern):
-    # print(str, pattern)
-    n = len(str)
-    conc = str+"$"+pattern
-    z = [0]*n
+def search(string, pattern):
+    """ Prints z array """
+    conc = pattern + "$" +  string
+    n = len(conc)
+    z = [0] * n
     calc_z_array(conc, z)
-
-
-
-
+    for i in range(1, n):
+        print(z[i], end=" ")
 
 def main():
     # str = input()
-    str = "baabaa"
+    string = "baabaa"
     pattern = "aab"
     # pattern = input()
-    calc_z_array(str, pattern)
-
-
-
-
-
-
-
-
-
+    search(string, pattern)
 
 if __name__ == "__main__":
     main()
