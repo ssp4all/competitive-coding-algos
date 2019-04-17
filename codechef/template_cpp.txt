@@ -1,21 +1,22 @@
 // Suraj Pawar
+// https://www.codechef.com/APRIL19B/problems/FENCE
 #include <bits/stdc++.h>
 using namespace std;
 #define nl "\n" 
 #define ll long long 
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    lld n, x;
-    cin>>n;
-    vector<int> v;
-    for(lld i=0; i<n; i++){
-        cin >> x;
-        v.push_back(x);
+#define fastio  ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+
+/*
+
+*/
+int main(){
+
+    fastio;
+    ll t;
+    cin>>t;
+    while(t--){
+        
     }
-    sort(v.begin(), v.end());
-    for(auto ele: v)
-        cout<<ele<<" ";
-  return 0;
+    return 0;   
 }
