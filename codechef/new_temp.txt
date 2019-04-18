@@ -1,5 +1,5 @@
 // Suraj Pawar
-// https://www.codechef.com/APRIL19B/problems/SUBREM
+// https://codeforces.com/contest/1025/problem/B
 #include <bits/stdc++.h>
 using namespace std;
 #define nl "\n" 
