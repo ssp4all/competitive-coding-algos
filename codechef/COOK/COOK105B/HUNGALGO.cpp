@@ -1,10 +1,10 @@
 // Suraj Pawar
-// https://codeforces.com/contest/1025/problem/B
+// https://www.codechef.com/COOK105B/problems/HUNGALGO
 #include <bits/stdc++.h>
 using namespace std;
 #define nl "\n" 
-#define ll long long 
-
+#define ll long long
+ 
 #define io  ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 struct fastio
@@ -48,22 +48,53 @@ inline ll getnum()
 template <class T> inline void putnum(T x)
 {
 	if (x<0) putchar('-'), x=-x;
-	register short a[20]={}, sz=0;
+	short a[20]={}, sz=0;
 	while (x) a[sz++]=x%10, x/=10;
 	if(sz==0) putchar('0');
 	for (int i=sz-1; i>=0; i--) putchar('0'+a[i]);
 }
 /*
+1
+3
+0 0 4
+3 0 1
+0 1 0
 */
 
 
 int main(){
+    io;
+    ll t;
+    // cin>>t;
+	geti(t);
+    while (t--){
+		ll n;
+		// cin>>n;
+		geti(n);
+		ll mat[n][n], row[n]={0}, col[n]={0};
+		
+// 		memset(row, -1, sizeof(row));
+// 		memset(col, -1, sizeof(col));
+		
+		for (ll i=0; i<n; ++i)
+			for (ll j=0; j<n; ++j)
+				geti(mat[i][j]);
+				// cin>>mat[i][j];
+	
+		for (ll i=0; i<n; ++i){
+			for (ll j=0; j<n; ++j){
+				if (mat[i][j] == 0)	row[i] = 1;
+				if (mat[j][i] == 0)	col[i] = 1;
+			}
+		}
 
-    geti(t);
-    while(t--){
-
-        getii(n, k);
-        putsi(1);
+		ll flag = 0;
+		for (ll i=0; i<n; ++i)
+			if (row[i] == 0 || col[i] == 0)
+				flag = 1;
+		
+		if (flag == 0)	cout<<"YES"<<nl;
+		else	cout<<"NO"<<nl;
     }
     return 0;   
 }
