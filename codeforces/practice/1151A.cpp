@@ -8,8 +8,8 @@ using namespace std;
 #define fastio  ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 /*
-4
-ZCTH
+9
+AAABBBCCC
 */
 int main(){
 
@@ -18,13 +18,15 @@ int main(){
 	string s;
     cin>>n>>s;
 	string org = "ACTG";
-	ll ans = 999999;	
+	ll ans = 999999;
 	for (ll i=0; i<n-3; ++i){
 		ll cost = 0;
 		for (ll j=0; j<4; ++j){
 			// cout<<"org: "<<org[j]<<" "<<"string: "<<s[i+j]<<nl;
 			ll t = (org[j] - s[i+j]);
-			cost += min(abs(t), t+26);
+			// cout<<t<<nl;
+			if (t<0)	cost += abs(min(abs(t), 26-abs(t)));	
+			else	cost += abs(min(abs(t), 26-t));
 			// cout<<cost<<nl;
 		}	
 			
