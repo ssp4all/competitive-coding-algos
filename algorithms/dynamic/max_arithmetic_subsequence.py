@@ -1,0 +1,12 @@
+# https://leetcode.com/problems/longest-arithmetic-sequence/submissions/
+class Solution:
+    def longestArithSeqLength(self, A: List[int]) -> int:
+        memo = {}
+        n = len(A)
+        for i in range(n):
+            for j in range(i + 1, n):
+                memo[j, A[j] - A[i]] = memo.get((i, A[j] - A[i]), 1) + 1
+        print(memo)
+        return max(memo.values())
+    
+    
