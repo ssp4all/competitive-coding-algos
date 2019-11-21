@@ -10,6 +10,17 @@ def non_leaf_nodes(node):
 		return 0
 	return 1 + non_leaf_nodes(node.left) + non_leaf_nodes(node.right)
 
+def print_ancestor(node, key):
+ 	"""Ancestors of a given node """
+	if node is None:
+		return False
+	if node.data == key:
+		return True
+	if print_ancestor(node.left, key) or print_ancestor(node.right, key):
+		print(node.data)
+		return True
+	return False
+
 def calc_height(node):
 	if node == None:
 		return 0
@@ -30,21 +41,47 @@ def preorder(node):
 	print(node.data)
 	preorder(node.right)
 
-def reverse_tree(root):
-	if root == None:
-		return
 
-	temp = node(0)
-	temp = root.left
-	root.left = root.right
-	root.right = temp
+def LCA(node, n1, n2):
+	""" Lowest common ancestor of a given two nodes"""
+	if node is None:
+		return None
 
-	reverse_tree(root.left)
-	reverse_tree(root.right)
+	if node.data == n1 or
+		node.data == n2:
+		return node.data
 
+	left = LCA(node.left, n1, n2)
+	right = LCA(node.right, n1, n2)
 
+	if left and right:
+		return node.data
 
-	
+	return left if left is not None else right
+
+def LCA_for_BST(node, n1, n2):
+	""" Lowest common ancestor of a given two nodes"""
+	if node is None:
+		return None
+	if node.data > n1 and node.data > n2:
+		return LCA_for_BST(node.left, n1, n2)
+	elif node.data < n1 and node.data < n2:
+		return LCA_for_BST(node.right, n1, n2)
+
+	return node
+
+def reverse_tree(node):
+	"""Reverse a binary tree """
+	if node == None:
+    	return None
+               
+    le = self.invertTree(node.left)
+    ri = self.invertTree(node.right)
+    # print(le, ri)
+    node.left = ri
+    node.right = le
+    
+    return node
 
 if __name__ == '__main__':
 	root = node(1)

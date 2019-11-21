@@ -6,4 +6,4 @@ a = min(stats.keys(), key = lambda x:stats[x] )
 # Sort in decreasing order
 x = sorted(stats, key=lambda x:stats[x], reverse=1)
 
-print(a)
+print(x)
