@@ -4,11 +4,20 @@ class node:
 		self.left = self.right = None
 
 def non_leaf_nodes(node):
+	"""Count non-leaf nodes"""
 	if node == None:
 		return 0
 	if node.left == None and node.right == None:
 		return 0
 	return 1 + non_leaf_nodes(node.left) + non_leaf_nodes(node.right)
+
+def count_leaf_nodes(node):
+	"""Count leaf nodes """
+	if node == None:
+		return 0
+	if node.left == None and node.right == None:
+		return 1
+	return count_leaf_nodes(node.left) + count_leaf_nodes(node.right)
 
 def print_ancestor(node, key):
  	"""Ancestors of a given node """
@@ -21,18 +30,31 @@ def print_ancestor(node, key):
 		return True
 	return False
 
+def diameter(node):
+	if node == None:
+		return 0
+	lh = calc_height(node.left)
+	rh = calc_height(node.right)
+
+	ld = diameter(node.left)
+	rd = diameter(node.right)
+
+	return max(lh+rh+1, max(ld, rd))
+
+
 def calc_height(node):
 	if node == None:
 		return 0
-	if node.left == None and node.right == None:
-		return 1
-	lh = calc_height(node.left)
-	rh = calc_height(node.right)
+	return 1 + max(calc_height(node.left), calc_height(node.right))
+	# if node.left == None and node.right == None:
+	# 	return 1
+	# lh = calc_height(node.left)
+	# rh = calc_height(node.right)
 	 
-	if lh > rh:
-		return 1 + lh
-	else: 
-		return 1 + rh
+	# if lh > rh:
+	# 	return 1 + lh
+	# else: 
+	# 	return 1 + rh
 
 def preorder(node):
 	if node == None:

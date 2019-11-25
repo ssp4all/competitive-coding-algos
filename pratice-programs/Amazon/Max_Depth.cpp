@@ -98,3 +98,46 @@ int main(){
 	
     return 0;   
 }
+/* python */
+from collections import defaultdict
+class Graph:
+	def __init__(self, n):
+		self.graph = defaultdict(list)
+		self.n = n
+
+	def addEdge(self, x, y):
+		self.graph[x].append(y)
+		# self.graph[y].append(x)
+
+	def explore(self, u, visited, depth, level):
+		global MD
+		visited[u] = 1
+		level[depth].add(u)
+		MD = max(MD, depth)
+		print(u, level)
+		for v in self.graph[u]:
+			if visited[v] == 0:
+				self.explore(v, visited, depth+1, level)
+
+
+
+	def dfs(self, s, depth):
+		visited = [0]*n
+		level = [set() for _ in range(self.n)]
+		if visited[s] == 0:
+			self.explore(s, visited, depth, level)
+		print(level)
+		print(MD)
+	
+if __name__ == "__main__":
+	MD = 0
+	n = 4
+	g = Graph(4)
+	g.addEdge(0, 1) 
+	g.addEdge(0, 2) 
+	g.addEdge(1, 2) 
+	g.addEdge(2, 0) 
+	g.addEdge(2, 3) 
+	g.addEdge(3, 3)
+	print(g.graph)
+	g.dfs(0, 0)

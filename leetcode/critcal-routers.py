@@ -1,4 +1,3 @@
-# Articulation point detection
 from collections import defaultdict
 
 class Graph:
@@ -38,8 +37,6 @@ class Graph:
 					ap[u]= 1
 			elif v != parent[u]:
 				low[u] = min(low[u], disc[v])
-
-				
 
 	def dfs(self):
 		visited = [0]*self.n
