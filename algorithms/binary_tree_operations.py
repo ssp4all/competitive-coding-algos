@@ -97,8 +97,8 @@ def reverse_tree(node):
 	if node == None:
     	return None
                
-    le = self.invertTree(node.left)
-    ri = self.invertTree(node.right)
+    le = reverse_tree(node.left)
+    ri = reverse_tree(node.right)
     # print(le, ri)
     node.left = ri
     node.right = le
