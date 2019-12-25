@@ -1,8 +1,9 @@
 # https://leetcode.com/problems/most-common-word/
+import string
 class Solution:
     def mostCommonWord(self, p: str, banned: List[str]) -> str:
         d = dict()
-        p = p.translate(str.maketrans(',', ' ', "!?';."))         
+        p = p.translate(str.maketrans(',', ' ', string.punctuation))         
         p = p.split()
         print(p)
         for i in p:  

@@ -10,7 +10,7 @@ def bsearch(arr, target):
             left = mid + 1
         else:
             right = mid
-    return right
+    return right if arr[right] == target else -1
     # x = float('inf')
 
 
