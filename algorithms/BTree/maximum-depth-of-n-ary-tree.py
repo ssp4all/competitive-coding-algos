@@ -9,6 +9,8 @@ class Node:
 class Solution:
     def maxDepth(self, root: 'Node') -> int:
         if not root: return 0
-        if all(not child for child in root.children): return 1
+        # if all(not child for child in root.children): return 1
+        if not root.children: return 1
+
         # print(root.children)
         return 1 + max(self.maxDepth(child) for child in root.children)
