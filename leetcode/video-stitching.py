@@ -1,6 +1,16 @@
 # https://leetcode.com/problems/video-stitching/
 class Solution:
     def videoStitching(self, clips: List[List[int]], T: int) -> int:
+        start, end, ans = -1, 0, 0
+        for i, j in sorted(clips):
+            if start > T or i >= start: break
+            elif start < i <= end:
+                ans, start = ans + 1, end
+            end = max(end, j)
+        return ans if end >= T else -1
+           
+class Solution:
+    def videoStitching(self, clips: List[List[int]], T: int) -> int:
         if not clips: return -1
         ans = 0
         n = len(clips)

@@ -5,7 +5,7 @@ class Solution:
         temp = []
         n = len(s)
         for i in range(n):
-            while temp != [] and s[i] in temp:
+            while temp and s[i] in temp:
                 temp.pop(0) 
             temp.append(s[i])
             ans = max(ans, len(temp))

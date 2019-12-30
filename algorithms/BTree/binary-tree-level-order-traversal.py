@@ -25,3 +25,33 @@ class Solution:
             return levels
         dfs(root, 0)
         return levels
+
+"""My code"""
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        if not root: return root
+        levels = [[root.val]]
+        depth = 0
+        
+        def bfs(root, depth, levels):
+            if not root or (not root.left and not root.right):    return
+            
+            if len(levels) <= depth:
+                levels.append([])
+            if root.left:   
+                levels[depth].append(root.left.val)
+            if root.right:
+                levels[depth].append(root.right.val)
+            bfs(root.left, depth + 1, levels)
+            bfs(root.right, depth + 1, levels)
+        bfs(root, 1, levels)
+        return levels
+            
+                
