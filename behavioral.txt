@@ -1,0 +1,24 @@
+Behavioral Questions
+- Tell me about a time you had to solve a difficult problem? 
+Ans: CSI game event where developed android application failed.
+
+- What was the best thing you learned at your internship?
+Ans: Importance of team working
+
+- Help some one after your work?
+Ans: LexisNexis hackathon when I helped in developing front-end
+
+- Part of your work in Internship?
+Ans: Developed module for extraction of data from excel sheet to relational databases.
+
+- Tight deadlines?
+Ans: JustResume project
+
+- Creative way to overcome?
+
+
+Ask interviewer
+
+Q What metrics are used to measure the success of SDEs at? 
+Q Can we change team and how?
+Q When can I expect to hear from you?

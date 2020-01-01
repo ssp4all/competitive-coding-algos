@@ -24,10 +24,6 @@ class Solution:
 				elif root.left:
 					rightBoundary(root.left)
 					print(root.val)
-					
-
-
-			
 			
 		if not root: return root
 		print(root.val)
