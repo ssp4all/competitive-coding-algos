@@ -28,7 +28,6 @@ class Solution:
                         for n in neigh:
                             if n not in visited:
                                 que.append((n, j+1))
-                        
             return 0
         d = built_dict(wordlist)
         return bfs(wordlist, start, end, d)

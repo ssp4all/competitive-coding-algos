@@ -65,4 +65,12 @@ Problems solved
 - * Top-k-frequent-words
 - Favorite Genre
 - Word ladder
+- custom-sort-string and custom-sort-array
+
+"Happy New Year, keep scrolling ;)"
+01/01
+- Roman to int
+- Top k freq elements
+- Subtree of another tree
+- Sum of two int
 - 

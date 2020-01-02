@@ -13,11 +13,14 @@ songGenres = {
    "Pop":     ["song5", "song6"],
    "Jazz":    ["song8", "song9"]
 }
+
 s2g = {}
 for i in songGenres.keys():
 	for j in songGenres[i]:
 		s2g[j] = i
+
 ans = defaultdict(list)
+
 for i in userSongs:
 	freq = defaultdict(int)
 	for j in userSongs[i]:
@@ -25,8 +28,8 @@ for i in userSongs:
 	for z in freq:
 		if freq[z] == max(freq.values()):
 			ans[i].append(z)
-	if len(ans[i]) == 0:
-		ans[i] += freq.keys()
+	# if len(ans[i]) == 0:
+	# 	ans[i] += freq.keys()
 print(ans)
 
 

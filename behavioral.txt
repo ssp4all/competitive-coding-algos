@@ -15,7 +15,7 @@ Ans: Developed module for extraction of data from excel sheet to relational data
 Ans: JustResume project
 
 - Creative way to overcome?
-
+Designed game for MAITRI Diwali festival-lucky door
 
 Ask interviewer
 
