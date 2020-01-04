@@ -68,9 +68,29 @@ Problems solved
 - custom-sort-string and custom-sort-array
 
 "Happy New Year, keep scrolling ;)"
+
 01/01
 - Roman to int
 - Top k freq elements
 - Subtree of another tree
 - Sum of two int
+- Video buffer
+
+02/01
+- Find the celebrity
+- 3sum (pending)
+- Max product of word length
+- Hamming dist
+- Form a no (DP)
+
+03/01
+- Cycle in LL
+- Max len of pair chain
+- Dec to bin and vice-versa
+- Happy Number
+- LL cycle 2
+- Intersection-of-two-arrays-ii
+- intersection-of-three-sorted-arrays
+
+04/01
 - 

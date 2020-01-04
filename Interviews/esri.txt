@@ -1,0 +1,13 @@
+Environmental Systems Research Institute
+
+ geographic information science
+
+ the term GIS describes any information system that integrates, stores, edits, analyzes, shares and displays geographic information for informing decision making.
+
+  ArcGIS components:
+  - ArcReader
+  - ArcView
+  - ArcEditor
+  - ArcGIS pro will replace ArcMap
+  - ArcCatalog is the data management application
+  
