@@ -41,6 +41,19 @@ def diameter(node):
 
 	return max(lh+rh+1, max(ld, rd))
 
+	"""Optimized"""
+	class Solution:
+	    def diameterOfBinaryTree(self, root: TreeNode) -> int:
+	        if not root: return 0
+	        self.ans = 0
+	        def calc(root):
+	            if not root: return 0
+	            lh = calc(root.left)
+	            rh = calc(root.right)
+	            self.ans = max(self.ans, lh+rh+1)
+	            return max(lh, rh) + 1
+	        calc(root)
+	        return self.ans - 1
 
 def calc_height(node):
 	if node == None:
@@ -91,6 +104,16 @@ def LCA_for_BST(node, n1, n2):
 		return LCA_for_BST(node.right, n1, n2)
 
 	return node
+
+	"""Iterative"""
+	while root:
+		if p.val < root.val and q.val < root.val:
+			root = root.left
+		elif p.val > root.val and q.val > root.val:
+			root = root.right
+		else:
+			return root
+	
 
 def reverse_tree(node):
 	"""Reverse a binary tree """

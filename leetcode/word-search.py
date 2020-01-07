@@ -1,6 +1,6 @@
 https://leetcode.com/problems/word-search
 
-from copy import deepcopy
+# from copy import deepcopy
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         if not board: return 0

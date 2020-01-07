@@ -11,7 +11,7 @@ class Solution:
         cur = head
         prev = None
         # print(type(cur))
-        while cur != None:
+        while cur:
             next = cur.next
             cur.next = prev
             prev = cur

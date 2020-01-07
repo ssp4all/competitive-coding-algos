@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/k-closest-points-to-origin/solution/
+https://leetcode.com/problems/k-closest-points-to-origin/solution/
 import heapq
 def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         heap = []

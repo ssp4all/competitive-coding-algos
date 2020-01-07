@@ -91,6 +91,18 @@ Problems solved
 - LL cycle 2
 - Intersection-of-two-arrays-ii
 - intersection-of-three-sorted-arrays
+- Contains duplicates
 
 04/01
-- 
+- Largest No
+- * Word break
+- Lowest-common-ancestor-of-a-binary-search-tree
+- Binary-tree-right-side-view
+
+05/01
+- Remove element (in-place) from array and LL
+- Remove-duplicates-from-sorted-array
+- Valid mountain array
+- Task schedular
+- Pattern Matching
+

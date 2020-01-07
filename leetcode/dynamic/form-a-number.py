@@ -1,3 +1,5 @@
+
+Numbers of way to form a number N using K i.e.(1, 2, ...k)
 def count(arr, k, n):
 	if n == 0:
 		return 1

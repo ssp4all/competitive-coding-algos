@@ -1,5 +1,7 @@
 """
-Given a 2d array in which each row is sorted and rotated, you need to come up with an algorithm which efficiently sort the entire 2d matrix in descenting order.
+Given a 2d array in which each row is sorted and rotated, 
+you need to come up with an algorithm which efficiently 
+sort the entire 2d matrix in descenting order.
 
 eg:
 input: arr[][] = {

@@ -68,7 +68,7 @@ class Solution:
     def heap_sort(self):
         """Sort given array using HEAP sort """
         n = len(self.sorting_array)
-        for i in range((n/2)-1, -1, -1):
+        for i in range((n//2)-1, -1, -1):
             self.heapify(n, i)
             
         for i in range(n-1, -1, -1):
