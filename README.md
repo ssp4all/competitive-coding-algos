@@ -106,3 +106,17 @@ Problems solved
 - Task schedular
 - Pattern Matching
 
+08/01
+- kth-smallest-element-in-a-sorted-matrix (revise)
+- Surrounded region
+- Merge k-sorted LL
+- find-all-numbers-disappeared-in-an-array
+
+09/01
+- shortest-unsorted-continuous-subarray
+- Rotate List
+
+10/01
+- Flood Fill
+- Island perimeter
+- 

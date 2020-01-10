@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/group-anagrams
+https://leetcode.com/problems/group-anagrams
 from collections import defaultdict
 
 class Solution:

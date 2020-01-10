@@ -1,4 +1,28 @@
-# https://leetcode.com/problems/longest-common-prefix/submissions/
+https://leetcode.com/problems/longest-common-prefix/submissions/
+
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if not strs:
+            return ""
+        # sorting
+        s1 = min(strs)
+        s2 = max(strs)
+        for i, c in enumerate(s1):
+            if c != s2[i]:
+                return s1[:i]
+        return s1
+
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if not strs: return ""
+        prefix = strs[0]
+        for s in strs:
+            while s.find(prefix):
+                prefix = prefix[:-1]
+                if not prefix: return ""
+        return prefix
+
+        
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         if strs == []:  return ""
@@ -60,10 +84,7 @@ class Trie:
         
 class Solution:
     def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
+        
         if not strs:
             return ''
         T = Trie()

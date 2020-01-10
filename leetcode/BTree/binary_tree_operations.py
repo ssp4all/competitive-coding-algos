@@ -69,12 +69,12 @@ def calc_height(node):
 	# else: 
 	# 	return 1 + rh
 
-def preorder(node):
+def inorder(node):
 	if node == None:
 		return
-	preorder(node.left)
+	inorder(node.left)
 	print(node.data)
-	preorder(node.right)
+	inorder(node.right)
 
 
 def LCA(node, n1, n2):
