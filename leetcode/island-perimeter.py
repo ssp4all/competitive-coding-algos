@@ -36,7 +36,7 @@ class Solution:
             dfs(u, v+1)
             dfs(u, v-1)
             
-            grid[u][v] = 2
+            # grid[u][v] = 2
             return
         
         row = len(grid)

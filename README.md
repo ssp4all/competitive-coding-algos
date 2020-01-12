@@ -78,10 +78,10 @@ Problems solved
 
 02/01
 - Find the celebrity
-- 3sum (pending)
+- 3sum
 - Max product of word length
 - Hamming dist
-- Form a no (DP)
+- Form a no (DP) **
 
 03/01
 - Cycle in LL
@@ -104,7 +104,7 @@ Problems solved
 - Remove-duplicates-from-sorted-array
 - Valid mountain array
 - Task schedular
-- Pattern Matching
+- Pattern Matching **
 
 08/01
 - kth-smallest-element-in-a-sorted-matrix (revise)
@@ -119,4 +119,11 @@ Problems solved
 10/01
 - Flood Fill
 - Island perimeter
+- convert-sorted-array-to-binary-search-tree
+
+11/01
+- shortest subarray with sum atleast k **
+- Maximum or count numbers of subarray-sum-equals-k
+
+12/01
 - 
