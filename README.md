@@ -122,8 +122,15 @@ Problems solved
 - convert-sorted-array-to-binary-search-tree
 
 11/01
-- shortest subarray with sum atleast k **
+- shortest subarray with sum atleast k ** (only +ve's)
 - Maximum or count numbers of subarray-sum-equals-k
 
 12/01
+- Pivot index
+- Subarray prod less than K (+ve's)
+- Maximum-product-subarray
+
+13/01 and 14/01
+- Battleship on a board
+- merge-sorted-array
 - 

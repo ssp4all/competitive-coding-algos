@@ -8,7 +8,8 @@ class Solution:
         for i in range(len(s)):
             for w in words:
                 print(w, s[i-len(w)+1:i+1])
-                if w == s[i-len(w)+1:i+1] and (d[i-len(w)] or i-len(w) == -1):
+                if w == s[i-len(w)+1:i+1] \
+                	and (d[i-len(w)] or i-len(w) == -1):
                     d[i] = True
         return d[-1]
     
