@@ -133,4 +133,17 @@ Problems solved
 13/01 and 14/01
 - Battleship on a board
 - merge-sorted-array
-- 
+
+15/01
+- Two Sum-4
+
+16/01
+- letter-combinations-of-a-phone-number
+
+17/01
+- Distinct islands
+- Walls and gates
+- Container with most water
+
+18/01
+- string-compression

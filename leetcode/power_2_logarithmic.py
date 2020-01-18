@@ -12,3 +12,4 @@ def power(n):
 	# return x
 x = power(6)
 print(x)
+

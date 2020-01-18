@@ -1,19 +1,23 @@
-https://leetcode.com/problems/surrounded-regions
+https://leetcode.com/problems/surrounded-regions/
 
 class Solution:
     def solve(self, board: List[List[str]]) -> None:
+        """
+        Do not return anything, modify board in-place instead.
+        """
+        if not board: return 
+        row = len(board)
+        col = len(board[0])
         
-        if not any(board): return
-
-        m, n = len(board), len(board[0])
-        save = [ij for k in range(m+n) \
-                for ij in ((0, k), (m-1, k), (k, 0), (k, n-1))]
+        que = []
+        for k in range(row+col):
+            for (i, j) in [(0, k), (k, 0), (row-1, k), (k, col-1)]:
+                que.append((i, j))
+        while que:
+            (i, j) = que.pop()
+            if 0<= i < row and 0<= j < col and board[i][j] == "O":
+                board[i][j] = "@"
+                que += ((i+1, j), (i-1, j), (i, j-1), (i, j+1))
         
-        while save:
-            i, j = save.pop()
-            if 0 <= i < m and 0 <= j < n and board[i][j] == 'O':
-                board[i][j] = 'S'
-                save += (i, j-1), (i, j+1), (i-1, j), (i+1, j)
-
-        board[:] = [['XO'[c == 'S'] for c in row] for row in board]
+        board[:] = [["XO"[board[i][j] == "@"] for j in range(col)]for i in range(row)]
         
