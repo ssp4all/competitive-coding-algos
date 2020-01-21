@@ -12,7 +12,6 @@ class Solution:
             sumi = 0
             for j in range(i, n):
                 sumi += nums[j]
-                # print(sumi)
                 if k == 0 and (j-i+1)>=2 and sumi == k:   return 1
                 elif k != 0 and (sumi % k) == 0 and (j-i+1)>=2:
                     return 1
