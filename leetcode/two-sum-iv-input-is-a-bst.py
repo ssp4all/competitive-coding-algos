@@ -26,7 +26,7 @@ class Solution:
         return 0
         
 
-https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
 class Solution:
     def twoSum(self, nums: List[int], k: int) -> List[int]:

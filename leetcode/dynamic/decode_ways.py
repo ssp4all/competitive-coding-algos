@@ -1,4 +1,5 @@
-# https://leetcode.com/problems/decode-ways/submissions/
+https://leetcode.com/problems/decode-ways/submissions/
+
 class Solution:
     def numDecodings(self, s: str) -> int:
         n = len(s)
@@ -14,5 +15,6 @@ class Solution:
                 
             if 10 <= int(s[i-2:i]) <= 26:
                 dp[i] += dp[i-2]
-            # print(dp)
         return dp[-1]
+
+        

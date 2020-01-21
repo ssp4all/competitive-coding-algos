@@ -147,3 +147,15 @@ Problems solved
 
 18/01
 - string-compression
+- Count and say
+- koko-eating-bananas
+
+19/01
+- Decode ways
+- Min spanning cities (prim's algo)
+
+20/01
+- LRU design
+- set matrix zeroes
+- Cont subarray sum (revise)
+- 

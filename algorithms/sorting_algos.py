@@ -19,8 +19,8 @@ class Solution:
         # for j in range(n2):
         #     right[j] = self.sorting_array[q+j+1]
         # print(left, right)
-        left.append(999999999)
-        right.append(999999999)
+        left.append(float('inf'))
+        right.append(float('inf'))
         
         i, j = 0, 0
         for k in range(p, r+1):

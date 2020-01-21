@@ -10,7 +10,7 @@ class Solution:
         col = len(board[0])
         
         que = []
-        for k in range(row+col):
+        for k in range(max(row, col)):
             for (i, j) in [(0, k), (k, 0), (row-1, k), (k, col-1)]:
                 que.append((i, j))
         while que:
