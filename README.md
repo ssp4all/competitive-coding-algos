@@ -161,4 +161,13 @@ Problems solved
 - count-sub-arrays-sum-divisible-k (Not done)
 
 21/01
-- 
+- Grumpy shopkeeper
+- Hopping frog
+
+22/01
+- Trie 
+
+23/01
+- Generate paranthesis
+- Get all subdirectories and files-recursively
+- longest-increasing-subsequence

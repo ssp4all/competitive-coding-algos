@@ -20,7 +20,6 @@ class Solution:
             else:
                 for letter in d[ND[0]]:
                     backtrack(comb+letter, ND[1:])
-        
         op = []
         if digits:
             backtrack("", digits)
