@@ -21,8 +21,7 @@ class Solution:
                 for letter in d[ND[0]]:
                     backtrack(comb+letter, ND[1:])
         op = []
-        if digits:
-            backtrack("", digits)
+        backtrack("", digits)
         return op
 
 class Solution:

@@ -171,3 +171,10 @@ Problems solved
 - Generate paranthesis
 - Get all subdirectories and files-recursively
 - longest-increasing-subsequence
+
+24/01
+- Max consecutive ones
+
+25/01
+- Longest increasing seq (DP)
+- median-of-two-sorted-arrays

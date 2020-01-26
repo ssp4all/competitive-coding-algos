@@ -12,5 +12,6 @@ def get_all_files(dir):
 	return files
 
 
-dir = "/home/suraj"
+dir = "."
 x = get_all_files(dir)
+print(x)
