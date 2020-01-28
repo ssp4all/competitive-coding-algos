@@ -33,7 +33,7 @@ class Solution:
             memo[previ + 1][cur] = max(taken, nottaken)
             return memo[previ + 1][cur]        
         return helper(-1, 0)
-        
+
 DP
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
@@ -49,6 +49,7 @@ class Solution:
             dp[i] = mv + 1
             ans = max(ans, dp[i])
         return ans
+        
 Find the number of longest-increasing-subsequence
 eg., 12435->(1,2,4,5) and (1,2,3,5)
 

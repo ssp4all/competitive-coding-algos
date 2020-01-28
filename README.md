@@ -176,5 +176,17 @@ Problems solved
 - Max consecutive ones
 
 25/01
-- Longest increasing seq (DP)
+- Numbers of longest increasing seq (DP)
 - median-of-two-sorted-arrays
+
+26/01 (Happy Republic Day)
+- String to int
+- integer-to-english-words
+- Gave Blackrock 
+
+27/01
+- Game of life
+- Pacific and atlantic water flow
+
+28/01
+- 

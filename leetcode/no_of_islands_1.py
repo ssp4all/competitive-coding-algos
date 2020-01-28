@@ -1,6 +1,6 @@
 https://leetcode.com/problems/number-of-islands/submissions/
 
-- Number of distrinct islandsa and also count too
+- Number of distrinct islands and also count too
 
 class Solution:
     def numDistinctIslands(self, grid: List[List[int]]) -> int:
@@ -29,8 +29,8 @@ class Solution:
                     ans += 1
                     if shape:
                         shapes.add(tuple(shape))
-                        print(shapes)
-        print(ans)
+                        # print(shapes)
+        # print(ans)
         return len(shapes)
 
 class Solution:
@@ -59,6 +59,8 @@ class Solution:
                     ans += 1
         return ans
 
+Recursive dfs
+
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid: return 0
@@ -83,3 +85,30 @@ class Solution:
         self.dfs(u, v-1, grid)
         self.dfs(u+1, v, grid)
         self.dfs(u-1, v, grid)
+
+BFS  iterative
+
+from collections import deque
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        if not grid or not grid[0]: return 0
+        ans = 0
+        row = len(grid)
+        col = len(grid[0])
+        que = deque()
+        seen = set()
+        for i in range(row):
+            for j in range(col):
+                if grid[i][j] == "1" and (i, j) not in seen:
+                    ans += 1
+                    que.append((i, j))
+                    while que:
+                        x, y = que.popleft()
+                        
+                        if 0 <= x < row and 0 <= y < col and grid[x][y] == "1" \
+                                and (x, y) not in seen:
+                            seen.add((x, y))    
+                            que.extend([(x, y+1), (x, y-1), (x+1, y), (x-1, y)])
+        return ans
+                            
+                        
