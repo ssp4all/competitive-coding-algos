@@ -189,4 +189,17 @@ Problems solved
 - Pacific and atlantic water flow
 
 28/01
-- 
+- Sieve of Eratosthenes (prime no < n)
+
+29/01
+- Implemented heappop and heappush ops
+- Nth fibonacci number, index of nth fibo, golden ration 
+
+30/01
+- Meeting rooms using heap
+- Btree populate
+- Paint houses
+- Permutations-1, permutation-2
+
+31/01
+- Next permutation

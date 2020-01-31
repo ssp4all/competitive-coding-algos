@@ -53,3 +53,12 @@ def fib(N):
 def fib(self, N):
 	golden_ratio = (1 + 5 ** 0.5) / 2
 	return int((golden_ratio ** N + 1) / 5 ** 0.5)
+
+Find index of a nth fibo term in constant time
+
+def find_nth_fibo(n):
+    if (n < 2):
+        return n
+    r5 = math.sqrt(5)
+    return (0.5 + math.log( r5 * n) // math.log( (1 + r5) * 0.5))  
+  

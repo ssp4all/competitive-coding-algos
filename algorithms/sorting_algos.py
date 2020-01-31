@@ -98,8 +98,32 @@ class Solution:
                 else:
                     break                            
             self.sorting_array[i+1] = key
-            
-        # pass
+
+
+    def heappush(heap, val):
+        heap.insert(0, val)
+        n = len(heap)
+        heapify(heap, n, 0)
+
+    def heappop(heap):
+        if not heap: return -1
+        heap[0], heap[-1] = heap[-1], heap[0]
+        x = heap.pop()
+        n = len(heap)
+        heapify(heap, n, 0)
+        return x
+    
+    def heapsort(ip):
+        heap = []
+        for i in ip:
+            heappush(heap, i)
+            print(i, heap)
+        while heap:
+            x = heappop(heap)
+            print(x, end=" ")
+
+
+
 
 if __name__ == "__main__":
     A = [6, 5, 4, 3, 2, 1]

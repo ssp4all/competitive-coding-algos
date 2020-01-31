@@ -15,3 +15,19 @@ class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
         if n == 0: return 0
         return (n & -n) == n
+
+
+Count total 1 bits for all numbers <= n
+
+https://leetcode.com/problems/counting-bits/
+
+class Solution:
+    def countBits(self, num: int) -> List[int]:
+        if not num: return [0]
+        dp = [0] * (num + 1)
+        os = 1
+        for i in range(1, num + 1):
+            if os*2 == i:
+                os *= 2
+            dp[i] = dp[i - os] + 1
+        return dp
