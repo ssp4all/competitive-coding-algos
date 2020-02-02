@@ -23,11 +23,8 @@ class Solution:
             if root.right:
                 helper(root.right, depth + 1)
         
-        
         helper(root.left, 1)
         helper(root.right, 1)
-        
-        # print(levels)
         
         for i in range(len(levels)):
             if len(levels[i]) == 1:

@@ -200,6 +200,15 @@ Problems solved
 - Btree populate
 - Paint houses
 - Permutations-1, permutation-2
+- Count one bits (DP)
+- 
 
 31/01
 - Next permutation
+- Combination
+- Sets
+
+01/02
+- Find duplicates in a tree
+- Repeated string match
+- Search suggestion system

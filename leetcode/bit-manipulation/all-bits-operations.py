@@ -21,6 +21,16 @@ Count total 1 bits for all numbers <= n
 
 https://leetcode.com/problems/counting-bits/
 
+def count(no):
+    c = 0
+    while no:
+        c += no & 1
+        no >>= 1
+    return c
+
+z = count(3)
+print(z)
+
 class Solution:
     def countBits(self, num: int) -> List[int]:
         if not num: return [0]
@@ -31,3 +41,14 @@ class Solution:
                 os *= 2
             dp[i] = dp[i - os] + 1
         return dp
+
+https://leetcode.com/problems/reverse-bits/
+
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        res = 0
+        for _ in range(32):
+            res = (res << 1) + (n & 1)
+            # print(res)
+            n >>= 1
+        return res

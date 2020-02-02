@@ -45,3 +45,39 @@ class Solution:
         used = [0]*n
         bt([], n, used)
         return ans
+
+Next permutations
+
+https://leetcode.com/problems/next-permutation/
+
+class Solution:
+    def nextPermutation(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        if not nums: return nums
+        n = len(nums)
+        left = n - 2
+        
+        def reverse(ptr):
+            r = n - 1
+            while ptr < r:
+                nums[ptr], nums[r] = \
+                    nums[r], nums[ptr]
+                r -= 1
+                ptr += 1
+        
+        while left > -1:
+            if nums[left] < nums[left + 1]:
+                right = left + 1
+                while right < n and nums[left] < nums[right]:
+                    right += 1
+                right -= 1
+                nums[left], nums[right] = \
+                    nums[right], nums[left]
+                reverse(left + 1)
+                return 
+            left -= 1
+        reverse(0)
+        return 
+            

@@ -24,9 +24,9 @@ class Solution:
             if n == 0 and isvalid(a) == 1:
                 ans.append(a)
             else:
-                s = ['(', ')']
                 for b in s:
                     backtrack(a+b, n-1)
+        s = ['(', ')']
         backtrack("", 2*n)
         return ans
 
