@@ -69,13 +69,71 @@ def calc_height(node):
 	# else: 
 	# 	return 1 + rh
 
-def inorder(node):
-	if node == None:
-		return
-	inorder(node.left)
-	print(node.data)
-	inorder(node.right)
 
+
+
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        if not root:    return []
+        op = []
+        stack = []
+        cur = root
+        while stack or cur:
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+            cur = stack.pop()
+            op.append(cur.val)
+            cur = cur.right
+        return op
+
+	    def inorder(node):
+			if node == None:
+				return
+			inorder(node.left)
+			print(node.data)
+			inorder(node.right)
+
+class Solution:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
+        if not root:    return root
+        s, op = [root], []
+        while s:
+            root = s.pop()
+            op.append(root.val)
+            if root.left:
+                s.append(root.left)
+            if root.right:
+                s.append(root.right)
+        return op[::-1]
+        
+        def postorderTraversal(root):
+            if not root:    return
+            postorderTraversal(root.left)
+            postorderTraversal(root.right)
+            op.append(root.val)
+        postorderTraversal(root)
+        return op
+       
+class Solution:
+	def preorder(node):
+		if not node:
+			return
+		print(node.data)
+		preorder(node.left)
+		preorder(node.right)
+
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        if not root:    return
+        op, stack = [], [root]
+        cur = root
+        while cur or stack:
+            cur = stack.pop()
+            if not cur: continue
+            op.append(cur.val)
+            stack.append(cur.right)
+            stack.append(cur.left)
+        return op
 
 def LCA(node, n1, n2):
 	""" Lowest common ancestor of a given two nodes"""
@@ -136,7 +194,3 @@ if __name__ == '__main__':
 	root.right.right = node(5)
 
 	reverse_tree(root)
-
-	# x = calc_height(root)
-	# print(x)
-	

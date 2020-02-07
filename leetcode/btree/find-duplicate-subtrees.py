@@ -21,8 +21,8 @@ class Solution:
                 ans.append(temp)
             else:
                 subtrees.add(tuple(temp))
-            # helper(root.left)
-            # helper(root.right)   
+            helper(root.left)
+            helper(root.right)   
         helper(root.left)
         helper(root.right)
         print(ans)

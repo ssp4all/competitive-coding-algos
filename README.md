@@ -212,3 +212,14 @@ Problems solved
 - Find duplicates in a tree
 - Repeated string match
 - Search suggestion system
+
+02/02
+- BST insertion and deletion
+- Merge and delete intervals
+
+03/02
+- Sudoku validate and solver
+
+06/02
+- Tree traversal iteratively (pre, in, and post)
+- 

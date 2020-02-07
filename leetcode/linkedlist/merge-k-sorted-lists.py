@@ -30,4 +30,23 @@ class Solution:
             cur.next = ListNode(i)
             cur = cur.next
         return head.next
-            
+
+from heapq import heappush, heappop
+
+class Solution:
+    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+        if not lists: return None
+        heap = []
+        for l in lists:
+            if l:
+                heappush(heap, (l.val, id(l), l))
+        head = cur = ListNode(0)
+        
+        while heap:
+            val, ind, node = heappop(heap)
+            cur.next = node
+            cur = cur.next
+            node = node.next
+            if node:
+                heappush(heap, (node.val, id(node), node))
+        return head.next

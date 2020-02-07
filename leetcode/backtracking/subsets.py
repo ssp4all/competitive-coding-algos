@@ -16,6 +16,8 @@ class Solution:
 
 https://leetcode.com/problems/subsets-ii/
 
+Subsets with duplicates
+
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         if not nums: return nums
