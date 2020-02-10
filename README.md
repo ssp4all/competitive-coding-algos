@@ -222,4 +222,14 @@ Problems solved
 
 06/02
 - Tree traversal iteratively (pre, in, and post)
+- Peeking iterator
+
+07/02
+- Min path sum
+- Sparse mat multiplication
+- Jump game
+
+09/02
+- Broken cal
+- Remove digits
 - 

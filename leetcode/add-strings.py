@@ -2,6 +2,24 @@ https://leetcode.com/problems/add-strings/
 
 class Solution:
     def addStrings(self, num1: str, num2: str) -> str:
+        if not num1 or not num2: return num1 or num2
+        op = []
+        carry = 0
+        num1, num2 = list(num1), list(num2)
+        
+        while len(num1) > 0 or len(num2) > 0:
+            n1 = (ord(num1.pop()) - ord("0")) if len(num1) > 0 else 0
+            n2 = (ord(num2.pop()) - ord("0")) if len(num2) > 0 else 0
+            temp = n1 + n2 + carry
+            op.append(temp % 10)
+            carry = temp // 10
+            
+        if carry:   op.append(carry)
+
+        return "".join([str(i) for (i) in op[::-1]])
+         
+class Solution:
+    def addStrings(self, num1: str, num2: str) -> str:
         ip1 = list(map(int, list(num1)))
         ip2 = list(map(int, list(num2)))
         
@@ -39,4 +57,4 @@ class Solution:
             
             
             
-            
+        

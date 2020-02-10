@@ -21,3 +21,22 @@ class Solution:
         
         FF(sr, sc, image[sr][sc], nc)
         return image
+
+from collections import deque
+class Solution:
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, nc: int) -> List[List[int]]:
+        sp = image[sr][sc]
+        if not image or sp == nc or not image[0]: return image
+        row = len(image)
+        col = len(image[0])
+        
+        queue = deque([(sr, sc)])
+        while queue:
+            x, y = queue.popleft()
+            image[x][y] = nc
+            for (a, b) in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+                nx, ny = x + a, y + b 
+                if 0 <= nx < row and 0 <= ny < col and \
+                    image[nx][ny] == sp:
+                    queue.append((nx, ny))
+        return image

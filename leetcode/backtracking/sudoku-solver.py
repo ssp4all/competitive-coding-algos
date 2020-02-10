@@ -10,7 +10,7 @@ class Solution:
         
         def check(row, col, ch):
             for i in range(9):
-                if board[row][i] == ch: return 0
+                if board[row][i] == ch: return 0 
                 if board[i][col] == ch: return 0
                 nr, nc = (3 * (row // 3) + (i // 3)), (3 * (col // 3) + i % 3)
                 if board[nr][nc] == ch: return 0
