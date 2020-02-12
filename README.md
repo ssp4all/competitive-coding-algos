@@ -232,4 +232,9 @@ Problems solved
 09/02
 - Broken cal
 - Remove digits
+
+10/02
+- Find a element in row sorted matrix or column sorted
+
+11/02
 - 

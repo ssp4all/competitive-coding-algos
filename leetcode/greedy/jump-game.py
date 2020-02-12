@@ -8,11 +8,9 @@ class Solution:
         def helper(cur):
             if cur >= n - 1:
                 return 1
-        
             for i in range(1, nums[cur] + 1):
                 if helper(cur + i):
                     return 1
-        
             return 0
         return helper(0)
 
