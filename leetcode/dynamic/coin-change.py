@@ -16,7 +16,25 @@ class Solution:
         return ans[-1] if ans[-1] != float('inf') else -1
             
         
-        
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        if not coins:   return -1 
+        if not amount: return 0
+        coins.sort()
+        cache = {}
+        def helper(amount):
+            if amount in cache: return cache[amount]
+            if amount < 0 or amount == 0:
+                return 0
+            else:
+                mini = float('inf')
+                for i in coins:
+                    if i > amount:  break
+                    mini = min(mini, helper(amount - i) + 1)
+                cache[amount] = mini
+                return mini
+        x = helper(amount)
+        return x if x != float('inf') else -1
         
         
         

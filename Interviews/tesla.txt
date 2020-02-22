@@ -1,0 +1,29 @@
+Why are you interested in an internship at Tesla? 
+
+-> Tesla is market leader in EVs with goal to transition form fossile fuel based economy to sustainable energy based products. To be at the top of this market segment the engineers behind the product have to have out of box thinking and strong thoretical and practical knowledge. As a Computer Science student I have developed a good foundation of problem solving and algorithms overs the past years and now I want to leverage those skill to contribute towards the companies success at the same time learn from from peers to expand my skill-sets. For this purpose I think Tesla is a purfect place to use as well as to hone my skills. 
+
+
+If you could work on anything data-related at Tesla, what would it be, why and how 
+would you do it?
+-> I would love to work with Data Engineer - Data Analytics team. As Data has proven to be 21st century's fuel, it is equally necessary to utilize it to make smart business decision. Joining this team will enable me work on Enterprise Data Warehouse & BI platform within Tesla using various data & BI tools.
+
+Currently at NC State Univerisity I am pursuing a master's in Computer Science with specialization in Data Science track so I have taken courses such as Foundation of Data Science (statistics), Algorithms for business intelligence (Big data tools- Apache Spark, Kafka) and Data mining (Logistic models). All those courses, projects and internship have provided me with required skill-set to be part of this team.
+
+
+
+
+What is the accomplishment you are the most proud of?
+-> Winning my very first hackathon is the accomplishment I am most proud of because this the point where I get to know how a technology can be used to make a positive change in the society. 
+
+After my second year we had participated in team of 4 in the Hackathon organized by the NGO who work for poor child welfare where we developed an web-application using (not so cool) tech stack of PHP, Bootstrap. Our idea was to develope an application where all hotels in a certial location can volunteer to share their remainaing food which otherwise goes into the garbade. It was basically an CRUD application where hotels can add how much kg of food they want to share with NGO so after that NGOs can go to that hotel and distribute that food to childrens in need. 
+
+From that experience I get to learn about the importance of team working, reach of a technology and how technology can impact society. Overall from that point I got motivated and started playing with technology and becomes an avid learner.
+
+
+Can you share the piece of code you wrote that you are the most proud of (less than 100 lines)? 
+
+-> I had developed an terminal based debugging tool where I had used automation plus some Natural language proceesing to simplify programmer's work. So basically my application will extract any error thrown by a program on execution if there is any then it will search for all the possible solution over the StackOverflow website. All the possible solutions will be weighted as per their relevence to original error, numbers of upvotes it has received then top 5 solution will be presented on the terminal and all this solution will be terminal where use had performed a program execution so use do not have to leave working space and it helps in incresing productivity and less chances of distraction.
+
+I have shared link to one file where App.py which was used to design an interface for the solution. The main challenges I faced was while designing an user interface using a python library called URWID because desingning an good interface is far more important that the backend features. I aim was to keep it minial and user should be able to guess the feature rather than refering documentation for it.
+
+

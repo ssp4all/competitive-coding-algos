@@ -41,7 +41,7 @@ class Solution:
         for i in reversed(postorder):
             if i > h:   return 0
             while s and i < s[-1]:
-                l = s.pop()
+                h = s.pop()
             s.append(i)
         return 1
 
