@@ -36,16 +36,13 @@ class WordDictionary:
         def helper(cur, word):
             if not cur:   return 0
             if not word:
-                if cur.end:
-                    return 1
-                return 0
+                return cur.end:
+                   
             st = word[0]
             if st != ".":
                 w = cur.child.get(st)
                 x = helper(w, word[1:])
-                if x:
-                    return 1
-                return 0
+                return x
             else:
                 for w in cur.child.values():
                     x = helper(w, word[1:])

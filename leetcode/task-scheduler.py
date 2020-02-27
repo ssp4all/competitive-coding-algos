@@ -3,7 +3,7 @@ https://leetcode.com/problems/task-scheduler
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         if not tasks: return -1
-        xx = Counter(tasks)
+        # xx = Counter(tasks)
         map = [0]*26
         for i in tasks:
             map[ord(i) - ord('A')] += 1

@@ -42,3 +42,4 @@ class Solution:
             if slots <= 0 and dq:
                 return 0
         return slots == 0
+        
