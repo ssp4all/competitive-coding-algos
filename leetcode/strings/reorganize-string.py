@@ -37,9 +37,21 @@ class Solution:
                         if bt(ans + [i]):   return 1
                         ip[ind][1] += 1
                 return 0
-            
         op = []
         bt([])
-        # print(op)
         return "".join(op)
+
+class Solution:
+    def reorganizeString(self, s: str) -> str:
+        if not s:   return ""
+        n = len(s)
+        op = []
+        for c, x in sorted((s.count(x), x) for x in set(s)):
+            if c > (n + 1) / 2: return ""
+            op.extend(c * x)
+        # print(op)
+        ans = [None] * n
+        ans[::2], ans[1::2] = op[n//2:], op[:n//2]
+        return "".join(ans)
+             
         

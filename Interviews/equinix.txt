@@ -1,0 +1,23 @@
+Software testing
+- unit
+- integration
+
+TYpes of testing
+- White
+- Black
+- Gray
+
+Software developement methodology
+- Waterfall
+- Agile
+- RAD
+- Unified process
+- Scrum
+- Extreme programming
+
+Test runner in python
+- unittest
+- nose or nose2
+- pytest
+
+Continuous Integration/Continuous Deployment

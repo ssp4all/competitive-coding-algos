@@ -37,4 +37,4 @@ int main() {
 		if((pa+pb)<k)
 			printf("Lose\n");
 	}
-}ou
+}
