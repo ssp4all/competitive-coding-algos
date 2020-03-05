@@ -1,9 +1,9 @@
-def findMin(nums):
+def findMin(num):
     l = 0
-    n = len(nums)
+    n = len(num)
     r = n - 1
     while l < r:
-        if nums[l] < num[r]:
+        if num[l] < num[r]:
             return num[l]
         m = (l + r) // 2
         if num[m] >= num[l]:
