@@ -17,8 +17,8 @@ class Solution:
                     graph[i].add(j)
                     indegree[j] += 1
                     break
-                    
-            que = deque(list(filter(lambda t:(indegree[t] == 0), temp)))
+
+            que = deque(list(filter(lambda t: (indegree[t] == 0), temp)))
             # print(graph, que)
             ans = ""
             while que:

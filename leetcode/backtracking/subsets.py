@@ -34,4 +34,3 @@ class Solution:
                 bt(temp + [nums[i]], i+1)
         bt([], 0)      
         return ans
-                    

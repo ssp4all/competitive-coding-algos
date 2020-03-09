@@ -1,5 +1,10 @@
 https://leetcode.com/problems/restore-ip-addresses/
 
+
+"""
+Input: "25525511135"
+Output: ["255.255.11.135", "255.255.111.35"]
+"""
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         if not s: return []

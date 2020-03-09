@@ -44,5 +44,3 @@ class Solution:
                 h = s.pop()
             s.append(i)
         return 1
-
-        

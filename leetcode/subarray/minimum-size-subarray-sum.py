@@ -46,4 +46,4 @@ class Solution:
             if sum - k in d:
                 ans = max(ans, i - d[sum-k])
             d[sum] = i
-        return count
+        return ans

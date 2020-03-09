@@ -12,9 +12,9 @@ class BST:
         if not root:
             return node
         elif root.val > node.val:
-            root.left = insert(root.left, key)
+            root.left = insert(root.left, node)
         else:
-            root.right = insert(root, node)
+            root.right = insert(root.right, node)
         return root
     
     def find_min(root):
@@ -32,11 +32,11 @@ class BST:
         else:
             if not root.left:
                 temp = root.right
-                root = Node
+                root = None
                 return temp
             elif not root.right:
                 temp = root.left
-                root = Node
+                root = None
                 return temp
             else:
                 temp = find_min(root.right)
@@ -53,6 +53,7 @@ class BST:
             return search(root.left, node)
         else:
            return search(root.right, node)
+        return None
 
     def inorder(root):
         if not root:

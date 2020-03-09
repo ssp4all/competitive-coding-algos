@@ -19,5 +19,5 @@ class Solution:
             
             
             i += 1
-        return sat + ans        
+        return sat + ans
         

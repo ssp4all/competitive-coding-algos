@@ -28,7 +28,6 @@ class Solution:
                                 return 1
                             else:
                                 board[i][j] = "."
-                        
                     return 0
             return 1
         

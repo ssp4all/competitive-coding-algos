@@ -103,3 +103,35 @@ class Solution:
         # print(res)
         return res if len(res) == no else []
         
+
+Indegree
+
+
+class Solution:
+    def canFinish(self, no: int, pre: List[List[int]]) -> bool:
+        if not pre:
+            return 1
+
+        indegree = {i: 0 for i in range(no)}
+
+        g = defaultdict(set)
+        for i, j in pre:
+            g[i].add(j)
+            indegree[j] += 1
+
+        que = deque(
+            list(filter(lambda t: (indegree[t] == 0), indegree.keys())))
+        # print(que, g, indegree)
+        order = []
+        if not que:
+            return 0
+        while que:
+            v = que.popleft()
+            for x in g[v]:
+                indegree[x] -= 1
+                if indegree[x] == 0:
+                    que.append(x)
+            order.append(v)
+
+        # print(order)
+        return len(order) == no

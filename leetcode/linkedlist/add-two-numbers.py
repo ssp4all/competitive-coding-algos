@@ -57,4 +57,3 @@ class Solution:
             cur2 = (cur2.next if cur2 else None)
         return head.next
             
-            

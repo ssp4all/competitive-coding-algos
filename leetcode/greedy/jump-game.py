@@ -1,10 +1,30 @@
-https://leetcode.com/problems/jump-game/
+https: // leetcode.com/problems/jump-game/
+
 
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        if not nums: return -1
+        if not nums:
+            return 0
         n = len(nums)
-        
+        s = nums[0]
+        e = -1
+        for i in range(n):
+            if s >= n - 1:
+                return 1
+            if s < i and e < i:
+                return 0
+            if s < i:
+                s = e
+            e = max(e, i + nums[i])
+        return 1
+
+
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        if not nums:
+            return -1
+        n = len(nums)
+
         def helper(cur):
             if cur >= n - 1:
                 return 1
@@ -14,13 +34,17 @@ class Solution:
             return 0
         return helper(0)
 
+
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        if not nums:    return 0
+        if not nums:
+            return 0
         n = len(nums)
-        if n <= 1 and nums[0] == 0: return 1
-        if nums[0]  == 0:   return 0
-        
+        if n <= 1 and nums[0] == 0:
+            return 1
+        if nums[0] == 0:
+            return 0
+
         cur = nums[0]
         maxi = cur
         for i in range(1, n):
@@ -28,12 +52,12 @@ class Solution:
                 maxi = i + nums[i]
                 if maxi >= n - 1:
                     return 1
-                
+
             if cur == i:
                 cur = maxi
             if i >= cur and i != n - 1:
                 return 0
-            
+
         if maxi >= n - 1:
             return 1
         else:

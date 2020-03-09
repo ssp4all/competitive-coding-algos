@@ -25,7 +25,7 @@ class Solution:
         for i in range(k, n):
             heappushpop(heap, nums[i])
         return heappop(heap)
-
+        
 from heapq import *
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:

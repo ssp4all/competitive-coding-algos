@@ -1,7 +1,9 @@
 from sys import argv
 import string
+
+
 def find_pattern(file, pattern):
-    
+
     f = open(file, mode="r+")
     content = f.read().split("\n")
 
@@ -12,6 +14,7 @@ def find_pattern(file, pattern):
             op.append(line)
     print(op)
     f.close()
+
 
 if __name__ == "__main__":
     # print(argv)
