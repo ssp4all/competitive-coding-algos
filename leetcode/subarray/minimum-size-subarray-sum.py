@@ -47,3 +47,4 @@ class Solution:
                 ans = max(ans, i - d[sum-k])
             d[sum] = i
         return ans
+
