@@ -14,7 +14,7 @@ class Solution:
             y = min(temp, key=lambda x:abs(x-i))
             ans.append(abs(y-i))
         return ans
-        
+
 """More cool """
 class Solution:
     def shortestToChar(self, S: str, C: str) -> List[int]:

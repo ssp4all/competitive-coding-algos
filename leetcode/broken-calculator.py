@@ -13,5 +13,3 @@ class Solution:
             else:
                 y //= 2
         return ans + (x - y)
-            
-                

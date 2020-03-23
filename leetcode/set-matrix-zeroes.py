@@ -25,8 +25,4 @@ class Solution:
             if j in c:
                 for z in range(row):
                     matrix[z][j] = 0
-        
-        
-        
-        
-        
+                    

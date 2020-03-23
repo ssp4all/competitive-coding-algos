@@ -1,9 +1,9 @@
-Max possible meetings in a room 
+# Max possible meetings in a room
+
 
 def max_meeting(ip):
 	ans = 1
-	
-	ip.sort(key= lambda x:(x[1]))
+	ip.sort(key=lambda x: (x[1]))
     end = ip[0][1]
     n = len(ip)
     for i in range(1, n):

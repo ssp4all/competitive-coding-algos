@@ -1,14 +1,16 @@
-https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
-
 from heapq import *
+https: // leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+
+
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-        if not matrix: return -1
+        if not matrix:
+            return -1
         heap = [(row[0], i, 0) for i, row in enumerate(matrix)]
         print(heap)
         heapq.heapify(heap)
         print(heap)
-        
+
         ret = 0
         for _ in range(k):
             ret, i, j = heapq.heappop(heap)
@@ -16,16 +18,17 @@ class Solution:
                 print((matrix[i][j+1], i, j+1))
                 heapq.heappush(heap, (matrix[i][j+1], i, j+1))
         return ret
-        
+
+
 class Solution(object):
     def kthSmallest(self, matrix, k):
         lo, hi = matrix[0][0], matrix[-1][-1]
-        while lo<hi:
+        while lo < hi:
             mid = (lo+hi)//2
-            x=0
+            x = 0
             for row in matrix:
                 print(x)
-                x +=  bisect.bisect_right(row, mid) 
+                x += bisect.bisect_right(row, mid)
             # x = sum()
             print()
 

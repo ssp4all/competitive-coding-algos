@@ -9,7 +9,6 @@ class Solution:
             dic &= Counter(i)
         return dic.elements()
 
-
 class Solution:
     def commonChars(self, a: List[str]) -> List[str]:
 		cnt  = [float('inf')] * 26
