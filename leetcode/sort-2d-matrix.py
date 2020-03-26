@@ -19,7 +19,6 @@ output: {
 }
 """
 
-
 from functools import reduce
 input = [[41, 45, 20, 21], [1, 2, 3, 4], [30, 42, 43, 29], [16, 17, 19, 10]]
 length_of_sublist = len(input[0])

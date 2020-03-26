@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/valid-palindrome-ii
+
 class Solution(object):
     def validPalindrome(self, s):
         if not s: return 1
@@ -10,6 +11,4 @@ class Solution(object):
                 return t == t[::-1] or tt == tt[::-1]
             l += 1
             r -= 1
-        return 1
-            
-            
+        return 1            
