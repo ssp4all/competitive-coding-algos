@@ -14,19 +14,19 @@
 // [1,2,3],[2,3,4],[6,7,8].
 
 class Solution {
-    public boolean isNStraightHand(int[] hand, int w) {
-        int n = hand.length;
+    public boolean isNStraightHand(final int[] hand, final int w) {
+        final int n = hand.length;
         if (n <= 0 || w <= 0 || w > n)
             return false;
-        Map<Integer, Integer> m = new TreeMap<Integer, Integer>();
-        for (int i: hand){
+        final Map<Integer, Integer> m = new TreeMap<Integer, Integer>();
+        for (final int i: hand){
             m.put(i, m.getOrDefault(i, 0) + 1);
         }
         // System.out.println((m));
-        for (int i: m.keySet()){
+        for (final int i: m.keySet()){
             if (m.getOrDefault(i, 0) <= 0)
                 continue;
-            int st = m.get(i);
+            final int st = m.get(i);
             for (int j = i; j < i + w; ++j){
                 if (m.getOrDefault(j, 0) < st){
                     return false;
