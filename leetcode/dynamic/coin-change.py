@@ -49,3 +49,17 @@ class Solution:
         #     if  amount <= 0: break
         # print(amount, ans)
         # return ans if amount == 0 else -1
+
+Numbers of ways to form the amount
+
+class Solution:
+    def change(self, amt: int, coins: List[int]) -> int:
+        dp = [0] * (amt + 1)
+        dp[0] = 1
+        for c in coins:
+            for i in range(1, amt + 1):
+            
+                if i >= c:
+                    dp[i] += dp[i - c]
+        # print(dp)
+        return dp[-1]
