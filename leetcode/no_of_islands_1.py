@@ -110,5 +110,29 @@ class Solution:
                             seen.add((x, y))    
                             que.extend([(x, y+1), (x, y-1), (x+1, y), (x-1, y)])
         return ans
-                            
+
+# Latest 
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        if not grid or not grid[0]: return 0
+        r, c = len(grid), len(grid[0])
+        
+        def bfs(a, b):
+            q = [(a, b)]
+            for x, y in q: 
+                for i, j in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
+                    nx, ny = x + i, y + j
+                    if (0 <= nx < r and 0 <= ny < c) and grid[nx][ny] == "1":
+                        grid[nx][ny] = "@"
+                        q += [(nx, ny)]
+            
+        ans = 0
+        for i in range(r):
+            for j in range(c):
+                if grid[i][j] == "1":
+                    bfs(i, j)
+                    grid[i][j] = "@"
+                    ans += 1
+        # print(grid)
+        return ans           
                         
