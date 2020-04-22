@@ -25,24 +25,33 @@ Output: 6
 #         self.left = None
 #         self.right = None
 
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = Nonew
+
 class Solution:
     def maxPathSum(self, root: TreeNode) -> int:
-        if not root:    return 0
-        if not root.left and not root.right:    return root.val
-        
+        if not root:    return 0       
         global ans
         ans = float('-inf') 
         
         def helper(node):
             global ans
+
             if not node:
                 return 0
-            l = helper(node.left)
-            r = helper(node.right)
+            # print(node.val, ans)
+
+            l = max(0, helper(node.left))
+            r = max(0, helper(node.right))
             summ = l + r + node.val
             ans = max(ans, summ)
             return max(l, r) + node.val
             
             
-        helper(root)
+        x = helper(root)
+        ans = max(ans, x)
         return root.val if ans == float('-inf') else ans

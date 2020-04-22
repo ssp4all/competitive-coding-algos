@@ -10,10 +10,36 @@ Suraj
 
 -----------------------------------------------------
 
-Hi Katherine
+Hi Joey
 
 I hope you are doing well.
-I have recently applied for a Summer SDE intern position at Wonderlic. I would really appreciate it if we can connect here. 
-Thank you for your time and considerations
+I am a graduate student pursuing MS in CS looking for a summer SDE internship at Cadence Design Systems. I would appreciate it if we can connect here. 
+Thank you for your time and considerations.
 
 Cheers!
+
+----------------------------------------------------
+
+Looking for a summer internship
+
+Hi Mark
+
+
+
+I hope you are doing well.
+
+
+
+I am a first-year graduate student looking for an SDE internship where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development which mostly involves programming languages such as Python, Java and little bit C++. My projects and previous internships allowed me to work on tech stacks such as React, Django, REST API's and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
+
+
+
+I'm really excited and looking forward to hearing from you. Thank you so much for your time and considerations. I have attached my resume for your reference.
+
+
+
+Sincerely
+
+Suraj
+
+425-213-8716
