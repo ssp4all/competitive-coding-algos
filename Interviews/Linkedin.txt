@@ -10,10 +10,18 @@ Suraj
 
 -----------------------------------------------------
 
-Hi Joey
+Hi Peter
 
 I hope you are doing well.
-I am a graduate student pursuing MS in CS looking for a summer SDE internship at Cadence Design Systems. I would appreciate it if we can connect here. 
+I am a graduate student pursuing MS in CS. Currently, I'm looking for a summer SDE/Data Science internship. I would appreciate it if we can connect here. 
+Thank you for your time and considerations.
+
+Cheers!
+-----------------------------------------------------
+Hi Mojdeh
+
+I hope you are doing well.
+I am a graduate student pursuing MS in CS. I have recently applied for the Android Mobile App Developer Intern position at Oigtit. I would appreciate it if we can connect here. 
 Thank you for your time and considerations.
 
 Cheers!
@@ -22,24 +30,33 @@ Cheers!
 
 Looking for a summer internship
 
-Hi Mark
-
-
+Hi Lindsay
 
 I hope you are doing well.
 
+I am a first-year graduate student looking for an SDE internship where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development which mostly involves programming languages such as Python, Java, and little bit C++. During my projects and previous internships, I have worked on various technologies such as React, Django, Git, REST APIs, and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
 
-
-I am a first-year graduate student looking for an SDE internship where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development which mostly involves programming languages such as Python, Java and little bit C++. My projects and previous internships allowed me to work on tech stacks such as React, Django, REST API's and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
-
-
-
-I'm really excited and looking forward to hearing from you. Thank you so much for your time and considerations. I have attached my resume for your reference.
-
-
+Please let me know if you have an open position in SDE/DS domain or when you'd be open to a conversation. I’m happy to provide you with any additional information you might need. I look forward to hearing from you.
 
 Sincerely
-
 Suraj
+425-213-8716
 
+PS: I have attached my resume for your reference.
+
+----------------------------------------------------
+(DS)
+
+Looking for a summer internship
+
+Hi Nicholas
+
+I hope you are doing well.
+
+I am a first-year graduate student looking for an SDE/Data Science internship where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development which mostly involves programming languages such as Python and Java. Here at NC State, I will be doing a specialization in Machine Learning which is my main area of interest. My projects and previous internships required me to work in various Machine Learning domains such as Neural Networks, Recommendation, Prediction, and tools for data analytics such as Tableau.
+
+Please let me know if you have any open position in SDE/DS domain or when you'd be open to a conversation. I’m happy to provide you with any additional information you might need. I look forward to hearing from you.
+
+Sincerely
+Suraj
 425-213-8716

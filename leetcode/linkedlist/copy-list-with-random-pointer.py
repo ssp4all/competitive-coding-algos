@@ -8,6 +8,23 @@ class Node:
         self.next = next
         self.random = random
 """
+
+class Solution:
+    def copyRandomList(self, head: 'Node') -> 'Node':
+        cache = {None: None}
+        cur = head
+        while cur:
+            cache[cur] = Node(cur.val)
+            cur = cur.next
+        
+        temp = cur = head
+        while cur:
+            cache[cur].next = cache[cur.next]
+            cache[cur].random = cache[cur.random]
+            cur = cur.next
+        return cache[temp]
+    
+
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
         if not head: return head
