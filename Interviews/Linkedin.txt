@@ -10,22 +10,29 @@ Suraj
 
 -----------------------------------------------------
 
-Hi Peter
+Hi Jin
 
 I hope you are doing well.
-I am a graduate student pursuing MS in CS. Currently, I'm looking for a summer SDE/Data Science internship. I would appreciate it if we can connect here. 
+I am a graduate student pursuing MS in CS at NC State University. Currently, I'm looking for a summer SDE/Data Science internship. I would appreciate it if we can connect here. 
 Thank you for your time and considerations.
 
 Cheers!
 -----------------------------------------------------
-Hi Mojdeh
+Hi Phil
 
 I hope you are doing well.
-I am a graduate student pursuing MS in CS. I have recently applied for the Android Mobile App Developer Intern position at Oigtit. I would appreciate it if we can connect here. 
+I am a graduate student pursuing MS in CS at NC State University, Raleigh, NC. I have recently applied for the SDE and Data Science Intern position at K12. I would appreciate it if we can connect here. 
 Thank you for your time and considerations.
 
 Cheers!
+-------------------------------------------------------
+SDE - Why you want to join
 
+I am seasoned in various programming languages like Java, Python, and JavaScript. I want to leverage these skills to build a game-changing product with the cutting edge technologies and SioDigital is the perfect place to hone my skills.
+
+DS - Why you want to join
+
+Over the years I have developed intermediate level skills in Data Science like mining patters, preprocessing, prediction and modeling the data. I would like to leverage these skills to solve some real life problems and e-commerce industry will be the best fit for the job which will align with my goal.
 ----------------------------------------------------
 
 Looking for a summer internship
@@ -60,3 +67,17 @@ Please let me know if you have any open position in SDE/DS domain or when you'd 
 Sincerely
 Suraj
 425-213-8716
+
+-------------------------------------------------------------
+I am a Graduate student at Arizona State University with a key focus in machine learning, deep learning, and NLP. I am interested in dealing with different ways of making intelligent decisions from the data in real-world scenarios that create an immediate impact on the end-users.
+
+I am deeply interested in leveraging the REST services to interact with machine learning models thus truly developing an end to end pipeline on the backend side and delivering real-time data decisions. I have built strong expertise in Python, Django, Java, Spring, AWS, Docker, Knockout JS working as a software developer for over 3 years.
+
+To bolster the skills in machine learning, I have developed projects demonstrating the use of different machine learning and NLP techniques used on structured as well as unstructured data. I have enrolled for the course “Multimedia and Web Databases” to primarily approach multimedia pattern discovery and data retrieval through machine learning.
+Having visited the ICML 2019, I was able to appreciate the research perspective in ML, which has allowed me to work on research-based projects in the field of ML and NLP in the current year.
+
+
+Specialties:
+Languages: Java, Python, C, C++, Javascript, MATLAB
+Technologies: Android, Pandas, AWS S3, Spring Boot, Nginx, MongoDB, MYSQL, AngularJS, Tensorflow, Keras, Scikit-Learn, AllenNLP, Pytorch, Jupyter, Docker, Django Framework, Git, Jenkins, KnockoutJS, Linux, Apache Spark, Spark SQL
+Interests: Web, REST, Applied Machine Learning, Data Science, NLP
