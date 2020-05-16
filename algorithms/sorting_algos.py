@@ -167,5 +167,69 @@ def iter_merge_sort(l):
         atoms.append(merge(atoms.popleft(), atoms.popleft()))
     return list(atoms[0])
 
+def counting_sort(ip):
+    n = len(ip)
+    c = [0] * (5)
+
+    # Count no of occurence
+    for i in ip:
+        c[i] += 1
+    print(c)
+
+    # Take cummulative sum
+    for i in range(1, 5):
+        c[i] += c[i - 1]
+    print(c)
+    # Here index is the element with position as values in C list
+    op = [0] * (n)
+    for i in range(n):
+        op[c[ip[i]] - 1] = ip[i]
+        c[ip[i]] -= 1
+    print(op)
+    
+
+ip = list(map(int, "01222222221101"))
+counting_sort(ip)
+
+"""
+Radix sort
+"""
+def radix_sort():
+    maxi = max(ip) #find max no of digits in a number
+    i = 1
+    while maxi // i > 0: #for each digit
+        counting_sort(i)
+        i *= 10
+
+
+def counting_sort(exp):
+    print(exp)
+    c = [0] * 10    #count each occurence
+    op = [0] * n    #output list
+
+    for i in range(n):
+        ind = ip[i] // exp
+        c[ind % 10] += 1
+    print(c)
+
+    for i in range(1, 10):
+        c[i] += c[i - 1]
+    
+    for i in range(n - 1, -1, -1):  #make sure to do reverse iteration
+        ind = ip[i] // exp
+        op[c[ind % 10] - 1] = ip[i]
+        c[ind % 10] -= 1
+
+    ip[:] = op
+    print(exp, op)
+
+
+ip = [ 170, 45, 75, 90, 802, 24, 2, 66]
+n = len(ip)
+print("input - >", ip)
+radix_sort()
+print("0>", ip)
+
+
 x = iter_merge_sort([4,3,2,1,17,8])
 print(x)

@@ -28,10 +28,9 @@ class Solution:
                 res = helper(ss[1:])
                 if 0 < int(ss[:2]) < 27 and len(ss[:2]) >= 2:
                     res += helper(ss[2:])
-                
                 cache[ss] = res
                 return res
-        return helper(s)       
+        return helper(s)
 
 class Solution:
     def numDecodings(self, s: str) -> int:
