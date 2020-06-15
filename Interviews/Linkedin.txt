@@ -9,11 +9,12 @@ In anticipation and appreciation,
 Suraj
 
 -----------------------------------------------------
-
+NEW GRAD- add note
+-----------------------------------------------------
 Hi Jin
 
 I hope you are doing well.
-I am a graduate student pursuing MS in CS at NC State University. Currently, I'm looking for a summer SDE/Data Science internship. I would appreciate it if we can connect here. 
+I am a graduate student pursuing MS in CS at NC State University. Currently, I'm looking for a New grad (Jan 2021) position in SDE/Data Science. I would appreciate it if we can connect here. 
 Thank you for your time and considerations.
 
 Cheers!
@@ -41,9 +42,9 @@ Hi Lindsay
 
 I hope you are doing well.
 
-I am a first-year graduate student looking for an SDE internship where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development which mostly involves programming languages such as Python, Java, and C++. During my projects and previous internships, I have worked on various technologies such as React, Django, Git, REST APIs, and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
+I am a first-year graduate student looking for an SDE internship where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development where I have used programming languages such as Python, Java, and C++. During my projects and previous internships, I have worked on various technologies such as React, Django, Git, REST APIs, and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
 
-Please let me know if you have an open position in SDE/DS domain or when you'd be open to a conversation. I’m happy to provide you with any additional information you might need. I look forward to hearing from you.
+Please let me know if you have an open position in SDE/DS domain or when you'd be open to a conversation. I’m happy to provide you with additional information you might need. I look forward to hearing from you.
 
 Sincerely
 Suraj

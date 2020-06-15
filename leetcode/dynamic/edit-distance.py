@@ -18,6 +18,45 @@ rorse -> rose (remove 'r')
 rose -> ros (remove 'e')
 
 """
+
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        
+        def helper(w1, w2):
+            if len(w1) == 0 and len(w2) == 0:
+                return 0
+            if len(w1) == 0 or len(w2) == 0:
+                return max(len(w1), len(w2))
+            if w1[0] == w2[0]:
+                return helper(w1[1:], w2[1:])
+            else:
+                insert = 1 + helper(w1, w2[1:])
+                replace = 1 + helper(w1[1:], w2[1:])
+                delete = 1 + helper(w1[1:], w2)
+                return min(insert, replace, delete)
+        return helper(word1, word2)
+
+
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        cache = {}
+        def helper(w1, w2):
+            if len(w1) == 0 and len(w2) == 0:
+                return 0
+            if len(w1) == 0 or len(w2) == 0:
+                return max(len(w1), len(w2))
+            if w1[0] == w2[0]:
+                return helper(w1[1:], w2[1:])
+            if (w1, w2) in cache:
+                return cache[(w1, w2)]
+            else:
+                insert = 1 + helper(w1, w2[1:])
+                replace = 1 + helper(w1[1:], w2[1:])
+                delete = 1 + helper(w1[1:], w2)
+                cache[(w1, w2)] = min(insert, replace, delete)
+                return min(insert, replace, delete)
+        return helper(word1, word2)
+        
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         if not word1 and not word2: return 0
