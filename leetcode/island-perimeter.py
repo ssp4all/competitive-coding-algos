@@ -49,3 +49,29 @@ class Solution:
                     dfs(i, j)
                     return ans
         return ans
+
+class Solution:
+    def islandPerimeter(self, grid: List[List[int]]) -> int:
+        if not grid or not grid[0]: return 0
+        r, c = len(grid), len(grid[0])
+        p = 0
+        
+        def helper(i, j):
+            grid[i][j] = "@"
+            p = 0
+            for x, y in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
+                ni, nj = i + x, j + y
+                if (0 <= ni < r and 0 <= nj < c) and grid[ni][nj] == 0:
+                    p += 1
+                elif (0 <= ni < r and 0 <= nj < c) and grid[ni][nj] not in ["@", 0]:
+                    p += helper(ni, nj)
+                elif not(0 <= ni < r and 0 <= nj < c):
+                    p += 1
+                    
+            return p
+            
+            
+        for i in range(r):
+            for j in range(c):
+                if grid[i][j] == 1:
+                    return helper(i, j)

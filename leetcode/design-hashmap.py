@@ -30,7 +30,7 @@ class MyHashMap:
         """
         Initialize your data structure here.
         """
-         self.hash_key = 2069
+        self.hash_key = 2069
         self.ht = [Pool() for _ in range(2069)]
 
     def put(self, key: int, val: int) -> None:

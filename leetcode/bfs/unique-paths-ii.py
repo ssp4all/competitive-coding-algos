@@ -85,3 +85,24 @@ class Solution:
             for j in range(1, c):
                 grid[i][j] = grid[i - 1][j] + grid[i][j - 1]
         return grid[r - 1][c - 1]    
+
+# recursive
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        cache = dict()
+        def helper(i, j):
+            print(i, j)
+            if (i, j) in cache:
+                return cache[(i, j)]
+            if i == m - 1 and j == n - 1:
+                return 1
+            if i < m - 1 and j < n - 1:
+                return helper(i + 1, j) + helper(i, j + 1)
+            
+            if i < m - 1:
+                return helper(i + 1, j)
+            if j < n - 1:
+                return helper(i, j + 1)
+            cache[(i, j)] = 
+            return 0
+        return helper(0, 0)

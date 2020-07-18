@@ -36,6 +36,21 @@ DS - Why you want to join
 Over the years I have developed intermediate level skills in Data Science like mining patters, preprocessing, prediction and modeling the data. I would like to leverage these skills to solve some real life problems and e-commerce industry will be the best fit for the job which will align with my goal.
 ----------------------------------------------------
 
+Hi Aysegul, 
+
+I hope you are doing well.
+
+I am a second-year graduate student pursuing MS in CS at NC State, currently, I am looking for an SDE co-op where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development where I have used programming languages such as Python, Java, and C++. During my projects and previous internships, I have worked on various technologies such as Struts, React, Django, Git, REST APIs, and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
+
+Please let me know if you have an open position in SDE/DS domain or when you'd be open to a conversation. I’m happy to provide you with additional information you might need. I look forward to hearing from you.
+
+I have attached my resume for your reference. 
+
+Sincerely
+Suraj
+425-213-8716
+----------------------------------------------------
+
 Looking for a summer internship
 
 Hi Lindsay
