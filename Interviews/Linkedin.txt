@@ -1,12 +1,4 @@
-Hi
 
-
-Thank you so much for taking the #plusonepledge initiative.
-
-Being a first-year Master's student, I am looking for a summer internship but unfortunately due to #COVID19 lots of companies are going on a hiring freeze which has made the job search even more difficult. I would highly appreciate it if you could offer me a #linkedinpremium membership.
-
-In anticipation and appreciation,
-Suraj
 
 -----------------------------------------------------
 NEW GRAD- add note
@@ -19,10 +11,10 @@ Thank you for your time and considerations.
 
 Cheers!
 -----------------------------------------------------
-Hi Rachael
+Hi #####
 
 I hope you are doing well.
-I am a graduate student pursuing MS in CS at NC State University, Raleigh, NC. I have recently applied for the SDE Intern position at Inmar. I would appreciate it if we can connect here. 
+I am a graduate student pursuing MS in CS at NC State University, Raleigh, NC. I have recently applied for the New grad (SDE) position at #####. I would appreciate it if we can connect here. 
 Thank you for your time and considerations.
 
 Cheers!
@@ -30,7 +22,11 @@ Cheers!
 SDE - Why you want to join
 
 I am seasoned in various programming languages like Java, Python, and JavaScript. I want to leverage these skills to build a game-changing product with the cutting edge technologies and SioDigital is the perfect place to hone my skills.
+***************
+I want to leverage my software development skills to create a long lasting impact on society and Duolingo is the best place to make it real. 
 
+Till now I have developed a good foundation for algorithms, data structure and now I wish to add more latest technologies to my skillset.
+******************
 DS - Why you want to join
 
 Over the years I have developed intermediate level skills in Data Science like mining patters, preprocessing, prediction and modeling the data. I would like to leverage these skills to solve some real life problems and e-commerce industry will be the best fit for the job which will align with my goal.
@@ -97,3 +93,13 @@ Specialties:
 Languages: Java, Python, C, C++, Javascript, MATLAB
 Technologies: Android, Pandas, AWS S3, Spring Boot, Nginx, MongoDB, MYSQL, AngularJS, Tensorflow, Keras, Scikit-Learn, AllenNLP, Pytorch, Jupyter, Docker, Django Framework, Git, Jenkins, KnockoutJS, Linux, Apache Spark, Spark SQL
 Interests: Web, REST, Applied Machine Learning, Data Science, NLP
+---------------------------------
+Hi
+
+
+Thank you so much for taking the #plusonepledge initiative.
+
+Being a first-year Master's student, I am looking for a summer internship but unfortunately due to #COVID19 lots of companies are going on a hiring freeze which has made the job search even more difficult. I would highly appreciate it if you could offer me a #linkedinpremium membership.
+
+In anticipation and appreciation,
+Suraj

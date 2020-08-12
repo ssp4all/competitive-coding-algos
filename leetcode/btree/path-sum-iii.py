@@ -33,7 +33,7 @@ class Solution:
         return ans
 
 """Optimized O(n)"""
-# Definition for a binary tree node.
+# Definition for a binary tree node.w
 # class TreeNode:
 #     def __init__(self, x):
 #         self.val = x
@@ -42,24 +42,21 @@ class Solution:
 
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> int:
-        if not root: return 0
-        global cache, ans
-        cache = {0:1}
-        ans = 0
-        
-        def dfs(root, cps, sum):
-            global cache, ans
-            if not root: return 
-            cps += root.val
-            ops = cps - sum
-            ans += cache.get(ops, 0)
-            cache[cps] = cache.get(cps, 0) + 1
+        if not root:    return 0
+        def dfs(node, p):
+            if not node: return
             
-            dfs(root.left, cps, sum)
-            dfs(root.right, cps, sum)
+            p += node.val
+            if p-sum in hm:
+                self.res += hm[p-sum]
             
-            cache[cps] -= 1
-        
-        dfs(root, 0, sum)
-        print(cache)
-        return ans
+            hm[p] += 1
+            dfs(node.left, p)
+            dfs(node.right, p)
+            hm[p] -= 1
+            
+        hm = defaultdict(int)
+        hm[0] = 1
+        self.res = 0
+        dfs(root, 0)
+        return self.res

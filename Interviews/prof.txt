@@ -1,0 +1,17 @@
+SUB: Looking for a part-time position
+
+Hello Professor,
+
+I hope you are healthy and doing well.
+
+My name is Suraj. I am a second-year graduate student pursuing an MS in CS. For the upcoming fall, I am looking for a part-time research/teaching/grading assistant position.
+
+In the first year, courses such as Algorithms, AI, and Machine Learning for Business applications has given me good enough exposure to be a good programmer. This summer 2020, I am doing an internship at Murano Corporation (An AI supply chain company at RTP, NC) as a Full Stack developer to develop a software application using the latest technology such as React and Java. Here, I am responsible for developing a full-fledged search and recommendation engine using Elastic Search and Apache Spark respectively.
+
+For fall, I am looking for an assistant position so I can use my problem solving to write cutting edge and good quality software, as well as learn new technologies to expand my skillset. I would appreciate it if you can let me know about any position availability or when you'd be open to a conversation. I'd be happy to provide you with additional information you might need. Looking forward to hearing from you.
+
+Thank you so much for your time and considerations.
+SincerelySuraj Pawar425-213-8716
+PS: I have attached my resume for your reference.
+LINKEDIN: https://www.linkedin.com/in/ssp4all
+GITHUB: https://github.com/ssp4all

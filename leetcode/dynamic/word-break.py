@@ -30,3 +30,22 @@ class Solution:
                     return 1
             return 0
         return dfs(s)
+        
+# Word-break 2
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        ans = set()
+        wordDict = set(wordDict)
+        def helper(word, op):
+            nonlocal ans
+            if not word:
+                ans.add(op[:-1]) 
+                return ""
+            diff = op
+            for i in range(len(word)):
+                if word[:i + 1] in wordDict:
+                    diff = helper(word[i + 1:], op + word[:i + 1]+ " ")
+            return diff
+                
+        op = helper(s, "")
+        return ans
