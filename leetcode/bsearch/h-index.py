@@ -27,7 +27,6 @@ class Solution:
                 res += 1
         return res
 
-
 import collections
 class Solution:
     def hIndex(self, citations: List[int]) -> int:

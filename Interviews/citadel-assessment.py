@@ -38,11 +38,12 @@ import sys
 # The function accepts INTEGER_ARRAY requestTime as parameter.
 #
 from collections import Counter, defaultdict
+
 def droppedRequests(requestTime):  
     if not requestTime:     return 0
     n = len(requestTime)
     if n <= 3: return 0
-    count = Counter(requestTime)
+    count = Counter(requestTime) 
     cache = defaultdict(int)
 
     for i in range(requestTime[0], requestTime[-1]+1):

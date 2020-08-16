@@ -94,6 +94,10 @@ Languages: Java, Python, C, C++, Javascript, MATLAB
 Technologies: Android, Pandas, AWS S3, Spring Boot, Nginx, MongoDB, MYSQL, AngularJS, Tensorflow, Keras, Scikit-Learn, AllenNLP, Pytorch, Jupyter, Docker, Django Framework, Git, Jenkins, KnockoutJS, Linux, Apache Spark, Spark SQL
 Interests: Web, REST, Applied Machine Learning, Data Science, NLP
 ---------------------------------
+What has been your favorite project or proudest accomplishment? Why?
+-> During my internship I got to work on developing search feature using RestApi and Elastic Search. I got to learn a lot during that period.
+---------------------------------
+
 Hi
 
 
