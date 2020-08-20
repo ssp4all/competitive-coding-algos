@@ -41,4 +41,31 @@ class Solution:
             dp[i][1] = max(dp[i - 2][0] - prices[i], dp[i - 1][1]) #buy
         # print(dp)
         return dp[-1][0]
+
+# recursive
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        if not prices:  return 0
+        
+        n = len(prices)
+        
+        if n <= 1:  return 0
+        elif n == 2:
+            if prices[0] < prices[1]:
+                return prices[1] - prices[0]
+            else:
+                return 0
+        def helper(cur):
+            if cur == 0:
+                return [0, -prices[0]]
+            if cur == 1:
+                return [max(0, -prices[0] + prices[1]), \
+                        max(-prices[0], 0 - prices[1])]
+            
+            b = max(helper(cur - 2)[0] + prices[cur], \
+                    helper(cur - 1)[1])
+            s = max(helper(cur - 1)[1] - prices[cur], \
+                    helper(cur - 1)[0])
+            return [s, b]
+        return helper(n - 1)[0]
             

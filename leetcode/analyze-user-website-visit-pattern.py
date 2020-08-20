@@ -26,7 +26,7 @@ The tuples in this example are:
 ["mary", 9, "about"]
 ["mary", 10, "career"]
 The 3-sequence ("home", "about", "career") was visited at least once by 2 users.
-The 3-sequence ("home", "cart", "maps") was visited at least once by 1 user.
+The 3-sequence  ("home", "cart", "maps") was visited at least once by 1 user.
 The 3-sequence ("home", "cart", "home") was visited at least once by 1 user.
 The 3-sequence ("home", "maps", "home") was visited at least once by 1 user.
 The 3-sequence ("cart", "maps", "home") was visited at least once by 1 user.
