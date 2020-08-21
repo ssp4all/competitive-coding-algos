@@ -217,5 +217,129 @@ while j < n:
         prev = direction[i]
 arrival_time[i] = max(arrival_time[i], master_clock)
 print(arrival_time)
+
+###alternative  turnstile Amazon
+def turnstileTimes(numCustomers, arrTime, direction):
+    start = arrTime[0]
+    exiting  = []
+    entering = []
+
+    for i in range(0, numCustomers):
+        if direction[i] == 0:
+            entering.append((arrTime[i], i))
+        else:
+            exiting.append((arrTime[i], i))
+
+    res = [-1 for _ in range(numCustomers)]
+
+    enterI = 0
+    exitI = 0
+    exitPrio = True
+    currTime = start
+    prevTime = -1
+
+    while enterI < len(entering) and exitI < len(exiting):
+        currExitTime = max(exiting[exitI][0], currTime) 
+        currEnterTime = max(entering[enterI][0], currTime)
+        if currEnterTime < currExitTime:
+            res[entering[enterI][1]] = currEnterTime
+            prevTime = currEnterTime
+            currTime = prevTime + 1
+            enterI += 1
+            exitPrio = False
+        elif currExitTime < currEnterTime:
+            res[exiting[exitI][1]] = currExitTime
+            prevTime = currExitTime
+            currTime = prevTime + 1
+            exitI += 1
+            exitPrio = True
+        else:
+            if currTime - prevTime > 1:
+                exitPrio = True
+            if not exitPrio:
+                res[entering[enterI][1]] = currEnterTime
+                prevTime = currEnterTime
+                currTime = prevTime + 1
+                enterI += 1
+            else:
+                res[exiting[exitI][1]] = currExitTime
+                prevTime = currExitTime
+                currTime = prevTime + 1
+                exitI += 1
+                exitPrio = True
+
+    while enterI < len(entering):
+        res[entering[enterI][1]] = max(entering[enterI][0], currTime)
+        currTime += 1
+        enterI += 1
+
+    while exitI < len(exiting):
+        res[exiting[exitI][1]] = max(exiting[exitI][0], currTime)
+        currTime += 1
+        exitI += 1
+    return res
+x = turnstileTimes(5, arrival_time,direction)
+print(x)
 -------------------------------
+#Amazon | OA 2019 | Optimal Utilization
+class Solution:
+    def findPairs(self, a, b, target):
+        a.sort(key=lambda x: x[1])
+        b.sort(key=lambda x: x[1])
+        l, r = 0, len(b) - 1
+        ans = []
+        curDiff = float('inf')
+        while l < len(a) and r >= 0:
+            id1, i = a[l]
+            id2, j = b[r]
+            if (target - i - j == curDiff):
+                ans.append([id1, id2])
+            elif (i + j <= target and target - i - j < curDiff):
+                ans.clear()
+                ans.append([id1, id2])
+                curDiff = target - i - j
+            if (target > i + j):
+                l += 1
+            else:
+                r -= 1
+        return ans
+----------------------------
+#packaging 
+def findSum(nums, target):
+    target -= 30
+    map = {}
+    maximum = -1
+    ans = [-1,-1]
+    for i in range(len(nums)):
+        if nums[i] not in map:
+            map[target - nums[i]] = i
+        else:
+            if nums[i] > maximum or target - nums[i] > maximum:
+                ans[0] = map[nums[i]]
+                ans[1] = i
+                maximum = max(nums[i],target - nums[i])
+    if ans != [-1,-1]:
+        return ans
+    else:
+        return []
+---------------------------------
+#count of unique pairs
+public static int uniquePairs(int[] nums, int target){
+        Set<Integer> set = new HashSet<Integer>();
+        Set<Integer> seen = new HashSet<Integer>();
+        int count = 0;
+        for(int num : nums){
+            if(set.contains(target-num) && !seen.contains(num)){
+                count++;
+                seen.add(target-num);
+                seen.add(num);
+            }
+            else if(!set.contains(num)){
+                set.add(num);
+            }
+
+        }
+
+        return count;
+    }
 
