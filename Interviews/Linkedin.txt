@@ -3,23 +3,32 @@
 -----------------------------------------------------
 NEW GRAD- add note
 -----------------------------------------------------
-Hi Jin
 
-I hope you are doing well.
-I am a graduate student pursuing MS in CS at NC State University. Currently, I'm looking for a New grad (Jan 2021) position in SDE/Data Science. I would appreciate it if we can connect here. 
-Thank you for your time and considerations.
+for Referral
+
+Hi Arvind, 
+I am a second yr graduate student at NC State pursuing MCS. Currently, I looking for an Entry-level SDE position at VMware for which it has an opening. I would appreciate it if we can connect here. 
+Cheers!
+****************************
+
+for recruiters
+
+Hi #
+
+I am a second-year graduate student pursuing MS in CS at NC State University, NC. I have recently applied for the New grad SDE position at #. I would appreciate it if we can connect here to discuss my profile and the impact I can make at #. 
 
 Cheers!
------------------------------------------------------
+****************************
 Hi #####
 
 I hope you are doing well.
-I am a graduate student pursuing MS in CS at NC State University, Raleigh, NC. I have recently applied for the New grad (SDE) position at #####. I would appreciate it if we can connect here. 
+I am a second year graduate student pursuing MS in CS at NC State University, NC. I have recently applied for the New grad SDE position at #####. I would appreciate it if we can connect here to discuss my profile and impact I can make at ###. 
 Thank you for your time and considerations.
 
 Cheers!
 -------------------------------------------------------
 SDE - Why you want to join
+-----------------------------------------------------
 
 I am seasoned in various programming languages like Java, Python, and JavaScript. I want to leverage these skills to build a game-changing product with the cutting edge technologies and SioDigital is the perfect place to hone my skills.
 ***************
@@ -36,7 +45,7 @@ Hi Aysegul,
 
 I hope you are doing well.
 
-I am a second-year graduate student pursuing MS in CS at NC State, currently, I am looking for an SDE co-op where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development where I have used programming languages such as Python, Java, and C++. During my projects and previous internships, I have worked on various technologies such as Struts, React, Django, Git, REST APIs, and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
+I am a second-year graduate student pursuing MS in CS at NC State. Currently, I am looking for an SDE co-op where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development where I have used programming languages such as Python, Java, and C++. I have worked on latest technologies such as React, Django, Git, REST APIs, and MySql. This summer I interned at Murano Corporation (AI Supply Chain) based in RTP, NC as a Software Engineering Intern. There I was responsible for developing front-end and backend along with databases.
 
 Please let me know if you have an open position in SDE/DS domain or when you'd be open to a conversation. I’m happy to provide you with additional information you might need. I look forward to hearing from you.
 
@@ -64,6 +73,25 @@ Suraj
 PS: I have attached my resume for your reference.
 
 ----------------------------------------------------
+###############################
+To recruiter (after application)
+################################
+Hi Kamor,
+
+I hope you are doing well.
+
+I am a second-year graduate student pursuing MS in CS at NC State. Recently, I have applied at Citrix for Entry level SDE position.
+
+I'm a seasoned full-stack developer with experience in software development where I have used programming languages such as Python, Java, and C++. I have worked on the latest technologies such as React, Django, Git, REST APIs, and MySql. This summer, I interned at Murano Corporation (AI Supply Chain) based in RTP, NC as a Software Engineering Intern. There I was responsible for developing front-end and back-end along with databases.
+
+Please let me know if you found my profile suitable for this position. I’m happy to provide you with additional information you might need. I am looking forward to hearing from you.
+
+I have attached my resume for your reference.
+
+Sincerely
+Suraj
+----------------------------------------------------
+
 (DS)
 
 Looking for a summer internship
@@ -97,13 +125,3 @@ Interests: Web, REST, Applied Machine Learning, Data Science, NLP
 What has been your favorite project or proudest accomplishment? Why?
 -> During my internship I got to work on developing search feature using RestApi and Elastic Search. I got to learn a lot during that period.
 ---------------------------------
-
-Hi
-
-
-Thank you so much for taking the #plusonepledge initiative.
-
-Being a first-year Master's student, I am looking for a summer internship but unfortunately due to #COVID19 lots of companies are going on a hiring freeze which has made the job search even more difficult. I would highly appreciate it if you could offer me a #linkedinpremium membership.
-
-In anticipation and appreciation,
-Suraj
