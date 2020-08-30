@@ -45,17 +45,19 @@ def droppedRequests(requestTime):
     if n <= 3: return 0
     count = Counter(requestTime) 
     cache = defaultdict(int)
+    try:
+        for i in range(requestTime[0], requestTime[-1]+1):
+            cache[i] = cache[i-1] + count[i]
 
-    for i in range(requestTime[0], requestTime[-1]+1):
-        cache[i] = cache[i-1] + count[i]
-
-    for i in range(3, n):
-        t1 , t2 = 0, 0
-        if requestTime[i]-10 in cache: t1 = cache[requestTime[i]-10]
-        if requestTime[i]-60 in cache: t2 = cache[requestTime[i]-60]
-        if requestTime[i-3] == requestTime[i]: requestTime[i-3] = '$'
-        elif i+1 - t1 > 20: requestTime[i] = '$'
-        elif i+1 - t2 > 60: requestTime[i] = '$'
+        for i in range(3, n):
+            t1 , t2 = 0, 0
+            if requestTime[i]-10 in cache: t1 = cache[requestTime[i]-10]
+            if requestTime[i]-60 in cache: t2 = cache[requestTime[i]-60]
+            if requestTime[i-3] == requestTime[i]: requestTime[i-3] = '$'
+            elif i+1 - t1 > 20: requestTime[i] = '$'
+            elif i+1 - t2 > 60: requestTime[i] = '$'
+    except MemoryError:
+        return 0
     return requestTime.count('$')
 
 if __name__ == '__main__':
