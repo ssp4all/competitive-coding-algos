@@ -13,7 +13,7 @@ Example 1:
 
 Input: 2
 Output: 2
-Explanation: 
+Explanation:  
 
 The first beautiful arrangement is [1, 2]:
 
@@ -27,8 +27,31 @@ Number at the 1st position (i=1) is 2, and 2 is divisible by i (i=1).
 
 Number at the 2nd position (i=2) is 1, and i (i=2) is divisible by 1.
 """
+
+#recursive
+class Solution:
+    def countArrangement(self, N):
+        if N <= 0:  return 0
+        global count
+        
+        def helper(cur, seen):
+            global count
+            if cur > N:
+                count += 1
+            else:
+                for i in range(1, N + 1):
+                    if seen[i] == 0 and \
+                        (i % cur == 0 or cur % i == 0):
+                        seen[i] = 1
+                        helper(cur + 1, seen)
+                        seen[i] = 0
+        seen = [0] * (N + 1)
+        count = 0
+        helper(1, seen)
+        return count
+
+#memo
 def arrangements(N):
-    # Write your code here
     cache = {}
     def repeat(i, X):
         if i == 1:
