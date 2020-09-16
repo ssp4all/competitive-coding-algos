@@ -1,4 +1,4 @@
-https://leetcode.com/problems/subtree-of-another-tree/
+ https://leetcode.com/problems/subtree-of-another-tree/
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -21,22 +21,6 @@ class Solution:
             if isSame(s, t):
                 return True
         return self.isSubtree(s.right, t) or self.isSubtree(s.left, t)
-        
-#         if s is None and t is None: return True
-#         if s.left: 
-#             if self.isSubtree(s.left, t):
-#                 return True
-#         if s.right:
-#             if self.isSubtree(s.right, t):
-#                 return True
-
-#         if s.val == t.val:
-#             return self.isSubtree(s.left, t.left) and self.isSubtree(s.right, t.right)
-        
-#         if self.isSubtree(s.left, t) or self.isSubtree(s.right, t):
-#             return True
-#         return False
-
         
         
         

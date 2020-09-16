@@ -29,4 +29,4 @@ Behavioral questions
 3. What are the factors you consider while offering intern’s full time offer?
 4. How promotions happens and what roles are offered to the experienced software developers?
 5. Where do you see after 5 yrs (Equinix)
-6. What the measure are used to measure the companies success?
+6. What the metrics are used to measure the companies success?

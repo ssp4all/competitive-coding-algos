@@ -25,13 +25,6 @@ Output: 6
 #         self.left = None
 #         self.right = None
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = Nonew
-
 class Solution:
     def maxPathSum(self, root: TreeNode) -> int:
         if not root:    return 0       

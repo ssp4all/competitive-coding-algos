@@ -8,6 +8,7 @@ Example 1:
 
 Input: [1,2,0]
 Output: 3
+
 Example 2:
 
 Input: [3,4,-1,1]
@@ -35,7 +36,7 @@ class Solution:
             if nums[i] // n == 0:
                 return i
         return n
-        
+
 #Easy
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:

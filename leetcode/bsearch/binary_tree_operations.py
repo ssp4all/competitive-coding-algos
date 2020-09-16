@@ -107,13 +107,13 @@ class Solution:
                 s.append(root.right)
         return op[::-1]
         
-        def postorderTraversal(root):
-            if not root:    return
-            postorderTraversal(root.left)
-            postorderTraversal(root.right)
-            op.append(root.val)
-        postorderTraversal(root)
-        return op
+    def postorderTraversal(root):
+        if not root:    return
+        postorderTraversal(root.left)
+        postorderTraversal(root.right)
+        op.append(root.val)
+    postorderTraversal(root)
+    return op
        
 class Solution:
 	def preorder(node):

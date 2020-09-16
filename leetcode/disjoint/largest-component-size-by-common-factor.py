@@ -2,19 +2,12 @@ https://leetcode.com/problems/largest-component-size-by-common-factor/
 
 """
 952. Largest Component Size by Common Factor
-Hard
 
-322
-
-52
-
-Add to List
-
-Share
 Given a non-empty array of unique positive integers A, consider the following graph:
 
 There are A.length nodes, labelled A[0] to A[A.length - 1];
-There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.
+There is an edge between A[i] and A[j] if and only if A[i] and A[j] 
+share a common factor greater than 1.
 Return the size of the largest connected component in the graph.
 """
 
@@ -22,7 +15,7 @@ from math import sqrt
 from functools import reduce
 from collections import defaultdict
 
-class Disjoint():
+class Disjoint:
     def __init__(self, N):
         self.parent = list(range(N))
         self.size = [1] * N

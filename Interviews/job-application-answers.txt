@@ -1,0 +1,10 @@
+
+--------------------------------------------
+Tell us about an achievement or project that you're proudof.
+--------------------------------------------
+Recently I finished working as a research assistant under the professor on his NSF funded research project. In this project, I used machine learning techniques to create a model and automate some task which helps reduce human intervention. The research paper published by the professor got accepted in the reputed journal for which he accoladed me a lot. 
+
+--------------------------------------------
+Tell us about a situation where you faced uncertainty or ambiguity
+--------------------------------------------
+Last summer, I interned at Murano Corporation where I was asked to improve their existing search feature which allows users to search across the enterprise application. I was tasked with upgrading it so, I was pretty confused about what technology to choose then after doing some research I decided to go ahead with elastic search which is an open-source, distributed, and scalable search engine.

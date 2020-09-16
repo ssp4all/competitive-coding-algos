@@ -36,3 +36,30 @@ class Solution:
             return ans
         else:
             return -1
+
+from heapq import *
+from collections import*
+class Solution:
+    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        g = defaultdict(list)
+        for i, j, w in times:
+            g[i] += [(j, w)]
+
+        seen = set()
+        pq = []
+        for i, w in g[k]:
+            heappush(pq, (w, i))
+        time = 0
+        seen = {k}
+        while pq:
+            c, node = heappop(pq)
+            # print(c, node)
+            if node in seen:    continue
+            seen.add(node)
+            time = max(time, c)
+            for child, w in g[node]:
+                heappush(pq, (w + c, child))
+            
+        if len(seen) == n:
+            return time
+        return -1

@@ -1,5 +1,45 @@
 https://leetcode.com/discuss/interview-question/algorithms/124822/bloomberg-interview-question-find-first-unique-integer-in-a-stream
 
+"""
+Design a data structure that support the following methods:
+
+public class Stream {
+    
+    public Stream() {
+        // do intialization if necessary
+    }
+
+    /**
+    * Adds integer num to a stream of integers.
+    */
+    public void add(int num) {
+        // write your code here
+    }
+
+    /**
+    *  Returns the first unique integer in the stream if found else return null.
+    */
+    public Integer getFirstUnique() {
+        // write your code here
+    }
+}
+
+Example:
+
+Stream s = new Stream();
+s.add(2);
+s.getFirstUnique(); // 2
+s.add(2);
+s.getFirstUnique(); // null
+s.add(3);
+s.getFirstUnique(); // 3
+s.add(4);
+s.getFirstUnique(); // 3
+s.add(3);
+s.getFirstUnique(); // 4
+"""
+
+
 from heapq import *
 
 class Node:

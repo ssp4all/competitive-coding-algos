@@ -9,7 +9,9 @@ Output: 12
 Input: str = “101110”
 Output: 8
 
-Number ‘101110’ is even, after dividing it by 2 we get an odd number ‘10111’ so we will add 1 to it. Then we’ll get ‘11000’ which is even and can be divide three times continuously in a row and get ’11’ which is odd, adding 1 to it will give us ‘100’ which is even and can be divided 2 times in a row. As, a result we get 1.
+Number ‘101110’ is even, after dividing it by 2 we get an odd number ‘10111’ so we will add 1 to it. 
+Then we’ll get ‘11000’ which is even and can be divide three times continuously in a row and get ’11’ 
+which is odd, adding 1 to it will give us ‘100’ which is even and can be divided 2 times in a row. As, a result we get 1.
 So 8 times the above two operations were required in this number.
 """
 

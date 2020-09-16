@@ -1,6 +1,7 @@
 https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/
 """
-Given an array of numbers, verify whether it is the correct preorder traversal sequence of a binary search tree.
+Given an array of numbers, verify whether it is the correct preorder 
+traversal sequence of a binary search tree.
 
 You may assume each number in the sequence is unique.
 
@@ -35,7 +36,7 @@ class Solution:
 
 class Solution:
     def verifyPostorder(self, postorder: List[int]) -> bool:
-        if not preorder: return 0
+        if not postorder: return 0
         h = float('inf')
         s = []
         for i in reversed(postorder):
