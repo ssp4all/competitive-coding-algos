@@ -1,41 +1,27 @@
 SUB: Referral request for Entry level SDE at Citrix
 
-
-
 Hi Vishrut,
-
-
 
 I hope you are healthy and well.
 
-
-
 I am about to start applying for an entry-level role in Software Engineering and would love to showcase my skills and experience in the field to the Hiring managers. Citrix is the amazing cloud company that I am targeting, as well as it has a recent job opening for new grads. If you have a minute, would you mind referring me?
-
-
 
 A little bit about my self, my full name is Suraj Pawar. I am a second-year graduate student pursuing a Master's in Computer Science at NC State University with a specialization in Data Science. This summer, I interned at Murano Corp. which is an AI Supply chain company based in RTP, NC where I worked as a software engineering intern. There I was responsible for optimizing existing features in the Murano's flagship supply chain management system. One of my major tasks was to improve the existing search feature for which I had used Elastic Search using Java. Apart from this, I am seasoned with Python, Java, JavaScript, and their respective frameworks.
 
-
-
 I would appreciate if you can refer me to Citrix for the SDE position. I am available any time to discuss my profile with you also let me know if you need additional information, I'd happy to talk with you. Looking forward to hearing from you.
-
-
 
 Thank you so much.
 
-
-
 Linkedin: https://www.linkedin.com/in/ssp4all
-
 GitHub: https://github.com/ssp4all
-
 
 
 Job Description: https://citrix.zrapply.com/en-US/CitrixCareers/job/University-Software-Engineer---2021_R22177?utm_source=ziprecruiter
 
-
-
 Thanks & Regards
-
 Suraj Pawar
+
+
+------------------------
+
+Suraj is pursuing a Master in Computer Science from NC State University and soon to be graduating in May 2021. I have been knowing him from my Master's, where we were part of the Algorithms's course. There, I got to work with him on a project which required extensive programming and database knowledge. He has a perfect blend of good programming and problem-solving skills which, makes him a good fit for this new-grad position at Oracle.
