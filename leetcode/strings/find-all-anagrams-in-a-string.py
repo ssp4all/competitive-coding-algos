@@ -17,6 +17,33 @@ s: "cbaebabacd" p: "abc"
 Output:
 [0, 6]
 """
+from collections import Counter, defaultdict
+
+class Solution:
+    def findAnagrams(self, s: str, t: str) -> List[int]:
+        if len(t) > len(s): return ""
+        need = Counter(t)
+        
+        count = len(need.keys())
+        begin, head, end = 0, 0, 0
+        indexes = []
+        while end < len(s):
+            if s[end] in need:
+                need[s[end]] -= 1
+                if need[s[end]] == 0:
+                    count -= 1
+            end += 1
+            while count == 0:
+                if s[begin] in need:
+                    need[s[begin]] += 1
+                    if need[s[begin]] > 0:
+                        count += 1
+                if end - begin  == len(t):
+                    indexes += [begin]
+                begin += 1
+                
+        return indexes
+#####################################################
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         if not s:   return []
