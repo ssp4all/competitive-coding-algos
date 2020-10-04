@@ -35,3 +35,35 @@ class Solution:
                     levels[i][j].next = levels[i][j+1]
                 levels[i][ll-1].next = None
         return root
+
+#######################################
+constant space O(1)
+
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        if not root:    return root
+        
+        cur, head, prev = root, None, None
+        while cur:
+            
+            while cur:
+                if cur.left:
+                    if prev:
+                        prev.next = cur.left
+                    else:
+                        head = cur.left
+                    prev = cur.left
+                if cur.right:
+                    if prev:
+                        prev.next = cur.right
+                    else:
+                        head = cur.right
+                    prev = cur.right
+                cur = cur.next
+            cur = head
+            head, prev = None, None
+        return root
+            
+                
+                
+        

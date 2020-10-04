@@ -19,12 +19,35 @@ A solution set is:
   [-2,  0, 0, 2]
 ]
 """
+from collections import defaultdict
+
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        if not nums:    return []
+
+        n = len(nums)
+        if n < 4:   return []
+        if n == 4:  return [nums] if sum(nums) == target else []
+        
+        ans = set()
+        seen = defaultdict(list)
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                remain = target - nums[i] - nums[j]
+                for x, y in seen[remain]:
+                    if x != i and x != j and y != i and y != j:
+                        tmp = [nums[i], nums[j], nums[x], nums[y]]
+                        tmp.sort()
+                        ans.add(tuple(tmp))
+                seen[nums[i] + nums[j]] += [(i, j)]
+                
+        return ans
+###############################################
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         if not nums:    return []
         
         nums.sort()
-        # print(nums)
         n = len(nums)
         if n < 4:   return []
         if n == 4:  return [nums] if sum(nums) == target else []
@@ -32,7 +55,6 @@ class Solution:
         ans = set()
         for i in range(n - 3):
             for j in range(i + 1, n - 2):
-                # if nums[j] == nums[j - 1]:  continue
                 anchor, left, right = j, j + 1, n - 1
                 while left < right:
                     tot = nums[i] + nums[anchor] + nums[left] +  nums[right]
