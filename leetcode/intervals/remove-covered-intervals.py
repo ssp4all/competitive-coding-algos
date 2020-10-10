@@ -34,3 +34,16 @@ class Solution:
                 res.pop()
             res += [[c, d]]
         return len(res)
+
+class Solution:
+    def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
+        if not intervals:   return 0
+        intervals.sort()
+        left, right = [-1, -1]
+        ans = 0
+        for st, end in intervals:
+            if st > left and end > right:
+                left = st
+                ans += 1
+            right = max(end, right)
+        return ans
