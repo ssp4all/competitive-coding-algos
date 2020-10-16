@@ -24,12 +24,9 @@ class Solution:
             l[v] = min(l.get(v, n), i)
             r[v] = max(r.get(v, 0), i)
         xx = sorted(list(c.items()), key=lambda x:(x[1]))
-        # print(xx)
         ans = n
-        # print(l, r)
         for i in range(len(xx)-1, -1, -1):
             v, freq = xx[i][0], xx[i][1]
-            # print(v, freq)
             ans = min(ans, r[v] - l[v] + 1)
             if i-1 >= 0 and xx[i-1][1] < freq:
                 break

@@ -23,9 +23,7 @@ class Solution:
                 imax, imin = imin, imax
             imax = max(nums[i], nums[i]*imax)
             imin = min(nums[i], nums[i]*imin)
-
             r = max(r, imax)
-
         return r
 
 class Solution:

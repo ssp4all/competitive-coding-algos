@@ -53,7 +53,7 @@ class Solution:
                 fast = fast.next.next
             if pre:
                 pre.next = None
-            # print(cur.val)
+
             l1 = sort_(cur)
             l2 = sort_(slow)
             return merge(l1, l2)

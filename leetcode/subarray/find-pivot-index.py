@@ -26,7 +26,7 @@ class Solution(object):
             sumL += nums[i]
             if sumL == sumR:
                 return i
-            sumR += nums[i]
+            sumR -= nums[i]
         return -1
 
 # class Solution(object):
