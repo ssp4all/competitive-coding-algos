@@ -70,6 +70,26 @@ class Solution:
         
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        if not gas or not cost: return -1
+        
+        if sum(cost) > sum(gas):    return -1
+    
+        for ind in range(len(gas)):
+            cur = ind
+            tank = 0
+            while True:
+                tank += gas[cur]
+                tank -= cost[cur]
+                
+                cur += 1
+                cur %= len(cost)
+                if cur == ind or tank < 0:   break
+            if cur == ind:   return ind
+
+        return -1
+
+class Solution:
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         n = len(gas)
         if sum(cost) > sum(gas):    return -1
         t = 0

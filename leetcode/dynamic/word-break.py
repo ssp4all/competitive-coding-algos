@@ -77,7 +77,20 @@ class Solution:
                     return 1
             return 0
         return dfs(s)
+
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         
+        @functools.lru_cache(None)
+        def dfs(s):
+            if not s:   return 1
+            for w in wordDict:
+                if s.startswith(w):
+                    if dfs(s[len(w):]):
+                        return 1
+            return 0
+        return dfs(s)
+
 # Word-break 2
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
@@ -96,3 +109,28 @@ class Solution:
                 
         op = helper(s, "")
         return ans
+
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        ans = set()
+        cache = {}
+        def helper(s):
+            if not s:
+                return []
+            if s in cache:
+                return cache[s]
+            res = []
+            for word in wordDict:
+                if not s.startswith(word):
+                    continue
+                if len(s) == len(word):
+                    res += [word]
+                else:
+                    rest_of = helper(s[len(word):])
+                    for item in rest_of:
+                        item = word + " " + item
+                        res += [item]
+            cache[s] = res
+            return res
+        x = helper(s)
+        return x

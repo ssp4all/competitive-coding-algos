@@ -36,3 +36,19 @@ while l <= r:
     else:
         r -= 1
 print(cnt)
+
+###################################
+Count subsets which equals sum to k
+####################################
+ip = [3, 4, 5, 2]
+tar = 9
+count = 0
+def recur(ip, sum_):
+    if sum_ == tar: return 1
+    if not ip:  return 0
+    count = recur(ip[:-1], sum_ + ip[-1]) + \
+                recur(ip[:-1], sum_)
+    return count  
+
+x = recur(ip, 0)
+print(x)
