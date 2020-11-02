@@ -70,3 +70,31 @@ class Solution:
             max_for_all = max(max_len, max_for_all)
         print(dp, max_for_all)
         return sum([item[1] for item in dp if item[0] == max_for_all])
+
+
+#############################################################
+count of LIS 
+class Solution:
+    def findNumberOfLIS(self, nums: List[int]) -> int:
+        if not nums:    return 0
+        
+        n = len(nums)
+        count = 0
+        maxi = float('-inf')
+        
+        def helper(i, last, tot):
+            nonlocal count, maxi
+            if i < 0:  
+                if tot > maxi:
+                    maxi = tot
+                    count = 1 
+                elif tot == maxi:
+                    count += 1
+                return
+            if nums[i] < last:
+                helper(i - 1, nums[i], tot + 1)
+            helper(i - 1, last, tot)
+            return
+
+        helper(n - 1, float('inf'), 0)
+        return count    
