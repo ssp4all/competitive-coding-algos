@@ -102,23 +102,23 @@ class Solution:
 Optimal
 class Solution:
     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
-        if not n or not edges:  return [0]
+        if not n or not edges:   return [0]
         
-        adj = {i:set() for i in range(n)}
-
+        tree = collections.defaultdict(set)
+        
         for a, b in edges:
-            adj[a].add(b)
-            adj[b].add(a)
+            tree[a].add(b)
+            tree[b].add(a)
         
-        l = [i for i in range(n) if len(adj[i]) == 1]
-        # print(adj, l)
+        queue = [node for node in tree if len(tree[node]) == 1]
+        
         while n > 2:
-            n -= len(l)
-            nl = []
-            for i in l:
-                node = adj[i].pop()
-                adj[node].remove(i)
-                if len(adj[node]) == 1:
-                        nl.append(node)
-                l = nl
-            return l
+            new_queue = []
+            n -= len(queue)
+            for node in queue:
+                root = tree[node].pop()
+                tree[root].remove(node)
+                if len(tree[root]) == 1:
+                    new_queue += [root]
+            queue = new_queue
+        return queue

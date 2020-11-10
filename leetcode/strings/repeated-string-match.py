@@ -16,3 +16,13 @@ class Solution:
             ans += 1
             if a.find(b) != -1: return ans
         return -1
+
+class Solution:
+    def repeatedStringMatch(self, a: str, b: str) -> int:
+        la, lb = len(a), len(b)
+        
+        x = (lb - 1) // la + 1
+        for i in range(2):
+            if b in a*(x + i):
+                return x + i
+        return -1

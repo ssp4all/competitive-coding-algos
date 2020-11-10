@@ -37,6 +37,22 @@ class Solution:
                    return w
         return ""
 
+class Solution:
+    def longestWord(self, words: List[str]) -> str:
+        if not words:   return ""
+        
+        seen = set()
+        words.sort()
+        
+        ans = ""
+        for word in words:
+            if len(word) == 1 or word[:-1] in seen:
+                if len(ans) == len(word):
+                    ans = min(ans, word)
+                elif len(word) > len(ans):
+                    ans = word
+                seen.add(word)
+        return ans
 
 from collections import defaultdict
 

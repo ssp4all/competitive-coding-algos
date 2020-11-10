@@ -1,4 +1,18 @@
 # https://leetcode.com/problems/valid-palindrome-ii
+
+"""
+Given a non-empty string s, you may delete at most one character. 
+Judge whether you can make it a palindrome.
+
+Example 1:
+Input: "aba"
+Output: True
+Example 2:
+Input: "abca"
+Output: True
+Explanation: You could delete the character 'c'.
+"""
+
 class Solution(object):
     def validPalindrome(self, s):
         if not s: return 1
@@ -11,5 +25,3 @@ class Solution(object):
             l += 1
             r -= 1
         return 1
-            
-            
