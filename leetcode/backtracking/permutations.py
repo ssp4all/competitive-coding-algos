@@ -24,27 +24,32 @@ class Solution:
         return permutations(nums)
 
 
-With duplicates
+# With duplicates
 
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
-        if not nums:    return nums
-        ans = set()
-        n = len(nums)
+        if not nums:    return []
         
-        def bt(temp, no, used):
-            if no == 0:
-                ans.add(tuple(temp))
+        n = len(nums)
+        ans = set()
+        used = [0] * n
+        nums.sort()
+        def backtrack(cur, ans, used):
+            if len(cur) == n:
+                ans.add(tuple(cur))
                 return
-            else:
-                for i in range(n):
-                    if used[i]: continue
+            
+            for i in range(n):
+                if i > 0 and nums[i-1] == nums[i] and not used[i - 1]:#magic lines
+                    continue;
+                if used[i] == 0:
                     used[i] = 1
-                    bt(temp + [nums[i]], no - 1, used)
+                    backtrack(cur + [nums[i]], ans, used)
                     used[i] = 0
-        used = [0]*n
-        bt([], n, used)
+        
+        backtrack([], ans, used)
         return ans
+            
 
 Next permutations
 

@@ -14,7 +14,7 @@ class Solution:
         
         for i in range(1, r):
             for j in range(1, c):
-                grid[i][j] = grid[i][j] + min(grid[i - 1][j], grid[i][j - 1])
+                grid[i][j] += min(grid[i - 1][j], grid[i][j - 1])
         return grid[-1][-1]
 
 class Solution:
@@ -43,6 +43,29 @@ class Solution:
         bt(0, 0, 0)
         return ans
         
+#heap
+from heapq import *
+
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        if not grid or not grid[0]: return 0
+        row, col = len(grid), len(grid[0])
+        
+        heap = [(grid[0][0], 0, 0)]
+        
+        seen = set()
+        
+        while heap:
+            sum_, x, y = heappop(heap)
+            seen.add((x, y))
+            if (x, y) == (row - 1, col - 1):
+                return sum_
+            if x + 1 < row and (x + 1, y) not in seen:
+                heappush(heap, (sum_ + grid[x + 1][y], x + 1, y))
+            if y + 1 < col and (x, y + 1) not in seen:
+                heappush(heap, (sum_ + grid[x][y + 1], x, y + 1))
+        
+
 # Java
 class Solution {
     public int minPathSum(int[][] grid) {

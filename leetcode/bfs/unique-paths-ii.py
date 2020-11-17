@@ -20,6 +20,7 @@ There are two ways to reach the bottom-right corner:
 1. Right -> Right -> Down -> Down
 2. Down -> Down -> Right -> Right
 """
+
 import collections
 # TLE 
 class Solution:

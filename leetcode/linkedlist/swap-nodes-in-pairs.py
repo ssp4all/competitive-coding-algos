@@ -44,5 +44,3 @@ class Solution:
         head.next = self.swapPairs(head.next.next)
         next.next = head
         return next
-                
-            

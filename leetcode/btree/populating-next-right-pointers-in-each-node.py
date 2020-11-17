@@ -37,6 +37,25 @@ class Solution:
         return root
 
 #######################################
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        if not root:    return root
+        dq = collections.deque([root])
+        
+        while dq:
+            size = len(dq)
+            new = deque()
+            for _ in range(size):
+                node = dq.popleft()
+                if not node:    continue
+                if dq:
+                    node.next = dq[0]
+                new += [node.left, node.right]
+            dq = new
+            
+        return root
+#######################################
+
 constant space O(1)
 
 class Solution:
