@@ -1,51 +1,5 @@
 https://leetcode.com/problems/word-break/
 
-"""
-Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*'.
-
-'?' Matches any single character.
-'*' Matches any sequence of characters (including the empty sequence).
-The matching should cover the entire input string (not partial).
-
-Note:
-
-s could be empty and contains only lowercase letters a-z.
-p could be empty and contains only lowercase letters a-z, and characters like ? or *.
-Example 1:
-
-Input:
-s = "aa"
-p = "a"
-Output: false
-Explanation: "a" does not match the entire string "aa".
-Example 2:
-
-Input:
-s = "aa"
-p = "*"
-Output: true
-Explanation: '*' matches any sequence.
-Example 3:
-
-Input:
-s = "cb"
-p = "?a"
-Output: false
-Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
-Example 4:
-
-Input:
-s = "adceb"
-p = "*a*b"
-Output: true
-Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
-Example 5:
-
-Input:
-s = "acdcb"
-p = "a*c?b"
-Output: false
-"""
 
 class Solution:
     def wordBreak(self, s: str, words: List[str]) -> bool:
@@ -92,6 +46,27 @@ class Solution:
         return dfs(s)
 
 # Word-break 2
+"""
+Given a non-empty string s and a dictionary wordDict containing a 
+list of non-empty words, add spaces in s to construct a sentence 
+where each word is a valid dictionary word. Return all such possible sentences.
+
+Note:
+
+The same word in the dictionary may be reused multiple times in the segmentation.
+You may assume the dictionary does not contain duplicate words.
+Example 1:
+
+Input:
+s = "catsanddog"
+wordDict = ["cat", "cats", "and", "sand", "dog"]
+Output:
+[
+  "cats and dog",
+  "cat sand dog"
+]
+"""
+
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
         ans = set()

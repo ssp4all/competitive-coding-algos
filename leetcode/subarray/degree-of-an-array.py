@@ -1,8 +1,10 @@
 https://leetcode.com/problems/degree-of-an-array/
 """
-Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.
+Given a non-empty array of non-negative integers nums, the degree of this 
+array is defined as the maximum frequency of any one of its elements.
 
-Your task is to find the smallest possible length of a (contiguous) subarray of nums, that has the same degree as nums.
+Your task is to find the smallest possible length of a (contiguous) 
+subarray of nums, that has the same degree as nums.
 
 Example 1:
 Input: [1, 2, 2, 3, 1]
@@ -26,7 +28,7 @@ class Solution:
         xx = sorted(list(c.items()), key=lambda x:(x[1]))
         ans = n
         for i in range(len(xx)-1, -1, -1):
-            v, freq = xx[i][0], xx[i][1]
+            v, freq = xx[i]
             ans = min(ans, r[v] - l[v] + 1)
             if i-1 >= 0 and xx[i-1][1] < freq:
                 break

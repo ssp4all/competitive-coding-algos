@@ -1,5 +1,4 @@
 
-
 def seg_tree(input, seg, left, right, pos):
     if left == right:
         seg[pos] = input[left]

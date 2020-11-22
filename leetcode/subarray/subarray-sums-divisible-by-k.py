@@ -25,7 +25,7 @@ class Solution:
         for i in range(n):
             sum_ += A[i]
             sum_ %= K
-            if sum_ < 0:    sum_ += K
+            # if sum_ < 0:    sum_ += K
             count += lookup.get(sum_, 0)
             lookup[sum_] = lookup.get(sum_, 0) + 1
         return count

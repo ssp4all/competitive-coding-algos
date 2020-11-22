@@ -45,7 +45,7 @@ class Solution:
             l = 0
             r = n - 1
             while l < r:
-                if a[l] <= a[r]: return l
+                if a[l] < a[r]: return l
                 m = (l+r) // 2
                 if a[m] >= a[l]:
                     l = m + 1
