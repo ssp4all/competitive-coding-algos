@@ -31,6 +31,38 @@ class Solution:
                 dot -= v * c
             
             stack += [(val, count)]
-            dot += (val * count)
+            dot += (val 
+
+                * count)
             ans += dot
         return ans % MOD
+
+
+# very easy
+"""
+idea is to use stack and dp
+for ex [3,1,2, 5, 4]
+3  | [3]                                             -> 3
+1  | [3, 1], [1]                                     -> 1, 1
+2  | [3, 1, 2] [1, 2] [2]                            -> 1, 1, 2
+5  | [3, 1, 2 ,5] [1, 2, 5] [2, 5] [5]               -> 1, 1, 2, 5
+4  | [3, 1, 2, 5, 4] [1,2, 5, 4] [2, 5,4] [5, 4] [4] -> 1, 1, 2, 4, 4
+
+i.,e res[i] = res[j] + A[i]*(i - j) where (j < i)  
+"""
+
+class Solution:
+    def sumSubarrayMins(self, arr: List[int]) -> int:
+        if not arr: return 0
+        arr = [0] + arr
+        n = len(arr)
+        res = [0] * n 
+        stack = [0]
+        for i, val in enumerate(arr):
+            while arr[stack[-1]] > val:
+                stack.pop()
+            
+            last_smallest = stack[-1]
+            res[i] = res[last_smallest] + (i - last_smallest) * arr[i]
+            stack += [i]
+        return sum(res) % (10**9 + 7)

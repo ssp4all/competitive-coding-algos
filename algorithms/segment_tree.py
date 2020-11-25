@@ -17,10 +17,27 @@ def range_query(seg, left, right, qlow, qhigh, pos):
     return min(range_query(seg, left, m, qlow, qhigh, 2*pos + 1), 
                 range_query(seg, m + 1, right, qlow, qhigh, 2*pos + 2))
 
+def update(seg, left, right, index, value, pos):
+	if left == right:
+		tree[left] = value 
+		return 
+	m = left + (right - left) // 2
+	if left <= index <= m:
+		update(seg, left, m, index, value, pos)
+	else:
+		update(seg, m + 1, right, index, value, pos)
+	seg[pos] = min(seg[2 * pos + 1], seg[2 * pos + 2])
+
+		
+
 
 ip = [-1, 2, 4, 0]
 n = len(ip)
-seg = [float('inf')] * (2 ** (n - 1) - 1)
+
+x = (int)(ceil(log2(n)))
+max_size = 2 * (int)(2**x) - 1;
+
+seg = [float('inf')] * max_size
 seg_tree(ip, seg, 0, n - 1, 0)
 print(seg)
 

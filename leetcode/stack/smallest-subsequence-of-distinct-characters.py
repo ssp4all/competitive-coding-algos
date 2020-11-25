@@ -27,4 +27,3 @@ class Solution:
                 stack.pop()
             stack += [ch]
         return "".join(stack)
-            

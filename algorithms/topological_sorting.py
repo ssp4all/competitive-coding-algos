@@ -26,7 +26,7 @@ class TP:
 
 """
 Kanh's algorithm
-""",
+"""
 class TP:
 	def __init__(self, n):
 		self.graph = defaultdict(list)

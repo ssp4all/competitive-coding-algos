@@ -16,6 +16,8 @@ Example 2:
 
 Input: " 2-1 + 2 "
 Output: 3
+
+"14-3/2"
 """
 
 # Master-code

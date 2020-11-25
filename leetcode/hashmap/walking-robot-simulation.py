@@ -51,5 +51,3 @@ class Solution:
                     c -= 1
             ans = max(ans, (x*x + y*y))
         return ans
-            
-            
