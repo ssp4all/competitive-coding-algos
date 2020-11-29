@@ -45,3 +45,26 @@ while i < len(ip1) or j < len(ip2):
 combined += [curr]
 print(combined)
     
+################################
+a = [[1,1],[2,5], [999, 999]]
+b = [[2,4], [8,10], [11,20], [999, 999]]
+
+res = []
+
+i, j = 0, 0 
+while i < len(a) and j < len(b):
+    sA, eA = a[i]
+    sB, eB = b[j]
+    if sA < sB:
+        if res and sA <= res[-1][1]:
+            res[-1] = [min(res[-1][0], sA), max(res[-1][1], eA)]
+        else:
+            res += [a[i]]
+        i += 1
+    else:
+        if res and sB <= res[-1][1]:
+            res[-1] = [min(res[-1][0], sB), max(res[-1][1], eB)]
+        else:
+            res += [b[j]]
+        j += 1
+print(res)

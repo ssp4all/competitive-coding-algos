@@ -1,7 +1,8 @@
 https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
 
 """
-Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into k non-empty subsets whose sums are all equal.
+Given an array of integers nums and a positive integer k, find whether it's possible
+ to divide this array into k non-empty subsets whose sums are all equal.
 
  
 
@@ -17,7 +18,7 @@ Note:
 1 <= k <= len(nums) <= 16.
 0 < nums[i] < 10000.
 """
-
+#Time Complexity as per the editorial is O(k^(n - k) * k!)
 class Solution:
     def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
         if not nums or not k:   return 0
@@ -74,4 +75,41 @@ class Solution:
         
         arr = [0] * k
         return helper()
-            
+
+##########################################
+# Time Complexity: O(2^n * k)
+class Solution:
+    def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
+        if not nums:    return 0 
+        
+        sum_, maxi = 0, float('-inf')
+        n = len(nums)
+        
+        for num in nums:
+            sum_ += num
+            maxi = max(maxi, num)
+        
+        # print(maxi, sum_)
+        if maxi > (sum_ // k) or (sum_ % k) != 0:   return 0
+        
+        target = sum_ // k
+        
+        #end edge cases check
+        
+        used = [0] * n
+        
+        def helper(cur, start, k):
+            if k == 0:  return 1
+
+            if cur == target:   
+                return helper(0, 0, k - 1)
+
+            for i in range(start, n):
+                if not used[i] and cur + nums[i] <= target:
+                    used[i] = 1
+                    if helper(cur + nums[i], i + 1, k):
+                        return 1
+                    used[i] = 0
+            return 0
+        print('test')
+        return helper(0, 0, k)
