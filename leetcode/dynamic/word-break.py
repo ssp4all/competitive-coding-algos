@@ -1,6 +1,6 @@
 https://leetcode.com/problems/word-break/
 
-
+# O(N^3)
 class Solution:
     def wordBreak(self, s: str, words: List[str]) -> bool:
         if not s: return 0
@@ -13,7 +13,7 @@ class Solution:
                 	and (d[i-len(w)] or i-len(w) == -1):
                     d[i] = True
         return d[-1]
-    
+# O(2^N)
 class Solution:
     def wordBreak(self, s: str, words: List[str]) -> bool:
         if not s or not words:  return 0
@@ -32,6 +32,7 @@ class Solution:
             return 0
         return dfs(s)
 
+# TC: O(N^3) SC: O(N)
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         
@@ -109,3 +110,27 @@ class Solution:
             return res
         x = helper(s)
         return x
+
+# better code for above
+# TC: O(min(W, N) * 2^N)
+# SC: O(2^N)
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        if not s:   return []
+
+        @functools.lru_cache(None)
+        def dfs(s):
+            if not s:   return []
+            
+            res = []
+            for w in wordDict:
+                if not s.startswith(w): continue
+                if len(w) == len(s):
+                    res += [w]
+                else:
+                    restOf = dfs(s[len(w): ])
+                    for item in restOf:
+                        res += [w + " " +item]
+            return res
+
+        return dfs(s)

@@ -21,6 +21,8 @@ queries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ?
 return: [6.0, 0.5, -1.0, 1.0, -1.0 ]
 """
 
+
+# TC: O(Q*N)
 from collections import defaultdict
 from numpy import prod
 
@@ -50,7 +52,6 @@ class Solution:
                 x = dfs(child, tar, val + [values[(char, child)]], seen)
                 if x != -1.0:
                     return x
-            # seen.remove(char)
             return -1.0
         
         for a, b in queries:

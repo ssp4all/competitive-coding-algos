@@ -1,6 +1,8 @@
 from collections import *
 from heapq import *
 
+#TC: O(ElgV) where E = edges and V = Vertices
+# SC: O(V + E)
 conn = [["A", "B", 4], ["B", "C", 10], ["A", "C", 41]]
 def dijkstra(conn, src, dest):
     g = defaultdict(list)

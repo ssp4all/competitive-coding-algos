@@ -18,6 +18,8 @@ Output: 2
 Explanation:The 0th and 1st students are direct friends, so they are in a friend circle. 
 The 2nd student himself is in a friend circle. So return 2.
 """
+
+# TC: O(n^2), SC:O(n) with path compression of union find
 class Solution:
     def findCircleNum(self, M: List[List[int]]) -> int:
         if not M or not M[0]:   return 0
@@ -27,18 +29,17 @@ class Solution:
         seen = set()
         
         def dfs(i):
+            seen.add(i)     
             for j in range(n):
-                seen.add(i)
                 if M[i][j] == 1 and j not in seen:
                     dfs(j)
-            
-            
         for i in range(n):
             if i not in seen:
                 dfs(i)
                 ans += 1
         return ans
-                
+       
+# TC: O(n^2), SC:O(n) with path compression of union find
 class UF:
     def __init__(self, n):
         self.parent = [i for i in range(n)]
