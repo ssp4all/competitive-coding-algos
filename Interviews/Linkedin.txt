@@ -125,3 +125,20 @@ Interests: Web, REST, Applied Machine Learning, Data Science, NLP
 What has been your favorite project or proudest accomplishment? Why?
 -> During my internship I got to work on developing search feature using RestApi and Elastic Search. I got to learn a lot during that period.
 ---------------------------------
+
+Hello, 
+My name is Suraj and I wanted to introduce myself as a potential candidate for Software Enginnerig [Position ID# if you have applied] with [COMPANY NAME]. My resume is attached and I ask that you review it at your earliest convenience. If you are not the right contact for this area, I ask that you forward to the appropriate team/recruiter.
+
+I am actively looking for a full time Software Engineering role starting from May 2021 locatede anywhere in the USA. 
+
+Please review my below profiles:
+LinkedIn: www.linked.com/in/ssp4all
+GitHub: www.github.com/ssp4all
+
+The best email & phone number to reach me is: spawar2@ncsu.edu & 425-213-8716.
+
+I look forward to hearing from you.
+
+Best, 
+Suraj Pawar
+---------------------------------

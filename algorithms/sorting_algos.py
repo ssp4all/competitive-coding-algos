@@ -233,3 +233,31 @@ print("0>", ip)
 
 x = iter_merge_sort([4,3,2,1,17,8])
 print(x)
+
+################################################
+# quick sort 
+# TC: O(nlgn)
+
+arr = [40, 20, 10, 30]
+
+def partition(arr, left, right):
+    if left == right:   return left 
+    pivot = arr[right] 
+    
+    i = left - 1
+    for j in range(left, right):
+        if arr[j] < pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i] 
+    i += 1
+    arr[i], arr[right] = arr[right], arr[i]
+    return i 
+    
+
+def quick_sort(arr, left, right):
+    if left >= right:   return
+    index = partition(arr, left, right)
+    quick_sort(arr, left, index - 1)
+    quick_sort(arr, index + 1, right)
+
+quick_sort(arr, 0, len(arr) - 1)

@@ -74,3 +74,31 @@ class NumArray:
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)
 # param_1 = obj.sumRange(i,j)
+
+
+class NumArray:
+    def __init__(self, nums: List[int]):
+        self.BIT = [0] * (len(nums) + 1)    
+        n = len(self.BIT)
+        
+        for i in range(len(nums)):
+            self.update(i, nums[i])
+        
+    def get(self, i):
+        i += 1
+        sum_ = 0
+        while i > 0:
+            sum_ += self.BIT[i] 
+            i -= i & -i
+        return sum_
+        
+        
+    def update(self, i, val):
+        i += 1
+        while i < len(self.BIT):
+            self.BIT[i] += val 
+            i += i & -i
+            
+    def sumRange(self, i: int, j: int) -> int:
+        diff = self.get(j) - self.get(i - 1)  
+        return diff

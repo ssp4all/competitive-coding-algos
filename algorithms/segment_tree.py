@@ -1,4 +1,4 @@
-
+# O(N)
 def seg_tree(input, seg, left, right, pos):
     if left == right:
         seg[pos] = input[left]
@@ -7,7 +7,7 @@ def seg_tree(input, seg, left, right, pos):
     seg_tree(input, seg, left, m, 2*pos + 1)
     seg_tree(input, seg, m + 1, right, 2*pos + 2)
     seg[pos] = min(seg[2 * pos + 1], seg[2 * pos + 2])
-
+# O(lgn)
 def range_query(seg, left, right, qlow, qhigh, pos):
     if qlow <= left and qhigh >= right:
         return seg[pos]
@@ -16,7 +16,7 @@ def range_query(seg, left, right, qlow, qhigh, pos):
     m = left + (right - left) // 2
     return min(range_query(seg, left, m, qlow, qhigh, 2*pos + 1), 
                 range_query(seg, m + 1, right, qlow, qhigh, 2*pos + 2))
-
+# O(lgn)
 def update(seg, left, right, index, value, pos):
 	if left == right:
 		tree[left] = value 

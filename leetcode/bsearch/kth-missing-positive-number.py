@@ -20,13 +20,28 @@ Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing
  positive integer is 6.
 """
 
+
+# 
+"""
+
+arr = [2,3,4,6,7]
+k = 2
+----------
+l   r   m
+----------
+0   5   2
+3   5   4
+3   4   3
+3   3   break
+"""
+Idea is to find leftmost index where A[m] - (m - 1) < k then return left + k
 # O(lgN)
 class Solution:
     def findKthPositive(self, A, k):
         l, r = 0, len(A)
         while l < r:
             m = (l + r) // 2
-            if A[m] - 1 - m < k: #logic is (A[m] - 1 + 1) - (m + 1)
+            if A[m] - 1 - m < k: #logic is (A[m]) - (m + 1)
                 l = m + 1
             else:
                 r = m

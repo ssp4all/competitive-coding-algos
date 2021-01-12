@@ -1,8 +1,13 @@
 https://leetcode.com/problems/word-ladder/
 
+# TC: O(M^2 * N) where N = total words and M is avg legth
+# SC: O(M^2 * N) 
+
 from collections import deque
 class Solution:
     def ladderLength(self, start: str, end: str, wordlist: List[str]) -> int:
+        if endWord not in wordList or not endWord or not beginWord or not wordList:
+            return 0
         def built_dict(wordlist):
             d = {}
             n = len(wordlist)
