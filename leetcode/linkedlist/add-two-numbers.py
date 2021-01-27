@@ -47,7 +47,7 @@ class Solution:
         carry = 0
         temp = head = ListNode(0)
 
-        while cur1 and cur2 or carry:
+        while cur1 or cur2 or carry:
             v1 = (cur1.val if cur1 else 0)
             v2 = (cur2.val if cur2 else 0)
             carry, addi = divmod(v1 + v2 + carry, 10)            
@@ -56,4 +56,4 @@ class Solution:
             cur1 = (cur1.next if cur1 else None)
             cur2 = (cur2.next if cur2 else None)
         return head.next
-            
+           

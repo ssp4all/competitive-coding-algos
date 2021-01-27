@@ -1,37 +1,24 @@
 class Solution:
     def __init__(self, input_array):
         self.sorting_array = input_array
-        self.comparison_count = 0
-    
+
+################################################
+# Merge sort 
+# TC: O(nlgn)
     def merge(self, p, q, r):
         """Merge two arrays into one"""
-        # n1 = q-p+1
-        # n2 = r-q
-        # left = [0]*n1
-        # right = [0]*n2
-        
-        left = self.sorting_array[p:q+1]
-        right = self.sorting_array[q+1:r+1]
-        
-        # for i in range(n1):
-        #     left[i] = self.sorting_array[p+i]
-                    
-        # for j in range(n2):
-        #     right[j] = self.sorting_array[q+j+1]
-        # print(left, right)
-        left.append(float('inf'))
-        right.append(float('inf'))
+
+        left = self.sorting_array[p:q+1] + [float('inf')]
+        right = self.sorting_array[q+1:r+1] + [float('inf')]
         
         i, j = 0, 0
         for k in range(p, r+1):
-            self.comparison_count += 1
             if left[i] <= right[j]:
                 self.sorting_array[k] = left[i]
                 i += 1
             else:
                 self.sorting_array[k] = right[j]
                 j += 1
-        print(self.sorting_array)
         
     def merge_sort(self, p, r):
         """Sort an array using merge sort"""
@@ -41,7 +28,10 @@ class Solution:
             self.merge_sort(q+1, r)
             print("p q r", p, q, r)
             self.merge(p, q, r)
-            
+
+################################################
+# Heap sort 
+# TC: O(nlgn)            
     def heapify(self, n, i):
         """Heapify the given array"""
         lar = i
@@ -74,31 +64,6 @@ class Solution:
         for i in range(n-1, -1, -1):
             self.sorting_array[0], self.sorting_array[i] = self.sorting_array[i], self.sorting_array[0]
             self.heapify(i, 0) 
-        
-        
-    def insertion_sort(self):
-        """Sort input array using Insertion Sort """
-        # print(self.sorting_array)
-        self.comparison_count = 0
-
-        n = len(self.sorting_array)
-
-        for j in range(1, n):
-            key = self.sorting_array[j]
-            i = j-1
-            
-            while True:                                
-                if i>-1:
-                    self.comparison_count += 1
-                    if self.sorting_array[i] > key:
-                        self.sorting_array[i+1] = self.sorting_array[i]
-                        i -= 1   
-                    else:
-                        break
-                else:
-                    break                            
-            self.sorting_array[i+1] = key
-
 
     def heappush(heap, val):
         heap.insert(0, val)
@@ -131,7 +96,7 @@ if __name__ == "__main__":
     s.merge_sort(0, len(A)-1)
 
 
-----------------------------------
+################################################
 # Iterative merge sort
 
 from collections import deque
@@ -191,9 +156,9 @@ def counting_sort(ip):
 ip = list(map(int, "01222222221101"))
 counting_sort(ip)
 
-"""
-Radix sort
-"""
+################################################
+# Radix sort
+
 def radix_sort():
     maxi = max(ip) #find max no of digits in a number
     i = 1
@@ -226,13 +191,9 @@ def counting_sort(exp):
 
 ip = [ 170, 45, 75, 90, 802, 24, 2, 66]
 n = len(ip)
-print("input - >", ip)
 radix_sort()
-print("0>", ip)
-
 
 x = iter_merge_sort([4,3,2,1,17,8])
-print(x)
 
 ################################################
 # quick sort 
@@ -244,12 +205,11 @@ def partition(arr, left, right):
     if left == right:   return left 
     pivot = arr[right] 
     
-    i = left - 1
+    i = left
     for j in range(left, right):
         if arr[j] < pivot:
-            i += 1
             arr[i], arr[j] = arr[j], arr[i] 
-    i += 1
+            i += 1
     arr[i], arr[right] = arr[right], arr[i]
     return i 
     
@@ -261,3 +221,28 @@ def quick_sort(arr, left, right):
     quick_sort(arr, index + 1, right)
 
 quick_sort(arr, 0, len(arr) - 1)
+
+
+################################################
+# Insertion sort 
+# TC: O(n^2)
+def insertion_sort(self, nums):
+    n = len(nums)
+    for i in range(1, n):
+        val = nums[i]
+        j = i - 1
+        while j >= 0 and nums[j] > val:
+            nums[j + 1] = nums[j]
+            j -= 1
+        nums[j + 1] = val
+
+################################################
+# Bubble sort 
+# TC: O(n^2)
+def bubble_sort(self, nums):
+        n = len(nums)
+        for i in range(n):
+            for j in range(0, n - i - 1):
+                if nums[j] > nums[j + 1]:
+                    nums[j], nums[j + 1] = nums[j + 1], nums[j]  
+

@@ -14,3 +14,9 @@ def findTheCelebrity(n):
 		return -1
 	return x
 	
+	"""
+	[1, 1, 1]
+	[0, 1, 0]
+	[0, 1, 1]
+
+	"""

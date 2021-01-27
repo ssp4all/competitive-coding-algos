@@ -1,38 +1,33 @@
 https://www.geeksforgeeks.org/quickselect-algorithm/
 
 # quick select 
-# O(n)
+# O(n) Avg case but O(n^2) for worst case
 #find Kth smallest number in the unsorted array 
 
 arr = [10, 50, 20, 30]
 k = 2 
 
-def partition(arr, left, right):
-    if left == right:   return left 
-    pivot = arr[right]     
-    i = left
-    for j in range(left, right):
-        if arr[j] < pivot:
-            arr[i], arr[j] = arr[j], arr[i] 
-            i += 1
-    arr[i], arr[right] = arr[right], arr[i]
-    return i 
+def partition(nums, l, r):
+    pivot = nums[r]
+    j = l
+    for i in range(l, r):
+        if nums[i] < pivot:
+            nums[i], nums[j] = nums[j], nums[i]
+            j += 1
+    nums[j], nums[r] = nums[r], nums[j]
+    return j
 
+def quick_select(nums, l, r, k):
+    if l > r or k - 1 > r - l:  return 
+    pivot = partition(nums, l, r)
+    if pivot - l == k - 1:
+        return nums[pivot]
+    if k - 1 < pivot - l:
+        return quick_select(nums, l, pivot - 1, k)
+    else:
+        return quick_select(nums, pivot + 1, r, k - (pivot - l + 1))
 
-def quick_select(arr, left, right, k):
-    print("->", arr[left: right + 1], k)
-    index = partition(arr, left, right)
-    if (k > 0 and k <= right - left + 1): 
-        if index == k - 1:
-            return arr[index]
-        if index - left > k - 1:
-            return quick_select(arr, left, index - 1, k)
-        else:
-            return quick_select(arr, index + 1, right, k - (index - left + 1))
-            
-
-ans = quick_select(arr, 0, len(arr) - 1, k)
-print(ans)
+return quick_select(nums, 0, len(nums) - 1, len(nums) - k + 1)
 
 """
 arr = [10, 50, 20, 30]

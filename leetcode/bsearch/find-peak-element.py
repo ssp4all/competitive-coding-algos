@@ -23,6 +23,7 @@ Explanation: Your function can return either index number 1 where the peak eleme
 """
 
 class Solution:
+    # TC: O(N)
     def findPeakElement(self, nums: List[int]) -> int:
         if len(nums) == 1:    return 0
         l, cur = 0, 1
@@ -33,6 +34,7 @@ class Solution:
         return l
         
 class Solution:
+    # TC:O(lgN)
     def findPeakElement(self, nums: List[int]) -> int:
         if len(nums) == 1:    return 0
         
