@@ -17,13 +17,8 @@ node that is reported first is the value that is smaller.
 Return an list of non-empty reports in order of X coordinate.  
 Every report will have a list of values of nodes.
 """
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
+# TC:O(NlgN), SC:O(N)
 import collections
 class Solution:
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:

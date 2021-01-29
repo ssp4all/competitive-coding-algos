@@ -19,6 +19,7 @@ Output: false
 
 from heapq import *
 
+# TC:O(NlgN), SC:O(N)
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         n = len(trips)
