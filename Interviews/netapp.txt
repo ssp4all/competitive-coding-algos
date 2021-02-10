@@ -1,16 +1,10 @@
-Hi Michelle
 
-I hope you are doing well.
+First) 
+Introduce your self 
 
-I'm a first-year graduate student on an F1 visa pursuing a Master's in Computer Science at NC State University.
+Questions to ask - 
 
-For the upcoming summer, I am looking for an internship in the Software Engineering domain which is my main area of interest. 
-
-Being a CS student, I am inclined towards Software-Engineering also I am seasoned with programming languages like Python, Java and good at cloud technologies like Docker, Kubernetes, and AWS. 
-
-I request you to please let me know if you have an open position in the SDE. I've attached my resume for your reference. Thank you for your time and considerations.
-
-
-Sincerely
-Suraj
-
+1) Upto date in knowledge
+2) Joining data flexibility 
+3) How do you tackle tech stack changes (migration)
+4)  

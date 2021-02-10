@@ -38,7 +38,7 @@ def bsearch(arr, tar):
     while l < r:
         m = l + (r - l) // 2
         if arr[m] > tar:
-            r = m - 1
+            r = m
         else:
-            l = m 
+            l = m + 1 
     return l
