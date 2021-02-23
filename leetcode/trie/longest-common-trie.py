@@ -1,5 +1,6 @@
 from collections import defaultdict
-class Node():
+
+class Node:
     def __init__(self):
         self.childrens = defaultdict(Node)
         self.end = 0

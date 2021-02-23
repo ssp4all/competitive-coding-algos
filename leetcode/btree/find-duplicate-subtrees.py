@@ -48,5 +48,4 @@ class Solution:
             return serial
        
         helper(root)
-        print(count)   
         return ans

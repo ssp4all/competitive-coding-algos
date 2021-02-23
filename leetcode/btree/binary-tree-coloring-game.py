@@ -4,13 +4,6 @@ https://leetcode.com/problems/binary-tree-coloring-game/
 1145. Binary Tree Coloring Game
 Medium
 
-485
-
-102
-
-Add to List
-
-Share
 Two players play a turn based game on a binary tree.  We are given the root of this binary tree, and the number of nodes n in the tree.  n is odd, and each node has a distinct value from 1 to n.
 
 Initially, the first player names a value x with 1 <= x <= n, and the second player names a value y with 1 <= y <= n and y != x.  The first player colors the node with value x red, and the second player colors the node with value y blue.
@@ -24,13 +17,6 @@ You are the second player.  If it is possible to choose such a y to ensure you w
 """
 
 
-
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def btreeGameWinningMove(self, root: TreeNode, n: int, x: int) -> bool:
         if not root:    return 1

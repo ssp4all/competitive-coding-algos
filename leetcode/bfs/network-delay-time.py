@@ -38,7 +38,8 @@ class Solution:
             return -1
 
 from heapq import *
-from collections import*
+from collections import *
+
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         g = defaultdict(list)
@@ -53,7 +54,6 @@ class Solution:
         seen = {k}
         while pq:
             c, node = heappop(pq)
-            # print(c, node)
             if node in seen:    continue
             seen.add(node)
             time = max(time, c)
