@@ -1,6 +1,5 @@
 https://leetcode.com/problems/search-a-2d-matrix/
 
-# from bisect import bisect_left
 
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
@@ -16,7 +15,7 @@ class Solution:
                 return True
         return False
         
-        
+ # TC:O(M*lgN), SC:O(1)       
 #         for row in matrix:
 #             x = bisect_left(row, target)
 #             # print(x)
@@ -25,23 +24,34 @@ class Solution:
         
 #         return False
 
+"""
+Upsolving 
+
+- Idea isto start from rightmost col and first row 
+- then it wil be binary search tree
+- if tar < val
+    dec col
+  else
+    inc row
+
+"""
+# TC:O(M + N), SC:O(1)
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        if not matrix or not matrix[0]: return False
-        # return (any(target in row for row in matrix))
+        if not matrix or not matrix[0]: return 0 
         
-        r = len(matrix)
-        c = len(matrix[0])
+        row = len(matrix)
+        col = len(matrix[0])
         
-        s, e = 0, r * c - 1
+        i = 0 #for row
+        j = col - 1 #for col
         
-        while s <= e:
-            m = (s + e) // 2
-            midv = matrix[m // c][m % c]
-            if midv == target:
-                return True
-            elif midv > target:
-                e = m - 1
+        while j >= 0 and i < row:
+            val = matrix[i][j]
+            if val == target:
+                return 1 
+            elif val > target:
+                j -= 1
             else:
-                s = m + 1
-        return False
+                i += 1
+        return 0
