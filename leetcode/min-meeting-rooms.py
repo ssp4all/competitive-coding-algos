@@ -1,3 +1,5 @@
+# below solutino is from GFG
+
 def min_lec(lec):
 	n = len(lec)
 	prefix = [0]*20
@@ -20,7 +22,8 @@ min_lec(lec)
 
 """
 Given an array of meeting time intervals consisting of start 
-and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+and end times [[s1,e1],[s2,e2],...] (si < ei), 
+find the minimum number of conference rooms required.
 
 Example 1:
 
@@ -67,3 +70,21 @@ class Solution:
                 heappop(heap)
             heappush(heap, inter[i][0])
         return len(heap)
+
+# a little differenet solution
+class Solution:
+    def minMeetingRooms(self, intervals: List[List[int]]) -> int:
+        queue = list()
+        
+        for s, e in intervals:
+            queue.append((s, 1))
+            queue.append((e, -1))
+
+        queue.sort()
+        
+        rooms, max_rooms = 0, 0
+        for _, atn in queue:
+            rooms += atn
+            max_rooms = max(max_rooms, rooms)
+                
+        return max_rooms
