@@ -31,9 +31,7 @@ class Solution:
         ans = 0 
         
         for element in target:
-            if element > prev:  
-                ans += element - prev 
+            ans += min(0, element - prev) 
             prev = element
-        
         
         return ans
