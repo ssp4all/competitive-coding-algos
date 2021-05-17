@@ -35,6 +35,8 @@ Return:
 [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] 
 (positions with parentheses in above matrix).
 """
+
+# TC:O(M*N), SC:O(M*N)
 from collections import deque
 class Solution(object):
     def pacificAtlantic(self, matrix):

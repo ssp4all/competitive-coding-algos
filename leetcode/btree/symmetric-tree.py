@@ -6,6 +6,7 @@ https://leetcode.com/problems/symmetric-tree/
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 from collections import deque
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
@@ -33,3 +34,34 @@ class Solution:
         
 #         return helper(root.left, root.right)
             
+
+##################################
+upsolving find maxiums symmetric-tree 
+
+class Solution:
+    def isSymmetric(self, root: TreeNode) -> bool:
+        
+        if not root:    return 1 
+        maxi = None
+        maxiS = 0
+        def check(node, s):
+            nonlocal maxi, maxiS
+            
+            if not node:    return 0
+            left, right = [""], [""]
+            le = check(node.left, left)
+            ri = check(node.right, right)
+            size = le + ri + 1
+            if left[0] == right[0]:
+                if maxiS < size:    
+                    maxi = node 
+                    maxiS = size
+            
+            s[0] += "*" + left[0] + "*"
+            s[0] += "*" + str(node.val) + "*"
+            s[0] += "*" + right[0] + "*"
+            return size
+            
+        org = [""]
+        check(root, org)
+        return maxi
