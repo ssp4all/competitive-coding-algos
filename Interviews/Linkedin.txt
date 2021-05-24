@@ -1,11 +1,4 @@
------------------------------------------------------
-For Manager (connection only)
------------------------------------------------------
 
-Hi ###, 
-I am a graduate (MS in CS) student looking for an entry-level SDE role starting May 2021. I am wondering if you have any open SDE position in your team which I can apply for? 
-Looking forward to connecting with you.
-Thanks!
 
 -----------------------------------------------------
 NEW GRAD- add note
@@ -14,7 +7,7 @@ NEW GRAD- add note
 for Referral
 
 Hi Arvind, 
-I am a second yr graduate student at NC State pursuing MCS. Currently, I looking for an Entry-level SDE position at #### for which it has an opening. I would appreciate it if we can connect here. 
+I am a second yr graduate student at NC State pursuing MCS. Currently, I looking for an Entry-level SDE position at VMware for which it has an opening. I would appreciate it if we can connect here. 
 Cheers!
 ****************************
 
@@ -29,7 +22,7 @@ Cheers!
 Hi #####
 
 I hope you are doing well.
-I am a second year graduate student pursuing MS in CS at NC State University. I have recently applied for the New grad SDE position at #####. I would appreciate it if we can connect here to discuss my profile and impact I can make at ###. 
+I am a second year graduate student pursuing MS in CS at NC State University, NC. I have recently applied for the New grad SDE position at #####. I would appreciate it if we can connect here to discuss my profile and impact I can make at ###. 
 Thank you for your time and considerations.
 
 Cheers!
@@ -62,6 +55,23 @@ Sincerely
 Suraj
 425-213-8716
 ----------------------------------------------------
+
+Looking for a summer internship
+
+Hi Lindsay
+
+I hope you are doing well.
+
+I am a first-year graduate student looking for an SDE internship where I can use my problem-solving skills and proactively learn from my peers. I'm a seasoned full-stack developer with experience in software development where I have used programming languages such as Python, Java, and C++. During my projects and previous internships, I have worked on various technologies such as React, Django, Git, REST APIs, and databases. Apart from that, I have a minor interest in Machine Learning and Data analytics.
+
+Please let me know if you have an open position in SDE/DS domain or when you'd be open to a conversation. I’m happy to provide you with additional information you might need. I look forward to hearing from you.
+
+Sincerely
+Suraj
+425-213-8716
+
+PS: I have attached my resume for your reference.
+
 ----------------------------------------------------
 ###############################
 To recruiter (after application)
@@ -105,7 +115,6 @@ I am deeply interested in leveraging the REST services to interact with machine 
 
 To bolster the skills in machine learning, I have developed projects demonstrating the use of different machine learning and NLP techniques used on structured as well as unstructured data. I have enrolled for the course “Multimedia and Web Databases” to primarily approach multimedia pattern discovery and data retrieval through machine learning.
 Having visited the ICML 2019, I was able to appreciate the research perspective in ML, which has allowed me to work on research-based projects in the field of ML and NLP in the current year.
- 
 
 
 Specialties:

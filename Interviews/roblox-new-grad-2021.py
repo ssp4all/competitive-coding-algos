@@ -1,3 +1,18 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'efficientJanitor' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts FLOAT_ARRAY weight as parameter.
+#
 
 def efficientJanitor(weight):
     # Write your code here
@@ -13,7 +28,24 @@ def efficientJanitor(weight):
     return trips
 
 
+-----------------
+#!/bin/python3
 
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'findMinDistance' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER w
+#  2. INTEGER h
+#  3. INTEGER n
 #
 from collections import deque 
 from itertools import combinations
@@ -59,4 +91,4 @@ def max_gap(L, v):
             ret = max(ret,cnt)
         return ret
 
-    return max_gap(n,h) * max_gap(m,v)
+    return max_gap(n,h)*max_gap(m,v)

@@ -36,30 +36,3 @@ k = 4 => ans = 50
 [10, 20], [30, 50]
 
 """
-
-# With extra space but easy to code
-def partition(A):
-    n = len(A)
-    pivot = A[n - 1]
-    j = 0 
-    for i in range(n - 1):
-        if A[i] < pivot:
-            A[j], A[i] = A[i], A[j]
-            j += 1
-        i += 1 
-    A[j], A[n - 1] = A[n - 1], A[j]
-    return j 
-
-def quick_select(A, k):
-    if not A or k >= len(A):   return
-    pivot = partition(A)
-    if k == pivot:
-        return A[k]
-    elif k < pivot:
-        return quick_select(A[:pivot], k)
-    return quick_select(A[pivot + 1:], k - pivot - 1)
-    
-A = [1,2,3,4,5,99,8,1000, 7]
-k = 3
-idx = quick_select(A, k - 1)
-print(idx)

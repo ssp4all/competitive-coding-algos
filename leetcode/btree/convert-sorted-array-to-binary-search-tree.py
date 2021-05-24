@@ -33,25 +33,3 @@ class Solution:
             return root
         return None
         
-
-#this one is for a Sorted Linked List
-class Solution:
-    def sortedListToBST(self, head: ListNode) -> TreeNode:
-        if not head:    return None 
-        
-        def helper(head, tail):
-            if not head:    return head 
-            
-            slow, fast = head, head 
-            if head == tail:    return None 
-            
-            # find middle
-            while fast != tail and fast.next != tail:
-                slow, fast = slow.next, fast.next.next
-            
-            root = TreeNode(slow.val)
-            root.left = helper(head, slow)
-            root.right = helper(slow.next, tail)
-            return root 
-    
-        return helper(head, None)

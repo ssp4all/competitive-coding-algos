@@ -26,6 +26,7 @@ class Solution:
             q = (p+r) // 2
             self.merge_sort(p, q)
             self.merge_sort(q+1, r)
+            print("p q r", p, q, r)
             self.merge(p, q, r)
 
 ################################################

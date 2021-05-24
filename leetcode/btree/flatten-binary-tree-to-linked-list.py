@@ -1,6 +1,5 @@
 https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
 
-Check increasing-order-search-tree problems
 """
 Given a binary tree, flatten it to a linked list in-place.
 

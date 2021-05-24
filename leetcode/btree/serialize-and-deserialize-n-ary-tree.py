@@ -46,8 +46,7 @@ class Codec:
         return ",".join(s)
 	
     def deserialize(self, data: str) -> 'Node':
-        """
-        Decodes your encoded data to tree.
+        """Decodes your encoded data to tree.
         
         :type data: str
         :rtype: Node

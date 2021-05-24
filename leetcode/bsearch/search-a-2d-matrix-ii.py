@@ -29,23 +29,3 @@ class Solution:
             if j + len(row) >= 0 and target == row[j]:
                 return True
         return False
-
-class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        if not matrix or not matrix[0]: return 0 
-        
-        row = len(matrix)
-        col = len(matrix[0])
-        
-        i = 0 #for row
-        j = col - 1 #for col
-        
-        while j >= 0 and i < row:
-            val = matrix[i][j]
-            if val == target:
-                return 1 
-            elif val > target:
-                j -= 1
-            else:
-                i += 1
-        return 0

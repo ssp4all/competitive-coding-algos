@@ -13,7 +13,7 @@ pop(int sn) –> pops an element from stack number ‘sn’ where sn is from 0 t
 
 def KStacks(n, k):
 
-    #initmazon
+    #init
     stack = [0] * n
     next = [i for i in range(1, n + 1)]
     next[-1] = -1

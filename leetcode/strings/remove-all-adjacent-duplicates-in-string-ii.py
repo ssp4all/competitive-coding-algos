@@ -35,28 +35,7 @@ class Solution:
                 stack += [[ch, 1]]
                 
         return "".join(i * j for i, j in stack[1:])
-
-# two pointer solution
-class Solution:
-    def removeDuplicates(self, s: str, k: int) -> str:
-        if not s:   return s 
         
-        n = len(s)
-        
-        #two pointer solution 
-        s = list(s)
-        counter = [0] * n 
-        i = -1
-        
-        for j in range(n):
-            i += 1
-            s[i] = s[j]
-            counter[i] = counter[i - 1] + 1 if i > 0 and s[j] == s[i - 1] else 1 
-            if counter[i] == k:
-                i -= k 
-        i += 1     
-        return "".join(s[:i])
-
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
         if not s:   return ""

@@ -32,22 +32,6 @@ class Solution:
             return cost 
         return helper(1, 0) + triangle[0][0]
 
-#TC: O(n*n/2), SC:O(N) > N = no of elements in the matrix
-class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -> int:
-        if not triangle or not triangle[0]:    return 0 
-        
-        idx = 0 
-        row = 0
-        
-        @functools.lru_cache(None)
-        def helper(row, idx):
-            if row >= len(triangle) or idx >= len(triangle[row]):    return 0 
-            
-            return min(helper(row + 1, idx), helper(row + 1, idx + 1)) + \
-                        triangle[row][idx]         
-        return helper(0, 0)
-
 # TC:O(n*n/2), SC:O(1)
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:

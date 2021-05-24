@@ -1,17 +1,4 @@
 # https://leetcode.com/problems/house-robber
-
-class Solution:
-    def rob(self, nums: List[int]) -> int:
-        if not nums:    return 0 
-        n = len(nums)
-        
-        @functools.lru_cache(None)
-        def recur(index):
-            if index >= n:  return 0 
-            return max(nums[index] + recur(index + 2), recur(index + 1))
-        
-        return recur(0)
-        
 class Solution:
     def rob(self, nums: List[int]) -> int:
         if not nums: return 0

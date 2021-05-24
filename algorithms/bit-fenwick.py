@@ -2,7 +2,7 @@ https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
 
 # Fenwick tree implementation
 
-TC: O(lgn)
+TC: O(lgn)s
 def get_sum(BIT: list, i:int):
     i += 1
     sum_ = 0
