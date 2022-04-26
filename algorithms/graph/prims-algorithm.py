@@ -38,8 +38,17 @@ def solve(N, connections):
     if len(seen) < N: 
         return []
     print(edges, seen)
-    # print(ans)
     return ans
+
+##############
+# TC: O(E + (E + V)lgV)
+# SC: O(V)
+###############
+
 connections = [["A", "B", 1], ["B", "C", 4], ["B", "D", 6], ["D", "E", 5], ["C", "E", 1]]
 x = solve(5, connections)
 print(x) 
+
+
+# relevant code 
+# https://leetcode.com/problems/min-cost-to-connect-all-points/
