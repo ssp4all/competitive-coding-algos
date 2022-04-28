@@ -18,6 +18,8 @@
 # Swap s[0] and s[3], s = "bcad"
 # Swap s[1] and s[2], s = "bacd"
 
+# TC: O((E + V) * $(V) + VlgV) where $ is some constant - this dsu is path compression
+# SC: O(V)
 
 class DSU:
     def __init__(self, N):
