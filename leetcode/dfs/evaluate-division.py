@@ -22,8 +22,8 @@ return: [6.0, 0.5, -1.0, 1.0, -1.0 ]
 """
 
 # BETTER 
-# TC: O(Q * E) 
-# SC: O(N) N = total variables
+# TC: O(Q * (E + V)) V = total variables, E = edges or Equations 
+# SC: O(V) 
 
 class Solution:
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
