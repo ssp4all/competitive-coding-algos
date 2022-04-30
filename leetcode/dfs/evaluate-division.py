@@ -21,6 +21,42 @@ queries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ?
 return: [6.0, 0.5, -1.0, 1.0, -1.0 ]
 """
 
+# BETTER 
+# TC: O(Q * E) 
+# SC: O(N) N = total variables
+
+class Solution:
+    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+        g = defaultdict(dict)
+        for eq, v in zip(equations, values):
+            a, b = eq
+            g[a][b] = v
+            g[b][a] = 1 / v
+        
+        seen = set()
+        def dfs(curr, tar, seen):
+            seen.add(curr)
+            if curr == tar: return 1
+            for nei in g[curr]:
+                if nei in seen:  continue 
+                if nei == tar:  return g[curr][nei]
+                tmp = dfs(nei, tar, seen)
+                if tmp == -1:   
+                    continue
+                return tmp * g[curr][nei]
+            return -1
+        ans = []
+        for que in queries:
+            a, b = que
+            seen.clear()
+            if a not in g or b not in g:
+                ans.append(-1)
+                continue
+            tmp = dfs(a, b, seen)
+            ans.append(tmp)
+        return ans
+
+############################################################
 
 # TC: O(Q*N)
 from collections import defaultdict
@@ -38,9 +74,7 @@ class Solution:
             graph[a].add(b)
             values[(a, b)] = vals[i]
             graph[b].add(a)
-            # print(vals[i])
             values[(b, a)] = 1 / vals[i]
-        # print(graph, values)
         
         def dfs(char, tar, val, seen):
             if char in seen:    return -1.0
