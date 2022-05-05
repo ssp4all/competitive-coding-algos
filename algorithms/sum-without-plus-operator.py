@@ -11,3 +11,14 @@ def sum(x: str, y: str)->int:
 
 op = sum(2, 2)
 print(op)
+
+
+
+####################
+
+class Solution {
+public:
+    int sum(int num1, int num2) {
+        return (num1 ^ num2) + 2 * (num1 & num2);
+    }
+};
