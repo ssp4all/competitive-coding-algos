@@ -68,6 +68,7 @@ class Solution:
 //////////////////////////////////////////////////////////////////////////
 // 123-pattern
 // https://www.geeksforgeeks.org/find-a-sorted-subsequence-of-size-3-in-linear-time/
+// https://leetcode.com/problems/increasing-triplet-subsequence/
 
 // Solution - 1
 // TC: O(N^2)
