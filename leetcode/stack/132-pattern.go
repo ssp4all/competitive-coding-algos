@@ -100,3 +100,6 @@ class Solution:
             else:
                 return True
         return False
+    
+// or solve it using https://leetcode.com/problems/longest-increasing-subsequence/ 
+// in TC: O(NlgK)
