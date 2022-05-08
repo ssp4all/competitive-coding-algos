@@ -9,7 +9,7 @@
  
 
 // Example 1:
-
+ss
 // Input: nums = [1,2,3,4]
 // Output: false
 // Explanation: There is no 132 pattern in the sequence.

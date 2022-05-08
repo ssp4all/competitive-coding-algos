@@ -28,7 +28,7 @@ class NestedIterator(object):
         self.st = [[nestedList, 0]]
 
     def next(self):
-        self.hasNext()
+        self.hasNext() #already getting called before next()
         li, idx = self.st[-1]
         self.st[-1][1] += 1
         return li[idx].getInteger()
