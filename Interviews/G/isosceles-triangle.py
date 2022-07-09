@@ -21,9 +21,8 @@
 # SC: O(N)
 
 def visible(mtns: list) -> int:
-    n = len(mtns)
     end, count = float('-inf'), 0
-    for l, r in sorted([(y - x, y + x) for x, y in mtns]):
+    for l, r in sorted([(x - y, x + y) for x, y in mtns], key=lambda x: (x[0], -x[1])): # to handle same left cases 
         if r > end:
             count += 1 
             end = r 
