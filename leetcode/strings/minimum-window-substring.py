@@ -63,11 +63,11 @@ class Solution:
                 while i < j and need[s[i]] < 0:
                     need[s[i]] += 1
                     i += 1
-                need[s[i]] += 1
+                need[s[i]] += 1 #to break the while loop 
                 miss += 1
                 if end == 0 or j - i < end - st:
                     st, end = i, j
-                i += 1
+                i += 1 #increment here coz if no need to add 1 in the original ans 
         return s[st:end]
         
 #         n = len(s)
