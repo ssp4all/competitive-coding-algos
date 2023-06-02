@@ -127,4 +127,30 @@ class Solution:
                     preOp, num = s[i], 0
             return sum(stack)
 
-    
+
+# solves all problems - basic I, II, and III
+class Solution:
+    def calculate(self, s):
+        def update(op, v):
+            if op == '+':   st.append(v)
+            elif op == '-': st.append(-v)
+            elif op == '*': st.append(st.pop() * v)
+            elif op == '/': st.append(int(st.pop() / v))
+        num, sign, i, st = 0, '+', 0, [] 
+        while i < len(s):
+            ch = s[i]
+            if ch.isdigit():
+                num = num * 10 + int(ch)
+            elif ch in '+-/*':
+                update(sign, num)
+                num, sign = 0, ch
+            elif ch == '(':
+                update(num, sign)
+                num, j = self.calculate(s[i + 1: ])
+                i = i + j
+            elif ch == ')':
+                update(sign, num)
+                return sum(st), i + 1
+            i += 1
+        update(sign, num)
+        return sum(st)
