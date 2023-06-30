@@ -6,7 +6,6 @@ from heapq import *
 conn = [["A", "B", 4], ["B", "C", 10], ["A", "C", 41]]
 def dijkstra(conn, src, dest):
     g = defaultdict(list)
-
     for c in conn:
         st, end, cost = c
         g[st] += [(cost, end)]
@@ -21,7 +20,7 @@ def dijkstra(conn, src, dest):
         if node == dest:
             return [cost, path]
         for w, ch in g.get(node, []):
-            if ch in seen:  continue
+            # if ch in seen:  continue
             new_dist = cost + w
             old_dist = dist.get(ch, None)
             if old_dist is None or  old_dist > new_dist:
@@ -32,3 +31,23 @@ def dijkstra(conn, src, dest):
 
 x = dijkstra(conn, "A", "C")
 print(x)
+
+
+##############################################
+class Solution:
+    def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
+        g = defaultdict(list)
+        for a, b, w in edges:
+            g[a].append([b, w])
+            g[b].append([a, w])
+
+        def dfs(i):
+            heap = [(0, i)]
+            dist = {i: 0}          
+            while heap:
+                curr, node = heapq.heappop(heap)
+                for nei, w in g[node]:
+                    new_d = curr + w
+                    if new_d < dist.get(nei, float('inf')): 
+                        dist[nei] = new_d
+                        heapq.heappush(heap, (new_d, nei))     
