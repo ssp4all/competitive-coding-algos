@@ -11,73 +11,63 @@ N = 2
 """
 
 class Node:
-    def __init__(self, key, value):
-        self.k = key 
-        self.v = value 
+    def __init__(self, k, v):
+        self.k = k 
+        self.v = v 
         self.nxt = self.prev = None 
 
 class LRUCache:
+
     def __init__(self, capacity):
         self.cap = capacity  
         self.head, self.tail = Node(-1, -1), Node(-1, -1) # TODO: revisit
         self.head.nxt = self.tail 
         self.tail.prev = self.head
-        self.lookup = {} # store key = node reference 
+        self.lookup = {}
     
     def get(self, key):
         if key in self.lookup:
             node = self.lookup[key]
-            value = self.__remove(node)
-            new_node = Node(key, value)
-            self.lookup[key] = new_node
-            self.__append(new_node)
+            self.__remove(node)
+            self.__append(node)
             return node.v 
-        else:
-            raise KeyError('key not found')
+        return -1
     
     def __remove(self, node: Node):
-        # removes node from the DLL 
-        # TODO: what if there is only one key, or zero
-        value = node.v
         left, right = node.prev, node.nxt 
         left.nxt = right 
         right.prev = left
-        node.prev, node.nxt = None, None 
-        del node 
-        return value
+        node.prev, node.nxt = None, None  
     
     def __popleft(self):
-        _ = self.__remove(self.head.nxt)
-        return
+        if len(self.lookup) == 0:   return 
+        node = self.head.nxt
+        self.__remove(node)
+        return node
     
     def __append(self, node):
         prev = self.tail.prev 
         prev.nxt = node 
         node.prev = prev 
         node.nxt = self.tail
+        self.tail.prev = node
 
     def put(self, key, value):
-        try:
-            if key in self.lookup:
-                node = self.lookup[key]
-                node.v = value
-                self.__remove(node) 
-                new_node = Node(key, value)
-                self.__append(new_node)
-                # update lookup 
-                self.lookup[key] = new_node
-            else:
-                # size check 
-                if len(self.lookup) == self.cap:
-                    # evict left most 
-                    self.__popleft()   
-                new_node = Node(key, value)
-                self.lookup[key] = new_node 
-                self.__append(new_node)
-            return 
-        except Exception as e:
-            return e 
-
+        if key in self.lookup:
+            node = self.lookup[key]
+            node.v = value
+            self.__remove(node) 
+            self.__append(node)
+        else:
+            new_node = Node(key, value)
+            self.lookup[key] = new_node 
+            self.__append(new_node)
+            # size check 
+            if len(self.lookup) > self.cap:
+                node = self.__popleft()  # evict left most 
+                del self.lookup[node.k]
+                del node
+        return 
 
 cache = LRUCache(3)
 try:
