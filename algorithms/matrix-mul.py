@@ -15,7 +15,7 @@ class Solution:
                     if mat[i][j]:
                         comp[i].append((mat[i][j], j)) # store (val, col_index)
             return comp 
-
+                     
         A, B = get_compressed(mat1), get_compressed(mat2)
 
         for i in range(r1):

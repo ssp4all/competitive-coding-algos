@@ -1,4 +1,4 @@
-https://leetcode.com/problems/critical-connections-in-a-network/
+# https://leetcode.com/problems/critical-connections-in-a-network/
 
 """
 Solves both articulation and critical connections
@@ -48,7 +48,7 @@ class Solution:
         # print(ans)
         return ans
 
---------------------
+# --------------------
 # Amazon
 from collections import defaultdict
 def criticalConnections(n, connections):
