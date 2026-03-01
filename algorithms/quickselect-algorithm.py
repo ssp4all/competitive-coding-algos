@@ -6,28 +6,37 @@ https://www.geeksforgeeks.org/quickselect-algorithm/
 
 arr = [10, 50, 20, 30]
 k = 2 
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return self.quickSelect(nums, 0, len(nums) - 1, len(nums) - k)
 
-def partition(nums, l, r):
-    pivot = nums[r]
-    j = l
-    for i in range(l, r):
-        if nums[i] < pivot:
-            nums[i], nums[j] = nums[j], nums[i]
-            j += 1
-    nums[j], nums[r] = nums[r], nums[j]
-    return j
+    def quickSelect(self, arr, left, right, k_index):
+        if left == right:
+            return arr[left]
+        # Partition and get pivot position
+        pivot_index = self.partition(arr, left, right)
+        # If pivot is at the target position, we found the answer
+        if k_index == pivot_index:
+            return arr[k_index]
+        # If target is on the left side, search left
+        elif k_index < pivot_index:
+            return self.quickSelect(arr, left, pivot_index - 1, k_index)
+        # If target is on the right side, search right
+        else:
+            return self.quickSelect(arr, pivot_index + 1, right, k_index)
 
-def quick_select(nums, l, r, k):
-    if l > r or k - 1 > r - l:  return 
-    pivot = partition(nums, l, r)
-    if pivot - l == k - 1:
-        return nums[pivot]
-    if k - 1 < pivot - l:
-        return quick_select(nums, l, pivot - 1, k)
-    else:
-        return quick_select(nums, pivot + 1, r, k - (pivot - l + 1))
+    def partition(self, arr, left, right):
+        pivot = arr[right]
+        i = left
+        # Move all elements smaller than pivot to the left
+        for j in range(left, right):
+            if arr[j] < pivot:
+                arr[i], arr[j] = arr[j], arr[i]
+                i += 1
+        # Place pivot in its correct position
+        arr[i], arr[right] = arr[right], arr[i]
+        return i
 
-return quick_select(nums, 0, len(nums) - 1, len(nums) - k + 1)
 
 """
 arr = [10, 50, 20, 30]
